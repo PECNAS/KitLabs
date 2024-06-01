@@ -1,0 +1,61 @@
+﻿<Window x:Class="WpfApp5.Curators"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+        Title="Curators" Height="450" Width="800"
+        Background="#FF2E2E2E">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="299"/>
+            <RowDefinition Height="85"/>
+        </Grid.RowDefinitions>
+        <Label Grid.RowSpan="1" FontSize="24" HorizontalAlignment="Center"
+Foreground="#FFE9CB80">Лабораторная работа №4</Label>
+        <StackPanel x:Name="PanelView" Grid.Row="1" Height="384"
+VerticalAlignment="Top" Grid.RowSpan="2">
+            <DataGrid x:Name="DataGridStudent" Height="271" Width="634"
+Background="#FF6D6D6D" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Код куратора" Binding="{Binding Curator_ID}"
+Width="90"/>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding First_Name}"
+Width="35"/>
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Last_Name}"
+Width="60"/>
+                    <DataGridTextColumn Header="Номер телефона" Binding="{Binding Contact_Phone}"
+Width="110"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding Email}"
+Width="80"/>
+
+                    <DataGridTemplateColumn Width="84">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="ButtonDeleteGrid" Content="Удалить"
+Background="#FFE9CB80" Click="ButtonDeleteGrid_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Width="84">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="ButtonEditGrid" Content="Изменить"
+Background="#FFE9CB80" Click="ButtonEditGrid_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button x:Name="ButtonAdd" Height="28" Width="300" Content="Добавить запись" FontSize="14" Background="#FFE9C180" Click="ButtonAdd_Click_1" 
+/>
+            <Button x:Name="ButtonList" Height="27" Width="300" Content="Вывести данные" FontSize="14" Background="#FFE9C180"
+Margin="0,0,0,0" Click="ButtonList_Click_1" />
+            <Button x:Name="ButtonTables" Height="30" Width="300" Content="Выбрать таблицу" FontSize="14" Background="#FFE9C180"
+Margin="0,0,0,0" Click="ButtonTables_Click_1"/>
+        </StackPanel>
+    </Grid>
+</Window>

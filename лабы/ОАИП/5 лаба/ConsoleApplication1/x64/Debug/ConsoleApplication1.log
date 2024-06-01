@@ -1,0 +1,4 @@
+﻿  ConsoleApplication1.cpp
+D:\Documents\КИТ\2 курс\лабы\ОАИП\5 лаба\ConsoleApplication1\ConsoleApplication1.cpp(5,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\Documents\КИТ\2 курс\лабы\ОАИП\5 лаба\ConsoleApplication1\ConsoleApplication1.cpp(6,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  ConsoleApplication1.vcxproj -> D:\Documents\КИТ\2 курс\лабы\ОАИП\5 лаба\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="DataWindows\AppDataWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InsertWindows\AppInsertWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InsertWindows\CategoryInsertWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InsertWindows\ClientInsertWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InsertWindows\ExecutorInsertWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InsertWindows\HistoryInsertWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SendEMailWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Window1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Window2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="DataWindows\AppDataWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InsertWindows\AppInsertWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InsertWindows\CategoryInsertWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InsertWindows\ClientInsertWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InsertWindows\ExecutorInsertWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InsertWindows\HistoryInsertWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SendEMailWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Window1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Window2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

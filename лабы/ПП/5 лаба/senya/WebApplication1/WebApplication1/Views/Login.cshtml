@@ -1,0 +1,59 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Войти в аккаунт";
+}
+
+<style>
+    .container {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Войдите в свой аккаунт</h4>
+        </div>
+    </div>
+
+    <br /><br />
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @ViewBag.Error
+        </div>
+    }
+    <form method="post" action="~/Login">
+        <div class="input-group mb-3">
+            <input id="login" type="text" name="login" class="form-control" placeholder="Логин" aria-describedby="basic-addon2">
+        </div>
+        <div class="input-group mb-3">
+            <input id="psswd" type="text" name="password" class="form-control" placeholder="Пароль" aria-describedby="basic-addon2">
+        </div>
+
+        <button id="submit_btn" disabled type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br />
+    <a href="~/Registration">А я новенький первак</a>
+</div>
+
+<script>
+    var login_input = document.getElementById("login");
+    var psswd_input = document.getElementById("psswd");
+
+    login_input.onkeyup = type_check;
+    psswd_input.onkeyup = type_check;
+
+    function type_check() {
+        var btn = document.getElementById("submit_btn");
+        console.log(login_input.value, psswd_input.value);
+        if (login_input.value != "" && psswd_input.value != "") {
+            btn.removeAttribute("disabled");
+        } else {
+            btn.setAttribute("disabled", "");
+        }
+    }
+</script>

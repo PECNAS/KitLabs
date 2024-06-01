@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище Statement_curatorModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Curator">
+    <Key>
+      <PropertyRef Name="Curator_ID" />
+    </Key>
+    <Property Name="Curator_ID" Type="int" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Last_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Contact_Phone" Type="nvarchar" MaxLength="11" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Health_Card">
+    <Key>
+      <PropertyRef Name="Record_ID" />
+    </Key>
+    <Property Name="Record_ID" Type="int" Nullable="false" />
+    <Property Name="Student_ID" Type="int" />
+    <Property Name="Record_Description" Type="varchar(max)" />
+    <Property Name="Date_of_Record" Type="date" />
+  </EntityType>
+  <EntityType Name="Parents">
+    <Key>
+      <PropertyRef Name="Parent_ID" />
+    </Key>
+    <Property Name="Parent_ID" Type="int" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Last_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Contact_Phone" Type="nvarchar" MaxLength="11" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Workplace" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Student_ID" />
+    </Key>
+    <Property Name="Student_ID" Type="int" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Last_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Group_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Date_of_Birth" Type="date" />
+    <Property Name="Cell_Phone" Type="nvarchar" MaxLength="11" />
+    <Property Name="Curator_ID" Type="int" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Statement_curator.dbo.Student_Parent_Relationship" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="Student_Parent_Relationship">
+    <Key>
+      <PropertyRef Name="Student_ID" />
+      <PropertyRef Name="Parent_ID" />
+    </Key>
+    <Property Name="Student_ID" Type="int" Nullable="false" />
+    <Property Name="Parent_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Summary_Ledger">
+    <Key>
+      <PropertyRef Name="Ledger_ID" />
+    </Key>
+    <Property Name="Ledger_ID" Type="int" Nullable="false" />
+    <Property Name="Student_ID" Type="int" />
+    <Property Name="Teacher_ID" Type="int" />
+    <Property Name="Grade" Type="varchar" MaxLength="5" />
+    <Property Name="Semester" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Teachers">
+    <Key>
+      <PropertyRef Name="Teacher_ID" />
+    </Key>
+    <Property Name="Teacher_ID" Type="int" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Last_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Subject" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__Health_Ca__Stude__30F848ED">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Health_Card" Type="Self.Health_Card" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Student_ID" />
+      </Principal>
+      <Dependent Role="Health_Card">
+        <PropertyRef Name="Student_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__Curator__267ABA7A">
+    <End Role="Curator" Type="Self.Curator" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Curator">
+        <PropertyRef Name="Curator_ID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="Curator_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student_P__Paren__34C8D9D1">
+    <End Role="Parents" Type="Self.Parents" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Student_Parent_Relationship" Type="Self.Student_Parent_Relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parents">
+        <PropertyRef Name="Parent_ID" />
+      </Principal>
+      <Dependent Role="Student_Parent_Relationship">
+        <PropertyRef Name="Parent_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student_P__Stude__33D4B598">
+    <End Role="Student" Type="Self.Student" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Student_Parent_Relationship" Type="Self.Student_Parent_Relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Student_ID" />
+      </Principal>
+      <Dependent Role="Student_Parent_Relationship">
+        <PropertyRef Name="Student_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Summary_L__Stude__2B3F6F97">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Summary_Ledger" Type="Self.Summary_Ledger" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Student_ID" />
+      </Principal>
+      <Dependent Role="Summary_Ledger">
+        <PropertyRef Name="Student_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Summary_L__Teach__2C3393D0">
+    <End Role="Teachers" Type="Self.Teachers" Multiplicity="0..1" />
+    <End Role="Summary_Ledger" Type="Self.Summary_Ledger" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teachers">
+        <PropertyRef Name="Teacher_ID" />
+      </Principal>
+      <Dependent Role="Summary_Ledger">
+        <PropertyRef Name="Teacher_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище Statement_curatorModelContainer">
+    <EntitySet Name="Curator" EntityType="Self.Curator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Health_Card" EntityType="Self.Health_Card" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Parents" EntityType="Self.Parents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Summary_Ledger" EntityType="Self.Summary_Ledger" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teachers" EntityType="Self.Teachers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student_Parent_Relationship" EntityType="Self.Student_Parent_Relationship" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Student_Parent_Relationship].[Student_ID] AS [Student_ID], 
+    [Student_Parent_Relationship].[Parent_ID] AS [Parent_ID]
+    FROM [dbo].[Student_Parent_Relationship] AS [Student_Parent_Relationship]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Health_Ca__Stude__30F848ED" Association="Self.FK__Health_Ca__Stude__30F848ED">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Health_Card" EntitySet="Health_Card" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__Curator__267ABA7A" Association="Self.FK__Student__Curator__267ABA7A">
+      <End Role="Curator" EntitySet="Curator" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student_P__Paren__34C8D9D1" Association="Self.FK__Student_P__Paren__34C8D9D1">
+      <End Role="Parents" EntitySet="Parents" />
+      <End Role="Student_Parent_Relationship" EntitySet="Student_Parent_Relationship" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student_P__Stude__33D4B598" Association="Self.FK__Student_P__Stude__33D4B598">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Student_Parent_Relationship" EntitySet="Student_Parent_Relationship" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Summary_L__Stude__2B3F6F97" Association="Self.FK__Summary_L__Stude__2B3F6F97">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Summary_Ledger" EntitySet="Summary_Ledger" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Summary_L__Teach__2C3393D0" Association="Self.FK__Summary_L__Teach__2C3393D0">
+      <End Role="Teachers" EntitySet="Teachers" />
+      <End Role="Summary_Ledger" EntitySet="Summary_Ledger" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

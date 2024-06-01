@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\vstudio\\Lab10\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8DB9D26E-1F31-4718-8662-1E388897345A}|Lab10\\Lab10.csproj|e:\\vstudio\\lab10\\lab10\\simplesort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DB9D26E-1F31-4718-8662-1E388897345A}|Lab10\\Lab10.csproj|solutionrelative:lab10\\simplesort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DB9D26E-1F31-4718-8662-1E388897345A}|Lab10\\Lab10.csproj|e:\\vstudio\\lab10\\lab10\\improvedsort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DB9D26E-1F31-4718-8662-1E388897345A}|Lab10\\Lab10.csproj|solutionrelative:lab10\\improvedsort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DB9D26E-1F31-4718-8662-1E388897345A}|Lab10\\Lab10.csproj|e:\\vstudio\\lab10\\lab10\\fileout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DB9D26E-1F31-4718-8662-1E388897345A}|Lab10\\Lab10.csproj|solutionrelative:lab10\\fileout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DB9D26E-1F31-4718-8662-1E388897345A}|Lab10\\Lab10.csproj|e:\\vstudio\\lab10\\lab10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DB9D26E-1F31-4718-8662-1E388897345A}|Lab10\\Lab10.csproj|solutionrelative:lab10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileOut.cs",
+              "DocumentMoniker": "E:\\vstudio\\Lab10\\Lab10\\FileOut.cs",
+              "RelativeDocumentMoniker": "Lab10\\FileOut.cs",
+              "ToolTip": "E:\\vstudio\\Lab10\\Lab10\\FileOut.cs",
+              "RelativeToolTip": "Lab10\\FileOut.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T19:23:52.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SimpleSort.cs",
+              "DocumentMoniker": "E:\\vstudio\\Lab10\\Lab10\\SimpleSort.cs",
+              "RelativeDocumentMoniker": "Lab10\\SimpleSort.cs",
+              "ToolTip": "E:\\vstudio\\Lab10\\Lab10\\SimpleSort.cs",
+              "RelativeToolTip": "Lab10\\SimpleSort.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAWwFsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T12:04:06.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ImprovedSort.cs",
+              "DocumentMoniker": "E:\\vstudio\\Lab10\\Lab10\\ImprovedSort.cs",
+              "RelativeDocumentMoniker": "Lab10\\ImprovedSort.cs",
+              "ToolTip": "E:\\vstudio\\Lab10\\Lab10\\ImprovedSort.cs",
+              "RelativeToolTip": "Lab10\\ImprovedSort.cs",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAmwGMAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T12:51:40.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "E:\\vstudio\\Lab10\\Lab10\\Form1.cs",
+              "RelativeDocumentMoniker": "Lab10\\Form1.cs",
+              "ToolTip": "E:\\vstudio\\Lab10\\Lab10\\Form1.cs",
+              "RelativeToolTip": "Lab10\\Form1.cs",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAWwI0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T17:58:09.134Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

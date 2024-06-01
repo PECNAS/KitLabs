@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewBag.user.SecondName @ViewBag.user.FirstName</h1>
+<h3>Группа: @ViewBag.user.Group</h3>
+<h3></h3>
+
+<br />
+<br />
+
+<form method="post" action="~/Profile/Update">
+    <div class="input-group mb-3">
+        <input id="FirstName" type="text" name="FirstName" class="form-control" placeholder="Имя" aria-describedby="basic-addon2" value="@ViewBag.user.FirstName">
+    </div>
+    <div class="input-group mb-3">
+        <input id="SecondName" type="text" name="SecondName" class="form-control" placeholder="Фамилия" aria-describedby="basic-addon2" value="@ViewBag.user.SecondName">
+    </div>
+    <div class="input-group mb-3">
+        <input id="ThirdName" type="text" name="ThirdName" class="form-control" placeholder="Отчество" aria-describedby="basic-addon2" value="@ViewBag.user.ThirdName">
+    </div>
+    <div class="input-group mb-3">
+        <input id="Password" type="password" name="Password" class="form-control" placeholder="Пароль" aria-describedby="basic-addon2">
+    </div>
+    <div class="input-group mb-3">
+        <input id="Group" type="text" name="Group" class="form-control" placeholder="Группа" aria-describedby="basic-addon2" value="@ViewBag.user.Group">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Изменить</button>
+</form>

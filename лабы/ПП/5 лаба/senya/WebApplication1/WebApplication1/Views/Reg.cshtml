@@ -1,0 +1,86 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Регистрация";
+}
+
+
+<style>
+    .container {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Зарегистрировать новый аккаунт</h4>
+        </div>
+    </div>
+
+    <br /><br />
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @ViewBag.Error
+        </div>
+    }
+    <form method="post" action="~/Registration">
+        <div class="input-group mb-3">
+            <input id="login" type="text" name="login" class="form-control" placeholder="Логин" aria-describedby="basic-addon2">
+        </div>
+        <div class="input-group mb-3">
+            <input id="1name" type="text" name="FirstName" class="form-control" placeholder="Имя" aria-describedby="basic-addon2">
+        </div>
+        <div class="input-group mb-3">
+            <input id="2name" type="text" name="SecondName" class="form-control" placeholder="Фамилия" aria-describedby="basic-addon2">
+        </div>
+        <div class="input-group mb-3">
+            <input id="3name" type="text" name="ThirdName" class="form-control" placeholder="Отчество" aria-describedby="basic-addon2">
+        </div>
+        <div class="input-group mb-3">
+            <input id="group" type="number" name="Group" class="form-control" placeholder="Группа" aria-describedby="basic-addon2">
+        </div>
+        <div class="input-group mb-3">
+            <input id="psswd" type="password" name="Password" class="form-control" placeholder="Пароль" aria-describedby="basic-addon2">
+        </div>
+
+
+        <button id="submit_btn" disabled type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br />
+    <a href="~/Login">Уже есть аккаунт!</a>
+</div>
+
+<script>
+    var login_input = document.getElementById("login");
+    var psswd_input = document.getElementById("psswd");
+    var name3 = document.getElementById("1name");
+    var name2 = document.getElementById("2name");
+    var name1 = document.getElementById("3name");
+    var group = document.getElementById("group");
+
+    login_input.onkeyup = type_check;
+    psswd_input.onkeyup = type_check;
+    name1.onkeyup = type_check;
+    name2.onkeyup = type_check;
+    name3.onkeyup = type_check;
+    group.onkeyup = type_check;
+
+    function type_check() {
+        var btn = document.getElementById("submit_btn");
+        console.log(login_input.value, psswd_input.value);
+        if (login_input.value != "" &&
+        psswd_input.value != "" &&
+        name1.value != "" &&
+        name2.value != "" &&
+        name3.value != "" && 
+        group.value != "") {
+            btn.removeAttribute("disabled");
+        } else {
+            btn.setAttribute("disabled", "");
+        }
+    }
+</script>

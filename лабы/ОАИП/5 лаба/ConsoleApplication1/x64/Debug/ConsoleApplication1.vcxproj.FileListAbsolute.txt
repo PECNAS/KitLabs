@@ -1,0 +1,2 @@
+C:\Users\busov\Documents\КИТ\2 курс\лабы\ОАИП\5 лаба\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe
+D:\Documents\КИТ\2 курс\лабы\ОАИП\5 лаба\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe

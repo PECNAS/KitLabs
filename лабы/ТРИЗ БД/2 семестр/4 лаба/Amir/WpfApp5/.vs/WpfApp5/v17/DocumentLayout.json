@@ -1,0 +1,629 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\WpfApp5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\parent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\parent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\modelbd.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\modelbd.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\modelbd.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\modelbd.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\modelbd.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\modelbd.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|F:\\WpfApp5\\wpfapp5\\modelbd.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\modelbd.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\curatorseditinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\curatorseditinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|F:\\WpfApp5\\wpfapp5\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\curatorseditinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\curatorseditinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\health_cardeditinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\health_cardeditinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\parentseditinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\parentseditinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\health_card.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\health_card.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\parrentsaddinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\parrentsaddinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\windowtables.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\windowtables.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\windowtables.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\windowtables.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\windowadd.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\windowadd.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\summary_ledgeraddinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\summary_ledgeraddinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\summary_ledger.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\summary_ledger.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\summary_ledger.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\summary_ledger.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\parrentsaddinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\parrentsaddinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\summary_ledgeraddinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\summary_ledgeraddinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\health_cardeditinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\health_cardeditinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\health_cardaddinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\health_cardaddinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\curatorsaddinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\curatorsaddinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\health_cardaddinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\health_cardaddinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\health_card.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\health_card.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\parentseditinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\parentseditinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\parent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\parent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\curatorsaddinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\curatorsaddinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\windowadd.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\windowadd.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|F:\\WpfApp5\\wpfapp5\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\curators.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\curators.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\curators.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\curators.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|f:\\wpfapp5\\wpfapp5\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{423605FC-BA3F-48FA-8286-853FBD09383F}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:772836740:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "modelbd.tt",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\modelbd.tt",
+              "RelativeDocumentMoniker": "WpfApp5\\modelbd.tt",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\modelbd.tt",
+              "RelativeToolTip": "WpfApp5\\modelbd.tt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-05-21T15:04:52.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "modelbd.Context.cs",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\modelbd.Context.cs",
+              "RelativeDocumentMoniker": "WpfApp5\\modelbd.Context.cs",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\modelbd.Context.cs",
+              "RelativeToolTip": "WpfApp5\\modelbd.Context.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T20:17:39.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Parent.xaml",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\Parent.xaml",
+              "RelativeDocumentMoniker": "WpfApp5\\Parent.xaml",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\Parent.xaml",
+              "RelativeToolTip": "WpfApp5\\Parent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-20T20:36:03.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CuratorsEditInfo.xaml",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\CuratorsEditInfo.xaml",
+              "RelativeDocumentMoniker": "WpfApp5\\CuratorsEditInfo.xaml",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\CuratorsEditInfo.xaml",
+              "RelativeToolTip": "WpfApp5\\CuratorsEditInfo.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-21T04:08:34.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CuratorsEditInfo.xaml.cs",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\CuratorsEditInfo.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp5\\CuratorsEditInfo.xaml.cs",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\CuratorsEditInfo.xaml.cs",
+              "RelativeToolTip": "WpfApp5\\CuratorsEditInfo.xaml.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAADQAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T04:09:42.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.xaml",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\App.xaml",
+              "RelativeDocumentMoniker": "WpfApp5\\App.xaml",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\App.xaml",
+              "RelativeToolTip": "WpfApp5\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-18T05:19:05.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "modelbd.edmx [Diagram1]",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\modelbd.edmx",
+              "RelativeDocumentMoniker": "WpfApp5\\modelbd.edmx",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\modelbd.edmx [Diagram1]",
+              "RelativeToolTip": "WpfApp5\\modelbd.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-05-17T16:39:52.363Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "packages.config",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\packages.config",
+              "RelativeDocumentMoniker": "WpfApp5\\packages.config",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\packages.config",
+              "RelativeToolTip": "WpfApp5\\packages.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-05-20T19:43:16.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "modelbd.Context.tt",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\modelbd.Context.tt",
+              "RelativeDocumentMoniker": "WpfApp5\\modelbd.Context.tt",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\modelbd.Context.tt",
+              "RelativeToolTip": "WpfApp5\\modelbd.Context.tt",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAABIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-05-20T20:17:22.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Health_CardEditInfo.xaml",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\Health_CardEditInfo.xaml",
+              "RelativeDocumentMoniker": "WpfApp5\\Health_CardEditInfo.xaml",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\Health_CardEditInfo.xaml",
+              "RelativeToolTip": "WpfApp5\\Health_CardEditInfo.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-21T14:05:03.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ParentsEditInfo.xaml",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\ParentsEditInfo.xaml",
+              "RelativeDocumentMoniker": "WpfApp5\\ParentsEditInfo.xaml",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\ParentsEditInfo.xaml",
+              "RelativeToolTip": "WpfApp5\\ParentsEditInfo.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-21T06:35:10.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Health_Card.xaml.cs",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\Health_Card.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp5\\Health_Card.xaml.cs",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\Health_Card.xaml.cs",
+              "RelativeToolTip": "WpfApp5\\Health_Card.xaml.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAASwCIAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T13:55:03.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ParrentsAddInfo.xaml.cs",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\ParrentsAddInfo.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp5\\ParrentsAddInfo.xaml.cs",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\ParrentsAddInfo.xaml.cs",
+              "RelativeToolTip": "WpfApp5\\ParrentsAddInfo.xaml.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAawDQAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T06:31:09.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "WindowTables.xaml.cs",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\WindowTables.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp5\\WindowTables.xaml.cs",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\WindowTables.xaml.cs",
+              "RelativeToolTip": "WpfApp5\\WindowTables.xaml.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAApwEMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T04:23:45.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "WindowTables.xaml",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\WindowTables.xaml",
+              "RelativeDocumentMoniker": "WpfApp5\\WindowTables.xaml",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\WindowTables.xaml",
+              "RelativeToolTip": "WpfApp5\\WindowTables.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-21T04:20:43.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "WindowAdd.xaml",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\WindowAdd.xaml",
+              "RelativeDocumentMoniker": "WpfApp5\\WindowAdd.xaml",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\WindowAdd.xaml",
+              "RelativeToolTip": "WpfApp5\\WindowAdd.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-21T05:20:24.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Summary_LedgerAddInfo.xaml.cs",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\Summary_LedgerAddInfo.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp5\\Summary_LedgerAddInfo.xaml.cs",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\Summary_LedgerAddInfo.xaml.cs",
+              "RelativeToolTip": "WpfApp5\\Summary_LedgerAddInfo.xaml.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwCAAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T14:33:32.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Summary_Ledger.xaml.cs",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\Summary_Ledger.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp5\\Summary_Ledger.xaml.cs",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\Summary_Ledger.xaml.cs",
+              "RelativeToolTip": "WpfApp5\\Summary_Ledger.xaml.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T14:23:20.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Summary_Ledger.xaml",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\Summary_Ledger.xaml",
+              "RelativeDocumentMoniker": "WpfApp5\\Summary_Ledger.xaml",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\Summary_Ledger.xaml",
+              "RelativeToolTip": "WpfApp5\\Summary_Ledger.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-21T14:18:42.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ParrentsAddInfo.xaml",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\ParrentsAddInfo.xaml",
+              "RelativeDocumentMoniker": "WpfApp5\\ParrentsAddInfo.xaml",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\ParrentsAddInfo.xaml",
+              "RelativeToolTip": "WpfApp5\\ParrentsAddInfo.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-21T06:20:09.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Summary_LedgerAddInfo.xaml",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\Summary_LedgerAddInfo.xaml",
+              "RelativeDocumentMoniker": "WpfApp5\\Summary_LedgerAddInfo.xaml",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\Summary_LedgerAddInfo.xaml",
+              "RelativeToolTip": "WpfApp5\\Summary_LedgerAddInfo.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-21T14:25:53.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Health_CardEditInfo.xaml.cs",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\Health_CardEditInfo.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp5\\Health_CardEditInfo.xaml.cs",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\Health_CardEditInfo.xaml.cs",
+              "RelativeToolTip": "WpfApp5\\Health_CardEditInfo.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T14:09:00.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Health_CardAddInfo.xaml.cs",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\Health_CardAddInfo.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp5\\Health_CardAddInfo.xaml.cs",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\Health_CardAddInfo.xaml.cs",
+              "RelativeToolTip": "WpfApp5\\Health_CardAddInfo.xaml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T14:01:50.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Health_CardAddInfo.xaml",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\Health_CardAddInfo.xaml",
+              "RelativeDocumentMoniker": "WpfApp5\\Health_CardAddInfo.xaml",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\Health_CardAddInfo.xaml",
+              "RelativeToolTip": "WpfApp5\\Health_CardAddInfo.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-21T13:59:26.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CuratorsAddInfo.xaml.cs",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\CuratorsAddInfo.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp5\\CuratorsAddInfo.xaml.cs",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\CuratorsAddInfo.xaml.cs",
+              "RelativeToolTip": "WpfApp5\\CuratorsAddInfo.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADMAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T04:04:54.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Health_Card.xaml",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\Health_Card.xaml",
+              "RelativeDocumentMoniker": "WpfApp5\\Health_Card.xaml",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\Health_Card.xaml",
+              "RelativeToolTip": "WpfApp5\\Health_Card.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-21T13:52:10.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ParentsEditInfo.xaml.cs",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\ParentsEditInfo.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp5\\ParentsEditInfo.xaml.cs",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\ParentsEditInfo.xaml.cs",
+              "RelativeToolTip": "WpfApp5\\ParentsEditInfo.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T13:39:25.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Parent.xaml.cs",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\Parent.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp5\\Parent.xaml.cs",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\Parent.xaml.cs",
+              "RelativeToolTip": "WpfApp5\\Parent.xaml.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAgwD8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T20:40:25.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CuratorsAddInfo.xaml",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\CuratorsAddInfo.xaml",
+              "RelativeDocumentMoniker": "WpfApp5\\CuratorsAddInfo.xaml",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\CuratorsAddInfo.xaml",
+              "RelativeToolTip": "WpfApp5\\CuratorsAddInfo.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-21T04:04:05.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "WindowAdd.xaml.cs",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\WindowAdd.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp5\\WindowAdd.xaml.cs",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\WindowAdd.xaml.cs",
+              "RelativeToolTip": "WpfApp5\\WindowAdd.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADkAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T05:40:01.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp5\\MainWindow.xaml.cs",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp5\\MainWindow.xaml.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwB4AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T16:27:53.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp5\\MainWindow.xaml",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\MainWindow.xaml",
+              "RelativeToolTip": "WpfApp5\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-17T16:27:54.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Curators.xaml.cs",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\Curators.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp5\\Curators.xaml.cs",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\Curators.xaml.cs",
+              "RelativeToolTip": "WpfApp5\\Curators.xaml.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAowCMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T04:02:00.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Curators.xaml",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\Curators.xaml",
+              "RelativeDocumentMoniker": "WpfApp5\\Curators.xaml",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\Curators.xaml",
+              "RelativeToolTip": "WpfApp5\\Curators.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-21T04:01:04.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "App.config",
+              "DocumentMoniker": "F:\\WpfApp5\\WpfApp5\\App.config",
+              "RelativeDocumentMoniker": "WpfApp5\\App.config",
+              "ToolTip": "F:\\WpfApp5\\WpfApp5\\App.config",
+              "RelativeToolTip": "WpfApp5\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-05-20T16:37:53.215Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1437,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

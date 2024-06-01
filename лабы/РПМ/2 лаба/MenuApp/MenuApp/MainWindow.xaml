@@ -1,0 +1,39 @@
+﻿<Window x:Class="MenuApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MenuApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel LastChildFill="False">
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                <Menu>
+                    <MenuItem Header="_Цвет">
+                        <MenuItem Header="_Красный" MouseLeave="MenuItem_MouseLeave" MouseEnter="MenuItem_MouseEnter" Click="MenuItem_Click"/>
+                        <MenuItem Header="_Зеленый" MouseLeave="MenuItem_MouseLeave_1"  MouseEnter="MenuItem_MouseEnter_1" Click="MenuItem_Click_1"/>
+                        <MenuItem Header="_Синий" MouseLeave="MenuItem_MouseLeave_2" MouseEnter="MenuItem_MouseEnter_2" Click="MenuItem_Click_2"/>
+                        <MenuItem Header="_Белый" MouseLeave="MenuItem_MouseLeave_3" MouseEnter="MenuItem_MouseEnter_3" Click="MenuItem_Click_3"/>
+                    </MenuItem>
+                    <MenuItem MouseLeave="MenuItem_MouseLeave_4" MouseEnter="MenuItem_MouseEnter_4" Click="MenuItem_Click_4" Header="_О программе"/>
+                    <MenuItem MouseLeave="MenuItem_MouseLeave_5" MouseEnter="MenuItem_MouseEnter_5" Click="MenuItem_Click_5" Header="_Закрыть"/>
+                </Menu>
+            </StackPanel>
+            <ToolBar DockPanel.Dock="Top">
+                <Button Click="MenuItem_Click" MouseEnter="MenuItem_MouseEnter" MouseLeave="MenuItem_MouseLeave">Красный</Button>
+                <Button Click="MenuItem_Click_1" MouseEnter="MenuItem_MouseEnter_1" MouseLeave="MenuItem_MouseLeave_1">Зелёный</Button>
+                <Button Click="MenuItem_Click_2" MouseEnter="MenuItem_MouseEnter_2" MouseLeave="MenuItem_MouseLeave_2">Синий</Button>
+                <Button Click="MenuItem_Click_3" MouseEnter="MenuItem_MouseEnter_3" MouseLeave="MenuItem_MouseLeave_3">Белый</Button>
+                <Separator/>
+                <Button Click="MenuItem_Click_4" MouseEnter="MenuItem_MouseEnter_4" MouseLeave="MenuItem_MouseLeave_4">О программе</Button>
+                <Separator/>
+                <Button  Click="MenuItem_Click_5" MouseEnter="MenuItem_MouseEnter_5" MouseLeave="MenuItem_MouseLeave_5">Закрыть</Button>
+            </ToolBar>
+            <StatusBar Name="StatusBar" DockPanel.Dock="Bottom">
+                <TextBlock Name="StatusBar_TextBlock" Text=""/>
+            </StatusBar>
+        </DockPanel>
+
+    </Grid>
+</Window>

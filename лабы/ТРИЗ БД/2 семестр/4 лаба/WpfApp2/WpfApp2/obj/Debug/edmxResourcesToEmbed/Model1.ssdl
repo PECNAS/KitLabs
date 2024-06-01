@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище trizbd_bdModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "trizbd_bd.dbo.Attendance" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="Attendance">
+          <Property Name="id_event" Type="int" />
+          <Property Name="id_student" Type="int" />
+        </EntityType>-->
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="event_id" />
+    </Key>
+    <Property Name="event_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="event_title" Type="nvarchar" MaxLength="255" />
+    <Property Name="kind_of_event" Type="nvarchar" MaxLength="255" />
+    <Property Name="event_date" Type="nvarchar" MaxLength="50" />
+    <Property Name="event_time" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Groups">
+    <Key>
+      <PropertyRef Name="group_number" />
+    </Key>
+    <Property Name="group_number" Type="int" Nullable="false" />
+    <Property Name="profession" Type="nvarchar" MaxLength="255" />
+    <Property Name="instructor_id" Type="int" />
+    <Property Name="number_of_people" Type="int" />
+  </EntityType>
+  <EntityType Name="Instructor">
+    <Key>
+      <PropertyRef Name="instructor_id" />
+    </Key>
+    <Property Name="instructor_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="surname" Type="nvarchar" MaxLength="255" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+    <Property Name="first_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="birth_date" Type="nvarchar" MaxLength="50" />
+    <Property Name="telephone_number" Type="nvarchar" MaxLength="11" />
+    <Property Name="password" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="id_student" />
+    </Key>
+    <Property Name="id_student" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="surname" Type="nvarchar" MaxLength="255" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+    <Property Name="first_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="group_number" Type="int" />
+    <Property Name="telephone_number" Type="nvarchar" MaxLength="11" />
+    <Property Name="city_of_registration" Type="nvarchar" MaxLength="255" />
+    <Property Name="birth_date" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Subject">
+    <Key>
+      <PropertyRef Name="subject_id" />
+    </Key>
+    <Property Name="subject_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hours_in_week" Type="int" />
+    <Property Name="group_number" Type="int" />
+    <Property Name="subject_name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Timetable">
+    <Key>
+      <PropertyRef Name="class_id" />
+    </Key>
+    <Property Name="class_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="group_number" Type="int" />
+    <Property Name="subject_id" Type="int" />
+    <Property Name="time_timetable" Type="nvarchar" MaxLength="255" />
+    <Property Name="audience" Type="int" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+ошибка 6004: Невозможно найти таблицу "trizbd_bd.dbo.Attendance", на которую ссылается связь.
+        <Association Name="FK__Attendanc__id_ev__4222D4EF" />-->
+  <!--Ошибки, обнаруженные при создании:
+ошибка 6004: Невозможно найти таблицу "trizbd_bd.dbo.Attendance", на которую ссылается связь.
+        <Association Name="FK__Attendanc__id_st__4316F928" />-->
+  <Association Name="FK__Groups__instruct__3D5E1FD2">
+    <End Role="Instructor" Type="Self.Instructor" Multiplicity="0..1" />
+    <End Role="Groups" Type="Self.Groups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="instructor_id" />
+      </Principal>
+      <Dependent Role="Groups">
+        <PropertyRef Name="instructor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__group_n__403A8C7D">
+    <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="group_number" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="group_number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Timetable__group__45F365D3">
+    <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+    <End Role="Timetable" Type="Self.Timetable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="group_number" />
+      </Principal>
+      <Dependent Role="Timetable">
+        <PropertyRef Name="group_number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Timetable__subje__46E78A0C">
+    <End Role="Subject" Type="Self.Subject" Multiplicity="0..1" />
+    <End Role="Timetable" Type="Self.Timetable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="subject_id" />
+      </Principal>
+      <Dependent Role="Timetable">
+        <PropertyRef Name="subject_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище trizbd_bdModelContainer">
+    <EntitySet Name="Event" EntityType="Self.Event" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Groups" EntityType="Self.Groups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Instructor" EntityType="Self.Instructor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subject" EntityType="Self.Subject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Timetable" EntityType="Self.Timetable" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Groups__instruct__3D5E1FD2" Association="Self.FK__Groups__instruct__3D5E1FD2">
+      <End Role="Instructor" EntitySet="Instructor" />
+      <End Role="Groups" EntitySet="Groups" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__group_n__403A8C7D" Association="Self.FK__Student__group_n__403A8C7D">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Timetable__group__45F365D3" Association="Self.FK__Timetable__group__45F365D3">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="Timetable" EntitySet="Timetable" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Timetable__subje__46E78A0C" Association="Self.FK__Timetable__subje__46E78A0C">
+      <End Role="Subject" EntitySet="Subject" />
+      <End Role="Timetable" EntitySet="Timetable" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

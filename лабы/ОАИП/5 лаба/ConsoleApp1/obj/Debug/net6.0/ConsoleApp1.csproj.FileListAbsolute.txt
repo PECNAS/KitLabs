@@ -1,0 +1,4 @@
+C:\Users\busov\Documents\КИТ\2 курс\лабы\ОАИП\5 лаба\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\busov\Documents\КИТ\2 курс\лабы\ОАИП\5 лаба\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.AssemblyInfoInputs.cache
+C:\Users\busov\Documents\КИТ\2 курс\лабы\ОАИП\5 лаба\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.AssemblyInfo.cs
+C:\Users\busov\Documents\КИТ\2 курс\лабы\ОАИП\5 лаба\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.csproj.CoreCompileInputs.cache

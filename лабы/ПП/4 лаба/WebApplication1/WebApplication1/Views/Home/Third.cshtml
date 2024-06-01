@@ -1,0 +1,20 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Third Task";
+
+}
+<a href="/">Назад</a><br><br>
+
+<form method="post">
+    <label>Введите массив. Каждое число вводится через ; без пробела</label>
+    <input id="input" type="text" name="array" style="width: 30%;">
+
+    <input type="submit">
+</form>
+
+<p>
+    <label>Сумма квадратов всех четных индексов: @ViewBag.quad</label><br>
+    <label>Сумма кубов всех нечетных индексов: @ViewBag.cube</label>
+</p>

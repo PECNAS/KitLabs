@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfApp2.EventDataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="EventDataWindow" Height="465" Width="800">
+    <StackPanel>
+        <DataGrid Height="354" IsReadOnly="True" Name="DataGridTable" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="40" Header="Id" Binding="{Binding event_id }"/>
+                <DataGridTextColumn Width="150" Header="Название" Binding="{Binding event_title}"/>
+                <DataGridTextColumn Width="150" Header="Kind" Binding="{Binding kind_of_event }"/>
+                <DataGridTextColumn Width="150" Header="Дата" Binding="{Binding event_date }"/>
+                <DataGridTextColumn Width="150" Header="Время" Binding="{Binding event_time }"/>
+
+                <DataGridTemplateColumn Width="80">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="BtnDelete" Content="Удалить" Click="BtnDelete_Click" Background="Red"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Width="80">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="BtnEdit" Content="Изменить" Click="BtnEdit_Click" Background="Orange"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <WrapPanel Margin="0 10 0 0" HorizontalAlignment="Center">
+            <Button Height="40" Width="100" x:Name="BtnInsert" Content="Добавить" Click="BtnInsert_Click" Background="#F0F0F0"/>
+            <Button Name="Back" Content="Назад" Click="BackBtn_Click" Height="40" Width="100" />
+        </WrapPanel>
+    </StackPanel>
+</Window>

@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u0418\u0440\u043C\u0430\u043D\\source\\repos\\RPM2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{731B32CD-9C80-4CCA-9589-F0F300EE5FE3}|RPM2\\RPM2.csproj|c:\\users\\\u0438\u0440\u043C\u0430\u043D\\source\\repos\\rpm2\\rpm2\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{731B32CD-9C80-4CCA-9589-F0F300EE5FE3}|RPM2\\RPM2.csproj|solutionrelative:rpm2\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{731B32CD-9C80-4CCA-9589-F0F300EE5FE3}|RPM2\\RPM2.csproj|c:\\users\\\u0438\u0440\u043C\u0430\u043D\\source\\repos\\rpm2\\rpm2\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{731B32CD-9C80-4CCA-9589-F0F300EE5FE3}|RPM2\\RPM2.csproj|solutionrelative:rpm2\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0418\u0440\u043C\u0430\u043D\\source\\repos\\RPM2\\RPM2\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "RPM2\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\\u0418\u0440\u043C\u0430\u043D\\source\\repos\\RPM2\\RPM2\\MainWindow.xaml",
+              "RelativeToolTip": "RPM2\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-19T22:51:18.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0418\u0440\u043C\u0430\u043D\\source\\repos\\RPM2\\RPM2\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "RPM2\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0418\u0440\u043C\u0430\u043D\\source\\repos\\RPM2\\RPM2\\MainWindow.xaml.cs",
+              "RelativeToolTip": "RPM2\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T22:51:15.799Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

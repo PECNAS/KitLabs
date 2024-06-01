@@ -1,0 +1,86 @@
+E:\vstudio\trizbd\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\WpfApp1.exe
+E:\vstudio\trizbd\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\WpfApp1.dll.config
+E:\vstudio\trizbd\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\WpfApp1.deps.json
+E:\vstudio\trizbd\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\WpfApp1.runtimeconfig.json
+E:\vstudio\trizbd\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\WpfApp1.dll
+E:\vstudio\trizbd\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\WpfApp1.pdb
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.csproj.AssemblyReference.cache
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\MainWindow.g.cs
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\App.g.cs
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1_MarkupCompile.cache
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1_MarkupCompile.lref
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\MainWindow.baml
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.g.resources
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.GeneratedMSBuildEditorConfig.editorconfig
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.AssemblyInfoInputs.cache
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.AssemblyInfo.cs
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.csproj.CoreCompileInputs.cache
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.csproj.Up2Date
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.dll
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\refint\WpfApp1.dll
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.pdb
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.genruntimeconfig.cache
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\ref\WpfApp1.dll
+E:\vstudio\trizbd\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\EntityFramework.SqlServer.dll
+E:\vstudio\trizbd\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\EntityFramework.dll
+E:\vstudio\trizbd\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\System.Data.SqlClient.dll
+E:\vstudio\trizbd\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\runtimes\win-arm64\native\sni.dll
+E:\vstudio\trizbd\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\runtimes\win-x64\native\sni.dll
+E:\vstudio\trizbd\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\runtimes\win-x86\native\sni.dll
+E:\vstudio\trizbd\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\vstudio\trizbd\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\Window1.g.cs
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\Window1.baml
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\Window2.g.cs
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\Window2.baml
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\SendEMailWindow.g.cs
+E:\vstudio\trizbd\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\SendEMailWindow.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\WpfApp1.exe
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\WpfApp1.dll.config
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\WpfApp1.deps.json
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\WpfApp1.runtimeconfig.json
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\WpfApp1.dll
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\WpfApp1.pdb
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\EntityFramework.SqlServer.dll
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\EntityFramework.dll
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\System.Data.SqlClient.dll
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\runtimes\win-x64\native\sni.dll
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\runtimes\win-x86\native\sni.dll
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.csproj.AssemblyReference.cache
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\MainWindow.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\SendEMailWindow.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\Window1.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\Window2.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\App.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1_MarkupCompile.cache
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1_MarkupCompile.lref
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\MainWindow.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\SendEMailWindow.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\Window1.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\Window2.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.g.resources
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.AssemblyInfoInputs.cache
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.AssemblyInfo.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.csproj.CoreCompileInputs.cache
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.csproj.CopyComplete
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.dll
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\refint\WpfApp1.dll
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.pdb
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.genruntimeconfig.cache
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\ref\WpfApp1.dll
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\DataWindows\AppDataWindow.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\InsertWindows\AppInsertWindow.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\DataWindows\AppDataWindow.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\InsertWindows\AppInsertWindow.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\InsertWindows\CategoryInsertWindow.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\InsertWindows\ClientInsertWindow.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\InsertWindows\ExecutorInsertWindow.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\InsertWindows\HistoryInsertWindow.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\InsertWindows\CategoryInsertWindow.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\InsertWindows\ClientInsertWindow.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\InsertWindows\ExecutorInsertWindow.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\InsertWindows\HistoryInsertWindow.baml

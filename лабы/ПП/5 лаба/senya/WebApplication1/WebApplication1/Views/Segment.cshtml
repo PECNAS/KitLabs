@@ -1,0 +1,16 @@
+﻿@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewBag.segment.Title</h1>
+<p>@ViewBag.segment.Description</p>
+<br />
+<h3> 
+@ViewBag.leader.FirstName @ViewBag.leader.SecondName</h3>
+<img src="@ViewBag.leader.Avatar" />
+<form method="post" action="~/Catalog/ComeIn">
+    <input type="text" hidden value="@ViewBag.segment.Id" name="seg_id">
+    <button class="btn btn-primary">Присоединиться</button>
+
+</form>

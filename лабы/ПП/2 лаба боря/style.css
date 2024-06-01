@@ -1,0 +1,208 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#header {
+	width: 100%;
+	height: 15vh;
+	font-family: 'Kyiv Type Serif', arial;
+}
+
+.yeda-container {
+	width: 65%;
+	height: 100%;
+	float: left;
+}
+
+.logo-container {
+	width: 6%;
+	height: 50%;
+	float: left;
+	margin-left: 2vw;
+	margin-top: 2vh;
+}
+
+.logo-container:hover {
+	cursor: pointer;
+}
+
+.searcher-container {
+	width: 50%;
+	height: 100%;
+	float: left;
+	margin-left: 2vw;
+	margin-top: 2vh;
+}
+
+#searcher {
+	width: 100%;
+	height: 50%;
+
+	border: 2px solid #FFE400;
+	border-radius: 15px;
+}
+
+#searcher::placeholder {
+	font-size: 120%;
+	color: #8E8E8E;
+	padding-left: 10px;
+}
+
+.adress-container {
+	width: 29%;
+	height: 100%;
+	float: left;
+	margin-left: 2vw;
+	margin-top: 2vh;
+}
+
+#adress-button {
+	width: 100%;
+	height: 50%;
+
+	background-color: #FFE400;
+	border: none;
+	border-radius: 15px;
+
+	color: black;
+	font-size: 110%;
+	filter: brightness(1.0);
+}
+
+#adress-button:hover {
+	cursor: pointer;
+	transition: filter .3s;
+	filter: brightness(.95	);
+}
+
+.user-info-container {
+	width: 18%;
+	height: 100%;
+	float: right;
+}
+
+.notif-container {
+	width: 30%;
+	height: 40%;
+	float: left;
+	margin-top: 3vh;
+}
+
+.notif-container:hover {
+	cursor: pointer;
+}
+
+.language-container {
+	width: 30%;
+	height: 40%;
+	float: left;
+	margin-top: 2vh;
+	text-align: center;
+}
+
+.language-container {
+	cursor: pointer;
+}
+
+.user-icon-container {
+	width: 20%;
+	height: 50%;
+	float: right;
+	margin-top: 2vh;
+	margin-right: 5vh;
+}
+
+.user-icon-container {
+	cursor: pointer;
+}
+
+hr {
+	width: 96%;
+	margin-left: 2%;
+	background-color: #B6B6B6;
+	height: 1px;
+	border-radius: 2px;
+	border: none;
+}
+
+#content {
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 5vh;
+	height: 220vh;
+}
+
+.cat-title-container {
+	width: 100%;
+	font-size: 120%;
+	font-family: 'Kyiv Type Serif', arial;
+	margin-bottom: 5vh;
+	margin-left: 3vw;
+}
+
+.cat-title-container h1 {
+	display: block;
+	margin-bottom: 1.5vh;
+}
+
+
+.cats-navbar {
+	width: 100%;
+}
+
+.cat-nav-el {
+	width: 30%;
+	float: left;
+	margin-left: 3%;
+	font-family: 'Kyiv Type Serif', arial;
+	margin-top: 5vh;
+}
+
+
+.cat-nav-el img {
+	border-radius: 15px;
+}
+
+.cat-nav-el img:hover {
+	cursor: pointer;
+	transition: filter .3s;
+	filter: brightness(.9);
+}
+
+.nav-el-title {
+	font-size: 160%;
+}
+
+.nav-el-title:hover {
+	cursor: pointer;
+}
+
+.rate-container {
+	font-size: 90%;
+}
+
+#footer {
+	width: 100%;
+}
+
+
+#footer table {
+	width: 80%;
+	height: 50vh;
+
+	margin-left: 10%;
+	color: grey;
+	font-family: 'Kyiv Type Serif', arial;
+	font-size: 14px;
+	opacity: .7;
+}
+
+.table-element {
+	width: 25%;
+}
+
+.table-element-text:hover {
+	color: black;
+	cursor: pointer;
+}

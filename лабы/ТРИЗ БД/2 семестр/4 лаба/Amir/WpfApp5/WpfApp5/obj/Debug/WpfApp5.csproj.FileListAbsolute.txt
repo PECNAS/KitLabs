@@ -1,0 +1,66 @@
+F:\WpfApp5\WpfApp5\obj\Debug\WpfApp5.csproj.AssemblyReference.cache
+F:\WpfApp5\WpfApp5\obj\Debug\Curators.g.cs
+F:\WpfApp5\WpfApp5\obj\Debug\CuratorsAddInfo.g.cs
+F:\WpfApp5\WpfApp5\obj\Debug\CuratorsEditInfo.g.cs
+F:\WpfApp5\WpfApp5\obj\Debug\MainWindow.g.cs
+F:\WpfApp5\WpfApp5\obj\Debug\Parent.g.cs
+F:\WpfApp5\WpfApp5\obj\Debug\ParentsEditInfo.g.cs
+F:\WpfApp5\WpfApp5\obj\Debug\ParrentsAddInfo.g.cs
+F:\WpfApp5\WpfApp5\obj\Debug\WindowAdd.g.cs
+F:\WpfApp5\WpfApp5\obj\Debug\WindowTables.g.cs
+F:\WpfApp5\WpfApp5\obj\Debug\App.g.cs
+F:\WpfApp5\WpfApp5\obj\Debug\WpfApp5_Content.g.cs
+F:\WpfApp5\WpfApp5\obj\Debug\WpfApp5_MarkupCompile.cache
+F:\WpfApp5\WpfApp5\obj\Debug\WpfApp5_MarkupCompile.lref
+F:\WpfApp5\WpfApp5\obj\Debug\Health_Card.g.cs
+F:\WpfApp5\WpfApp5\obj\Debug\Health_CardAddInfo.g.cs
+F:\WpfApp5\WpfApp5\obj\Debug\Health_CardEditInfo.g.cs
+F:\WpfApp5\WpfApp5\obj\Debug\Summary_Ledger.g.cs
+F:\WpfApp5\WpfApp5\obj\Debug\Summary_LedgerAddInfo.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\WpfApp5.csproj.AssemblyReference.cache
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\Curators.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\CuratorsAddInfo.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\CuratorsEditInfo.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\Health_Card.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\Health_CardAddInfo.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\Health_CardEditInfo.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\MainWindow.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\Parent.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\ParentsEditInfo.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\ParrentsAddInfo.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\Summary_Ledger.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\Summary_LedgerAddInfo.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\WindowAdd.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\WindowTables.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\App.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\WpfApp5_Content.g.cs
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\WpfApp5_MarkupCompile.cache
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\WpfApp5_MarkupCompile.lref
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\bin\Debug\WpfApp5.exe.config
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\bin\Debug\WpfApp5.exe
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\bin\Debug\WpfApp5.pdb
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\bin\Debug\EntityFramework.dll
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\bin\Debug\EntityFramework.xml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\Curators.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\CuratorsAddInfo.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\CuratorsEditInfo.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\Health_Card.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\Health_CardAddInfo.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\Health_CardEditInfo.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\MainWindow.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\Parent.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\ParentsEditInfo.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\ParrentsAddInfo.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\Summary_Ledger.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\Summary_LedgerAddInfo.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\WindowAdd.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\WindowTables.baml
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\WpfApp5.g.resources
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\WpfApp5.Properties.Resources.resources
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\WpfApp5.csproj.GenerateResource.cache
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\WpfApp5.csproj.CoreCompileInputs.cache
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\WpfApp5.csproj.CopyComplete
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\WpfApp5.exe
+D:\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\Amir\WpfApp5\WpfApp5\obj\Debug\WpfApp5.pdb

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище trizbd_bdModelContainer" CdmEntityContainer="trizbd_bdEntities1">
+    <EntitySetMapping Name="Event">
+      <EntityTypeMapping TypeName="trizbd_bdModel.Event">
+        <MappingFragment StoreEntitySet="Event">
+          <ScalarProperty Name="event_id" ColumnName="event_id" />
+          <ScalarProperty Name="event_title" ColumnName="event_title" />
+          <ScalarProperty Name="kind_of_event" ColumnName="kind_of_event" />
+          <ScalarProperty Name="event_date" ColumnName="event_date" />
+          <ScalarProperty Name="event_time" ColumnName="event_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Groups">
+      <EntityTypeMapping TypeName="trizbd_bdModel.Groups">
+        <MappingFragment StoreEntitySet="Groups">
+          <ScalarProperty Name="group_number" ColumnName="group_number" />
+          <ScalarProperty Name="profession" ColumnName="profession" />
+          <ScalarProperty Name="instructor_id" ColumnName="instructor_id" />
+          <ScalarProperty Name="number_of_people" ColumnName="number_of_people" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Instructor">
+      <EntityTypeMapping TypeName="trizbd_bdModel.Instructor">
+        <MappingFragment StoreEntitySet="Instructor">
+          <ScalarProperty Name="instructor_id" ColumnName="instructor_id" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="birth_date" ColumnName="birth_date" />
+          <ScalarProperty Name="telephone_number" ColumnName="telephone_number" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Student">
+      <EntityTypeMapping TypeName="trizbd_bdModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="id_student" ColumnName="id_student" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="group_number" ColumnName="group_number" />
+          <ScalarProperty Name="telephone_number" ColumnName="telephone_number" />
+          <ScalarProperty Name="city_of_registration" ColumnName="city_of_registration" />
+          <ScalarProperty Name="birth_date" ColumnName="birth_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subject">
+      <EntityTypeMapping TypeName="trizbd_bdModel.Subject">
+        <MappingFragment StoreEntitySet="Subject">
+          <ScalarProperty Name="subject_id" ColumnName="subject_id" />
+          <ScalarProperty Name="hours_in_week" ColumnName="hours_in_week" />
+          <ScalarProperty Name="group_number" ColumnName="group_number" />
+          <ScalarProperty Name="subject_name" ColumnName="subject_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Timetable">
+      <EntityTypeMapping TypeName="trizbd_bdModel.Timetable">
+        <MappingFragment StoreEntitySet="Timetable">
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="group_number" ColumnName="group_number" />
+          <ScalarProperty Name="subject_id" ColumnName="subject_id" />
+          <ScalarProperty Name="time_timetable" ColumnName="time_timetable" />
+          <ScalarProperty Name="audience" ColumnName="audience" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

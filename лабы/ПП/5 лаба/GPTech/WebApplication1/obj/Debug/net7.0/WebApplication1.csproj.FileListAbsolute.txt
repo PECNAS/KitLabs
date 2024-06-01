@@ -1,0 +1,211 @@
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\appsettings.Development.json
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\appsettings.json
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.staticwebassets.runtime.json
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.exe
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.deps.json
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.runtimeconfig.json
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.pdb
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.csproj.AssemblyReference.cache
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.AssemblyInfoInputs.cache
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.AssemblyInfo.cs
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.csproj.CoreCompileInputs.cache
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cache
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.RazorAssemblyInfo.cache
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.RazorAssemblyInfo.cs
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.build.WebApplication1.props
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.WebApplication1.props
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.WebApplication1.props
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets.pack.json
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets.build.json
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets.development.json
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\scopedcss\bundle\WebApplication1.styles.css
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\scopedcss\projectbundle\WebApplication1.bundle.scp.css
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.csproj.CopyComplete
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\refint\WebApplication1.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.pdb
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.genruntimeconfig.cache
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\ref\WebApplication1.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Azure.Core.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Azure.Identity.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\System.Drawing.Common.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\System.Memory.Data.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\System.Runtime.Caching.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\System.Security.Permissions.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\System.Windows.Extensions.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\WebApplication1\WebApplication1\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\appsettings.Development.json
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\appsettings.json
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.staticwebassets.runtime.json
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.exe
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.deps.json
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.runtimeconfig.json
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.pdb
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Azure.Core.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Azure.Identity.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\System.Drawing.Common.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\System.Memory.Data.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\System.Runtime.Caching.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\System.Security.Permissions.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\System.Windows.Extensions.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\vstudio\WebApplication1\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.csproj.AssemblyReference.cache
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.AssemblyInfoInputs.cache
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.AssemblyInfo.cs
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.csproj.CoreCompileInputs.cache
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cache
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.RazorAssemblyInfo.cache
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.RazorAssemblyInfo.cs
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets.build.json
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets.development.json
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.build.WebApplication1.props
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.WebApplication1.props
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.WebApplication1.props
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets.pack.json
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\scopedcss\bundle\WebApplication1.styles.css
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\scopedcss\projectbundle\WebApplication1.bundle.scp.css
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\WebAppli.7D14BD69.Up2Date
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.dll
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\refint\WebApplication1.dll
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.pdb
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.genruntimeconfig.cache
+E:\vstudio\WebApplication1\WebApplication1\obj\Debug\net7.0\ref\WebApplication1.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\appsettings.Development.json
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\appsettings.json
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\WebApplication1.staticwebassets.runtime.json
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\WebApplication1.exe
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\WebApplication1.deps.json
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\WebApplication1.runtimeconfig.json
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\WebApplication1.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\WebApplication1.pdb
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Azure.Core.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Azure.Identity.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\System.Drawing.Common.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\System.Memory.Data.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\System.Runtime.Caching.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\System.Security.Permissions.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\System.Windows.Extensions.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\WebApplication1.csproj.AssemblyReference.cache
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\WebApplication1.AssemblyInfoInputs.cache
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\WebApplication1.AssemblyInfo.cs
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\WebApplication1.csproj.CoreCompileInputs.cache
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cache
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\WebApplication1.RazorAssemblyInfo.cache
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\WebApplication1.RazorAssemblyInfo.cs
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.build.WebApplication1.props
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.WebApplication1.props
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.WebApplication1.props
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\staticwebassets.pack.json
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\staticwebassets.build.json
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\staticwebassets.development.json
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\scopedcss\bundle\WebApplication1.styles.css
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\scopedcss\projectbundle\WebApplication1.bundle.scp.css
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\WebApplication1.csproj.CopyComplete
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\WebApplication1.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\refint\WebApplication1.dll
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\WebApplication1.pdb
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\WebApplication1.genruntimeconfig.cache
+D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\obj\Debug\net7.0\ref\WebApplication1.dll

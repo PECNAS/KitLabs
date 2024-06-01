@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Регистрация";
+}
+
+<h3>@ViewBag.item.Title</h3>
+<h5>Цена: @ViewBag.item.Price</h5>
+<button onclick="add_to_cart(@ViewBag.item.ItemId, @ViewBag.user.UserId)">Купить</button>
+
+<p>@ViewBag.item.Description</p>
+<br />
+<img src="@ViewBag.item.Image" />
+
+
+<script>
+    async function add_to_cart(item_id, user_id) {
+        var request = new XMLHttpRequest();
+        request.open("GET", "/Catalog/AddToCart/?item_id=" + item_id + "&user_id=" + user_id);
+        request.send();
+        request.onreadystatechange = function () {
+            if (request.readyState != 4
+                || request.responseText == null) {
+                return;
+            }
+
+            var obj = JSON.parse(request.response);
+            console.log(obj);
+
+            // document.querySelector("#cart-count-" + obj["item_id"]).innerHTML = "В корзине " + obj["count"];
+            alert("Предмет добавлен в корзину. В корзине сейчас " + obj["count"] + " данного товара")
+        }
+    }
+</script>

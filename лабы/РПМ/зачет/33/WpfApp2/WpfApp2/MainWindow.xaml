@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Наши услуги" Click="MenuItem_Click"/>
+        </Menu>
+        <Grid DockPanel.Dock="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="№ рейса"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" Text="Маршрут"/>
+            <TextBlock Grid.Row="0" Grid.Column="2" TextWrapping="Wrap" Text="Время вылета"/>
+            <TextBlock Grid.Row="0" Grid.Column="3" TextWrapping="Wrap" Text="Время прилета"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="1"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="Москва-Казань"/>
+            <TextBlock Grid.Row="1" Grid.Column="2" TextWrapping="Wrap" Text="13:57 13.05.2024"/>
+            <TextBlock Grid.Row="1" Grid.Column="3" TextWrapping="Wrap" Text="16.03 13.05.2024"/>
+
+            <TextBlock Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="2"/>
+            <TextBlock Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="Москва - Санкт Петербург"/>
+            <TextBlock Grid.Row="2" Grid.Column="2" TextWrapping="Wrap" Text="12:06 14.05.2024"/>
+            <TextBlock Grid.Row="2" Grid.Column="3" TextWrapping="Wrap" Text="13.43 14.05.2024"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="0" TextWrapping="Wrap" Text="3"/>
+            <TextBlock Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" Text="Санкт Петербург - Нью Йорк"/>
+            <TextBlock Grid.Row="3" Grid.Column="2" TextWrapping="Wrap" Text="23:30 20.05.2024"/>
+            <TextBlock Grid.Row="3" Grid.Column="3" TextWrapping="Wrap" Text="03:59 21.05.2024"/>
+
+            <TextBlock Grid.Row="4" Grid.Column="0" TextWrapping="Wrap" Text="4"/>
+            <TextBlock Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" Text="Калининград - Москва"/>
+            <TextBlock Grid.Row="4" Grid.Column="2" TextWrapping="Wrap" Text="18:31 22.05.2024"/>
+            <TextBlock Grid.Row="4" Grid.Column="3" TextWrapping="Wrap" Text="20.03 22.05.2024"/>
+
+            <TextBlock Grid.Row="5" Grid.Column="0" TextWrapping="Wrap" Text="5"/>
+            <TextBlock Grid.Row="5" Grid.Column="1" TextWrapping="Wrap" Text="Казань - Екатеринбург"/>
+            <TextBlock Grid.Row="5" Grid.Column="2" TextWrapping="Wrap" Text="13:50 31.05.2024"/>
+            <TextBlock Grid.Row="5" Grid.Column="3" TextWrapping="Wrap" Text="16:02 31.05.2024"/>
+        </Grid>
+    </DockPanel>
+</Window>

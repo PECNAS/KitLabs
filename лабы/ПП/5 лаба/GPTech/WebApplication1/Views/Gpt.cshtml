@@ -1,0 +1,97 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "GPT";
+}
+
+<p>
+    <h2>Не хотите собирать компьютер сами?</h2>
+    <br />
+    <span>Мы поможем вам! А точнее нейросеть, которая соберет наиболее подходящую комплектацию из того, что есть у нас в магазине, основываясь на ваших требованиях</span>
+</p>
+
+<p>
+    <label>Минимальный объём оперативной памяти в ГБ</label>
+    <input type="number" value="4" id="ozu-input"/>
+    <br />
+
+    <label>Минимальный объём видеопамяти в ГБ</label>
+    <input type="number" value="4" id="gpu-input"/>
+    <br />
+
+    <label for="gaming">Игровой</label>
+    <input id="gaming" type="radio" name="type" checked/>
+    <br />
+    <label for="office">Оффисный</label>
+    <input id="office" type="radio" name="type"/>
+    <br />
+    <label for="video">Для видеомонтажа</label>
+    <input id="video" type="radio" name="type"/>
+    <br />
+    <label for="maining">Для майнинга</label>
+    <input id="maining" type="radio" name="type" />
+
+    <br /><br />
+    <button id="send-gpt-button">Собрать</button>
+</p>
+
+<p id="gpt-result">
+    <div id="load-animation" hidden>
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Загрузка...</span>
+        </div>
+    </div>
+</p>
+
+<script>
+    const btn = document.getElementById("send-gpt-button");
+    var result_area = document.getElementById("gpt-result");
+    var load_area = document.getElementById("load-animation");
+
+    btn.addEventListener("click", send_gpt);
+
+    async function send_gpt() {
+        set_load_state();
+
+        var system_type = "Игровой"; // значение по умолчанию
+        var radio = document.getElementsByName("type");
+        radio.forEach((e) => {
+            if (e.checked) {
+                system_type = $("label[for='" + e.id + "']").text();
+            }
+        })
+
+        var gpu = document.getElementById("gpu-input").value;
+        var ozu = document.getElementById("ozu-input").value;
+
+        console.log(gpu, ozu, system_type);
+
+        var request = new XMLHttpRequest();
+        request.open("GET", "/Gpt/gpt_build/?ozu=" + ozu + "&gpu=" + gpu + "&type=" + system_type);
+        request.send();
+
+        request.onreadystatechange = function () {
+            if (request.readyState != 4
+                || request.responseText == null) {
+                return;
+            }
+
+            var obj = JSON.parse(request.response);
+            var res = obj["choices"][0]["message"]["content"].replace("\n", "<br>");
+
+            set_active_state()
+            result_area.innerHTML = res;
+        }
+
+        function set_load_state() {
+            result_area.innerHTML = "";
+            btn.setAttribute('disabled', '');
+            load_area.removeAttribute("hidden");
+        }
+
+        function set_active_state() {
+            btn.removeAttribute('disabled');
+            load_area.setAttribute('hidden', '');
+        }
+
+    }
+</script>

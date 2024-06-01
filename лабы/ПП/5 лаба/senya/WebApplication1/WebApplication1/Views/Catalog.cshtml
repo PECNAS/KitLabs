@@ -1,0 +1,13 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@foreach (var seg in ViewBag.segments)
+{
+    <h1>@seg.Title</h1>
+    <p>@seg.Description</p>
+    <a href="~/Catalog/Segment?seg_id=@seg.Id">Заинтересовало?</a>
+
+    <br /><hr /><br />
+}

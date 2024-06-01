@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Statement_curatorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Curator">
+    <Key>
+      <PropertyRef Name="Curator_ID" />
+    </Key>
+    <Property Name="Curator_ID" Type="Int32" Nullable="false" />
+    <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Contact_Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Student" Relationship="Self.FK__Student__Curator__267ABA7A" FromRole="Curator" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Health_Card">
+    <Key>
+      <PropertyRef Name="Record_ID" />
+    </Key>
+    <Property Name="Record_ID" Type="Int32" Nullable="false" />
+    <Property Name="Student_ID" Type="Int32" />
+    <Property Name="Record_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Date_of_Record" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Student" Relationship="Self.FK__Health_Ca__Stude__30F848ED" FromRole="Health_Card" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Parents">
+    <Key>
+      <PropertyRef Name="Parent_ID" />
+    </Key>
+    <Property Name="Parent_ID" Type="Int32" Nullable="false" />
+    <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Contact_Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Workplace" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Student" Relationship="Self.Student_Parent_Relationship" FromRole="Parents" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Student_ID" />
+    </Key>
+    <Property Name="Student_ID" Type="Int32" Nullable="false" />
+    <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Group_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Date_of_Birth" Type="DateTime" Precision="0" />
+    <Property Name="Cell_Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="Curator_ID" Type="Int32" />
+    <NavigationProperty Name="Curator" Relationship="Self.FK__Student__Curator__267ABA7A" FromRole="Student" ToRole="Curator" />
+    <NavigationProperty Name="Health_Card" Relationship="Self.FK__Health_Ca__Stude__30F848ED" FromRole="Student" ToRole="Health_Card" />
+    <NavigationProperty Name="Summary_Ledger" Relationship="Self.FK__Summary_L__Stude__2B3F6F97" FromRole="Student" ToRole="Summary_Ledger" />
+    <NavigationProperty Name="Parents" Relationship="Self.Student_Parent_Relationship" FromRole="Student" ToRole="Parents" />
+  </EntityType>
+  <EntityType Name="Summary_Ledger">
+    <Key>
+      <PropertyRef Name="Ledger_ID" />
+    </Key>
+    <Property Name="Ledger_ID" Type="Int32" Nullable="false" />
+    <Property Name="Student_ID" Type="Int32" />
+    <Property Name="Teacher_ID" Type="Int32" />
+    <Property Name="Grade" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Semester" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Student" Relationship="Self.FK__Summary_L__Stude__2B3F6F97" FromRole="Summary_Ledger" ToRole="Student" />
+    <NavigationProperty Name="Teachers" Relationship="Self.FK__Summary_L__Teach__2C3393D0" FromRole="Summary_Ledger" ToRole="Teachers" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Teachers">
+    <Key>
+      <PropertyRef Name="Teacher_ID" />
+    </Key>
+    <Property Name="Teacher_ID" Type="Int32" Nullable="false" />
+    <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Summary_Ledger" Relationship="Self.FK__Summary_L__Teach__2C3393D0" FromRole="Teachers" ToRole="Summary_Ledger" />
+  </EntityType>
+  <Association Name="FK__Student__Curator__267ABA7A">
+    <End Role="Curator" Type="Self.Curator" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Curator">
+        <PropertyRef Name="Curator_ID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="Curator_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Health_Ca__Stude__30F848ED">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Health_Card" Type="Self.Health_Card" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Student_ID" />
+      </Principal>
+      <Dependent Role="Health_Card">
+        <PropertyRef Name="Student_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Summary_L__Stude__2B3F6F97">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Summary_Ledger" Type="Self.Summary_Ledger" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Student_ID" />
+      </Principal>
+      <Dependent Role="Summary_Ledger">
+        <PropertyRef Name="Student_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Summary_L__Teach__2C3393D0">
+    <End Role="Teachers" Type="Self.Teachers" Multiplicity="0..1" />
+    <End Role="Summary_Ledger" Type="Self.Summary_Ledger" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teachers">
+        <PropertyRef Name="Teacher_ID" />
+      </Principal>
+      <Dependent Role="Summary_Ledger">
+        <PropertyRef Name="Teacher_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Student_Parent_Relationship">
+    <End Role="Parents" Type="Self.Parents" Multiplicity="*" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="Statement_curatorEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Curator" EntityType="Self.Curator" />
+    <EntitySet Name="Health_Card" EntityType="Self.Health_Card" />
+    <EntitySet Name="Parents" EntityType="Self.Parents" />
+    <EntitySet Name="Student" EntityType="Self.Student" />
+    <EntitySet Name="Summary_Ledger" EntityType="Self.Summary_Ledger" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Teachers" EntityType="Self.Teachers" />
+    <AssociationSet Name="FK__Student__Curator__267ABA7A" Association="Self.FK__Student__Curator__267ABA7A">
+      <End Role="Curator" EntitySet="Curator" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Health_Ca__Stude__30F848ED" Association="Self.FK__Health_Ca__Stude__30F848ED">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Health_Card" EntitySet="Health_Card" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Summary_L__Stude__2B3F6F97" Association="Self.FK__Summary_L__Stude__2B3F6F97">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Summary_Ledger" EntitySet="Summary_Ledger" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Summary_L__Teach__2C3393D0" Association="Self.FK__Summary_L__Teach__2C3393D0">
+      <End Role="Teachers" EntitySet="Teachers" />
+      <End Role="Summary_Ledger" EntitySet="Summary_Ledger" />
+    </AssociationSet>
+    <AssociationSet Name="Student_Parent_Relationship" Association="Self.Student_Parent_Relationship">
+      <End Role="Parents" EntitySet="Parents" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

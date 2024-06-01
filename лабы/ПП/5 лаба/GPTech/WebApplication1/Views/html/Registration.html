@@ -1,0 +1,81 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+    <link rel="stylesheet" href="D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <link rel="stylesheet" href="D:\Documents\КИТ\2 курс\лабы\ПП\5 лаба\GPTech\WebApplication1\wwwroot/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+<div class="login-form-container">
+    <h2>Войдите в свой аккаунт</h2>
+    <br>
+    <form method="post" action="~/Registration/Registration">
+        <table>
+            <tbody class="login-form">
+                <tr>
+                    <div class="login-form-row">
+                        <td>
+                            <label class="data-label">Email</label>
+                        </td>
+                        <td>
+                            <input placeholder="Email" class="data-input" name="email" type="text" />
+                        </td>
+                    </div>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <div class="login-form-row">
+                        <td>
+                            <label class="data-label">Пароль&nbsp;</label>
+                        </td>
+                        <td>
+                            <input placeholder="Пароль" class="data-input" id="psswd1" name="psswd" type="password" />
+                        </td>
+                    </div>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <div class="login-form-row">
+                        <td>
+                            <label class="data-label">Пароль&nbsp;&nbsp;&nbsp;</label>
+                        </td>
+                        <td>
+                            <input id="psswd2" placeholder="Пароль" class="data-input" type="password" />
+                        </td>
+                    </div>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+            </tbody>
+        </table>
+        <input disabled id="submit-button" type="submit" />
+    </form>
+</div>
+
+
+
+<script>
+    var psswd1 = document.querySelector("#psswd1");
+    var psswd2 = document.querySelector("#psswd2");
+
+    psswd2.onkeyup = function (e) {
+        var btn = document.querySelector("#submit-button");
+        if (psswd1.value == psswd2.value && psswd1.value != "") {
+            btn.removeAttribute('disabled');
+        } else {
+            btn.setAttribute('disabled', '');
+        }
+    }
+
+    psswd1.onkeyup = function (e) {
+        var btn = document.querySelector("#submit-button");
+        if (psswd1.value == psswd2.value && psswd1.value != "") {
+            btn.removeAttribute('disabled');
+        } else {
+            btn.setAttribute('disabled', '');
+        }
+    }
+</script>

@@ -1,0 +1,81 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="{Binding ElementName=lbColors, Path=SelectedValue}">
+    <Window.Resources>
+        <x:Array x:Key="MyColors" Type="{x:Type SolidColorBrush}">
+            <SolidColorBrush Color="White"/>
+            <SolidColorBrush Color="Green"/>
+            <SolidColorBrush Color="Yellow"/>
+            <SolidColorBrush Color="Red"/>
+        </x:Array>
+        <Style TargetType="Menu">
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="Height" Value="20"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="DockPanel.Dock" Value="Top"></Setter>
+            <EventSetter Event="MouseLeave" Handler="Button_MouseLeave"></EventSetter>
+        </Style>
+        <Style TargetType="MenuItem">
+            <EventSetter Event="MouseLeave" Handler="Button_MouseLeave"></EventSetter>
+        </Style>
+        <Style TargetType="StatusBar">
+            <Setter Property="DockPanel.Dock" Value="Bottom"></Setter>
+            <Setter Property="Height" Value="23"></Setter>
+            <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="JustButton">
+            <Setter Property="Height" Value="100"></Setter>
+            <Setter Property="Width" Value="100"></Setter>
+            <Setter Property="VerticalAlignment" Value="Top"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <EventSetter Event="MouseLeave" Handler="Button_MouseLeave"></EventSetter>
+        </Style>
+        <Style TargetType="ToolBar">
+            <Setter Property="Height" Value="100"></Setter>
+            <Setter Property="DockPanel.Dock" Value="Top"></Setter>
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="Margin" Value="0,0,458,0"></Setter>
+        </Style>
+        <Style TargetType="Button" BasedOn="{StaticResource JustButton}" x:Key="Info">
+            <EventSetter Event="Click" Handler="MenuItemAbout_Click"></EventSetter>
+            <EventSetter Event="MouseEnter" Handler="ButtonInfo_MouseEnter"></EventSetter>
+        </Style>
+        <Style TargetType="Button" BasedOn="{StaticResource JustButton}" x:Key="Close">
+            <EventSetter Event="Click" Handler="MenuItemClose_Click"></EventSetter>
+            <EventSetter Event="MouseEnter" Handler="ButtonClose_MouseEnter"></EventSetter>
+        </Style>
+        <Style TargetType="ListBox">
+            <EventSetter Event="MouseEnter" Handler="ButtonColor_MouseEnter"></EventSetter>
+            <EventSetter Event="MouseLeave" Handler="Button_MouseLeave"></EventSetter>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <Menu>
+            <MenuItem Header="_Меню" >
+                <MenuItem Header="_Сменить фон" MouseEnter="ButtonColor_MouseEnter">
+                    <ListBox x:Name="lbColors2" ItemsSource="{StaticResource MyColors}"/>
+                </MenuItem>
+                <MenuItem Header="_О создателе" Click="MenuItemAbout_Click" MouseEnter="ButtonInfo_MouseEnter"/>
+                <Separator />
+                <MenuItem Header="_Закрыть"  Click="MenuItemClose_Click" MouseEnter="ButtonClose_MouseEnter"/>
+            </MenuItem>
+        </Menu>
+        <ToolBar>
+            <ListBox x:Name="lbColors" ItemsSource="{StaticResource MyColors}" SelectedItem="{Binding ElementName=lbColors2, Path=SelectedItem}" />
+            <Button Style="{StaticResource Info}">
+                <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Info_Simple_bw.svg/1024px-Info_Simple_bw.svg.png"/>
+            </Button>
+            <Button Style="{StaticResource Close}">
+                <Image Source="https://w7.pngwing.com/pngs/766/422/png-transparent-no-symbol-scalable-graphics-drug-free-angle-text-logo-thumbnail.png" />
+            </Button>
+        </ToolBar>
+        <StatusBar>
+            <TextBlock Name="Stat" Text="Ожидание..." />
+        </StatusBar>
+    </DockPanel>
+</Window>

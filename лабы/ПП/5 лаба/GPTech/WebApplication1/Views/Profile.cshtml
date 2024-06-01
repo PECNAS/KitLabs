@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Личный кабинет";
+}
+
+@if (ViewBag.user != null)
+{
+    <span>Почта: <em>@ViewBag.user.Email</em> </span>
+    <br />
+    @if (ViewBag.cart.Count != 0)
+    {
+        <span>Корзина: </span>
+        <ol>
+            @foreach(var item in ViewBag.cart)
+            {
+                <li>
+                    <a>Название: @item.Key.Title</a>
+                    <br />
+                    <a>Описание: @item.Key.Description</a>
+                    <br />
+                    <a>Цена: @item.Key.Price</a>
+                    <br />
+                    <a>Количество: @item.Value</a>
+                </li>
+                <br/>
+            }
+        </ol>
+        <form method="post" action="~/Profile/BuyAll">
+            <input type="submit" value="Купить"/>
+        </form>
+    } else
+    {
+        <span>Корзина пустая</span>
+    }
+}
+<br /><br /><br />
+<form method="post" action="~/Profile/Update">
+    <label>Изменить пароль</label><br />
+    <input name="psswd" type="password"/>
+
+    <br /><br />
+    <input type="submit" />
+</form>
+
+<br /><br />
+<a href="~/Login/Delete">Удалить профиль</a>

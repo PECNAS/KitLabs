@@ -1,0 +1,14 @@
+C:\Users\busov\Documents\лабы\2 курс\c#\lab1\bin\Debug\net7.0\lab1.exe
+C:\Users\busov\Documents\лабы\2 курс\c#\lab1\bin\Debug\net7.0\lab1.deps.json
+C:\Users\busov\Documents\лабы\2 курс\c#\lab1\bin\Debug\net7.0\lab1.runtimeconfig.json
+C:\Users\busov\Documents\лабы\2 курс\c#\lab1\bin\Debug\net7.0\lab1.dll
+C:\Users\busov\Documents\лабы\2 курс\c#\lab1\bin\Debug\net7.0\lab1.pdb
+C:\Users\busov\Documents\лабы\2 курс\c#\lab1\obj\Debug\net7.0\lab1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\busov\Documents\лабы\2 курс\c#\lab1\obj\Debug\net7.0\lab1.AssemblyInfoInputs.cache
+C:\Users\busov\Documents\лабы\2 курс\c#\lab1\obj\Debug\net7.0\lab1.AssemblyInfo.cs
+C:\Users\busov\Documents\лабы\2 курс\c#\lab1\obj\Debug\net7.0\lab1.csproj.CoreCompileInputs.cache
+C:\Users\busov\Documents\лабы\2 курс\c#\lab1\obj\Debug\net7.0\lab1.dll
+C:\Users\busov\Documents\лабы\2 курс\c#\lab1\obj\Debug\net7.0\refint\lab1.dll
+C:\Users\busov\Documents\лабы\2 курс\c#\lab1\obj\Debug\net7.0\lab1.pdb
+C:\Users\busov\Documents\лабы\2 курс\c#\lab1\obj\Debug\net7.0\lab1.genruntimeconfig.cache
+C:\Users\busov\Documents\лабы\2 курс\c#\lab1\obj\Debug\net7.0\ref\lab1.dll

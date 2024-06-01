@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Home controller Test";
+}
+<a href="/">Назад</a><br><br>
+<form method="post">
+    <label>Введите строку: </label>
+    <input type="text" name="row"/><br />
+
+    <input type="submit" />
+</form>
+
+<p>
+    <label>Строка, в которой полностью удалены буквы "с" выглядит так: <b>@ViewBag.result</b></label>
+</p>

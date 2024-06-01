@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApp1.InsertWindows.HistoryInsertWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.InsertWindows"
+        mc:Ignorable="d"
+        Title="HistoryInsertWindow" Height="450" Width="800">
+    <Grid Background="#F0F0F0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <Label Content="Id заявки"/>
+            <TextBox Name="HistoryAppId"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="3">
+            <Label Content="Id исполнителя"/>
+            <TextBox Name="HistoryExecId"/>
+        </StackPanel>
+
+        <Button Grid.Row="5" Grid.Column="2" Content="Добавить" Click="Button_Click"/>
+    </Grid>
+</Window>

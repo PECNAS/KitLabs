@@ -1,0 +1,38 @@
+﻿<Window x:Class="CanvasApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CanvasApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#F0F0F0">
+        <DockPanel>
+            <InkCanvas Width="650" Name="canv" >
+                <InkCanvas.DefaultDrawingAttributes>
+                    <DrawingAttributes Color="Red" Height="1" Width="1"/>
+                </InkCanvas.DefaultDrawingAttributes>
+            </InkCanvas>
+            <WrapPanel Orientation="Vertical">
+                <ComboBox MouseLeave="ColorHandler" Name="combo_box" SelectedIndex="0">
+                    <ComboBoxItem  Content="Red"/>
+                    <ComboBoxItem Content="Green"/>
+                    <ComboBoxItem Content="Blue"/>
+                </ComboBox>
+                <Separator/>
+                <RadioButton Click="RadioHandler" GroupName="state" Name="RB_1">Рисование</RadioButton>
+                <RadioButton Click="RadioHandler" GroupName="state" Name="RB_2">Редактирование</RadioButton>
+                <RadioButton Click="RadioHandler" GroupName="state" Name="RB_3">Удаление</RadioButton>
+                <RadioButton Click="RadioHandler" GroupName="state" Name="RB_4">Удаление объекта</RadioButton>
+
+                <Separator/>
+                <WrapPanel Orientation="Horizontal">
+                    <Label>Размер кисти:</Label>
+                    <Label Name="draw_size">1</Label>
+                </WrapPanel>
+                <Slider Minimum="1" Maximum="10" ValueChanged="Slider_ValueChanged"></Slider>
+            </WrapPanel>
+        </DockPanel>
+
+    </Grid>
+</Window>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="script2.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<p>Программа предназначена для упрощения вычислений с матрицами</p>
+	<div class="create-first-matrix">
+		<table>
+			<thead>Введите матрицу</thead>
+			<tbody>
+				<tr>
+					<td><input class="el-input" type="number"></td>
+					<td><input class="el-input" type="number"></td>
+				</tr>
+				<tr>
+					<td><input class="el-input" type="number"></td>
+					<td><input class="el-input" type="number"></td>
+				</tr>
+			</tbody>
+		</table>
+		<button id="create-matrix" onclick="create_matrix(document.querySelector('#create-matrix'));">Создать матрицу</button>
+	</div>
+
+	<br><br>
+
+	<div class="create-second-matrix">
+		<table>
+			<thead>Введите дополнительную матрицу</thead>
+			<tbody>
+				<tr>
+					<td><input class="second-el-input" type="number"></td>
+					<td><input class="second-el-input" type="number"></td>
+				</tr>
+				<tr>
+					<td><input class="second-el-input" type="number"></td>
+					<td><input class="second-el-input" type="number"></td>
+				</tr>
+			</tbody>
+		</table>
+		<button id="create-second-matrix" onclick="create_matrix(document.querySelector('#create-second-matrix'));">Создать матрицу</button>
+	</div>
+
+	<br><br>
+
+	<div class="user-first-matrix">
+		<table>
+			<thead>Ваша матрица</thead>
+			<tbody>
+				<tr>
+					<td class="user-first-matrix-el">-</td>
+					<td class="user-first-matrix-el">-</td>
+				</tr>
+				<tr>
+					<td class="user-first-matrix-el">-</td>
+					<td class="user-first-matrix-el">-</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="user-second-matrix">
+		<table>
+			<thead>Вторая матрица</thead>
+			<tbody>
+				<tr>
+					<td class="user-second-matrix-el">-</td>
+					<td class="user-second-matrix-el">-</td>
+				</tr>
+				<tr>
+					<td class="user-second-matrix-el">-</td>
+					<td class="user-second-matrix-el">-</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="interface">
+		<ol>
+			<li>
+				<button onclick="add_matrix();">Сложить</button>
+			</li>
+			<li>
+				<button onclick="multiNumber_matrix();">Умножить на число</button>
+				<input type="number" id="multiNumber">
+			</li>
+			<li>
+				<button onclick="sub_matrix();">Вычесть</button>
+			</li>
+			<li>
+				<button onclick="multi_matrix();">Умножить на матрицу</button>
+			</li>
+			<li>
+				<button onclick="det_matrix();">Определитель</button>
+			</li>
+			<li>
+				<button onclick="transpon_matrix();">Транспонировать</button>
+			</li>
+			<li>
+				<button onclick="inverse_matrix();">Найти обратную</button>
+			</li>
+		</ol>
+	</div>
+	<hr>
+	<marquee>3 лаба</marquee>
+	<hr>
+</body>
+</html>

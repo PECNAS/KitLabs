@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище trizbd_bdModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "trizbd_bd.dbo.Attendance" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="Attendance">
+          <Property Name="id_event" Type="int" />
+          <Property Name="id_student" Type="int" />
+        </EntityType>-->
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="event_id" />
+          </Key>
+          <Property Name="event_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="event_title" Type="nvarchar" MaxLength="255" />
+          <Property Name="kind_of_event" Type="nvarchar" MaxLength="255" />
+          <Property Name="event_date" Type="nvarchar" MaxLength="50" />
+          <Property Name="event_time" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Groups">
+          <Key>
+            <PropertyRef Name="group_number" />
+          </Key>
+          <Property Name="group_number" Type="int" Nullable="false" />
+          <Property Name="profession" Type="nvarchar" MaxLength="255" />
+          <Property Name="instructor_id" Type="int" />
+          <Property Name="number_of_people" Type="int" />
+        </EntityType>
+        <EntityType Name="Instructor">
+          <Key>
+            <PropertyRef Name="instructor_id" />
+          </Key>
+          <Property Name="instructor_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="surname" Type="nvarchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" />
+          <Property Name="first_name" Type="nvarchar" MaxLength="255" />
+          <Property Name="birth_date" Type="nvarchar" MaxLength="50" />
+          <Property Name="telephone_number" Type="nvarchar" MaxLength="11" />
+          <Property Name="password" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="id_student" />
+          </Key>
+          <Property Name="id_student" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="surname" Type="nvarchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" />
+          <Property Name="first_name" Type="nvarchar" MaxLength="255" />
+          <Property Name="group_number" Type="int" />
+          <Property Name="telephone_number" Type="nvarchar" MaxLength="11" />
+          <Property Name="city_of_registration" Type="nvarchar" MaxLength="255" />
+          <Property Name="birth_date" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="subject_id" />
+          </Key>
+          <Property Name="subject_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hours_in_week" Type="int" />
+          <Property Name="group_number" Type="int" />
+          <Property Name="subject_name" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Timetable">
+          <Key>
+            <PropertyRef Name="class_id" />
+          </Key>
+          <Property Name="class_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="group_number" Type="int" />
+          <Property Name="subject_id" Type="int" />
+          <Property Name="time_timetable" Type="nvarchar" MaxLength="255" />
+          <Property Name="audience" Type="int" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+ошибка 6004: Невозможно найти таблицу "trizbd_bd.dbo.Attendance", на которую ссылается связь.
+        <Association Name="FK__Attendanc__id_ev__4222D4EF" />-->
+        <!--Ошибки, обнаруженные при создании:
+ошибка 6004: Невозможно найти таблицу "trizbd_bd.dbo.Attendance", на которую ссылается связь.
+        <Association Name="FK__Attendanc__id_st__4316F928" />-->
+        <Association Name="FK__Groups__instruct__3D5E1FD2">
+          <End Role="Instructor" Type="Self.Instructor" Multiplicity="0..1" />
+          <End Role="Groups" Type="Self.Groups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Instructor">
+              <PropertyRef Name="instructor_id" />
+            </Principal>
+            <Dependent Role="Groups">
+              <PropertyRef Name="instructor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Student__group_n__403A8C7D">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="group_number" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="group_number" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Timetable__group__45F365D3">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+          <End Role="Timetable" Type="Self.Timetable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="group_number" />
+            </Principal>
+            <Dependent Role="Timetable">
+              <PropertyRef Name="group_number" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Timetable__subje__46E78A0C">
+          <End Role="Subject" Type="Self.Subject" Multiplicity="0..1" />
+          <End Role="Timetable" Type="Self.Timetable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subject">
+              <PropertyRef Name="subject_id" />
+            </Principal>
+            <Dependent Role="Timetable">
+              <PropertyRef Name="subject_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище trizbd_bdModelContainer">
+          <EntitySet Name="Event" EntityType="Self.Event" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Groups" EntityType="Self.Groups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Instructor" EntityType="Self.Instructor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Subject" EntityType="Self.Subject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Timetable" EntityType="Self.Timetable" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Groups__instruct__3D5E1FD2" Association="Self.FK__Groups__instruct__3D5E1FD2">
+            <End Role="Instructor" EntitySet="Instructor" />
+            <End Role="Groups" EntitySet="Groups" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Student__group_n__403A8C7D" Association="Self.FK__Student__group_n__403A8C7D">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Timetable__group__45F365D3" Association="Self.FK__Timetable__group__45F365D3">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Timetable" EntitySet="Timetable" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Timetable__subje__46E78A0C" Association="Self.FK__Timetable__subje__46E78A0C">
+            <End Role="Subject" EntitySet="Subject" />
+            <End Role="Timetable" EntitySet="Timetable" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="trizbd_bdModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="event_id" />
+          </Key>
+          <Property Name="event_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="event_title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="kind_of_event" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="event_date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="event_time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Groups">
+          <Key>
+            <PropertyRef Name="group_number" />
+          </Key>
+          <Property Name="group_number" Type="Int32" Nullable="false" />
+          <Property Name="profession" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="instructor_id" Type="Int32" />
+          <Property Name="number_of_people" Type="Int32" />
+          <NavigationProperty Name="Instructor" Relationship="Self.FK__Groups__instruct__3D5E1FD2" FromRole="Groups" ToRole="Instructor" />
+          <NavigationProperty Name="Student" Relationship="Self.FK__Student__group_n__403A8C7D" FromRole="Groups" ToRole="Student" />
+          <NavigationProperty Name="Timetable" Relationship="Self.FK__Timetable__group__45F365D3" FromRole="Groups" ToRole="Timetable" />
+        </EntityType>
+        <EntityType Name="Instructor">
+          <Key>
+            <PropertyRef Name="instructor_id" />
+          </Key>
+          <Property Name="instructor_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="surname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="first_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="birth_date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="telephone_number" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Groups" Relationship="Self.FK__Groups__instruct__3D5E1FD2" FromRole="Instructor" ToRole="Groups" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="id_student" />
+          </Key>
+          <Property Name="id_student" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="surname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="first_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="group_number" Type="Int32" />
+          <Property Name="telephone_number" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="city_of_registration" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="birth_date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Groups" Relationship="Self.FK__Student__group_n__403A8C7D" FromRole="Student" ToRole="Groups" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="subject_id" />
+          </Key>
+          <Property Name="subject_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hours_in_week" Type="Int32" />
+          <Property Name="group_number" Type="Int32" />
+          <Property Name="subject_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Timetable" Relationship="Self.FK__Timetable__subje__46E78A0C" FromRole="Subject" ToRole="Timetable" />
+        </EntityType>
+        <EntityType Name="Timetable">
+          <Key>
+            <PropertyRef Name="class_id" />
+          </Key>
+          <Property Name="class_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="group_number" Type="Int32" />
+          <Property Name="subject_id" Type="Int32" />
+          <Property Name="time_timetable" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="audience" Type="Int32" />
+          <NavigationProperty Name="Groups" Relationship="Self.FK__Timetable__group__45F365D3" FromRole="Timetable" ToRole="Groups" />
+          <NavigationProperty Name="Subject" Relationship="Self.FK__Timetable__subje__46E78A0C" FromRole="Timetable" ToRole="Subject" />
+        </EntityType>
+        <Association Name="FK__Groups__instruct__3D5E1FD2">
+          <End Role="Instructor" Type="Self.Instructor" Multiplicity="0..1" />
+          <End Role="Groups" Type="Self.Groups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Instructor">
+              <PropertyRef Name="instructor_id" />
+            </Principal>
+            <Dependent Role="Groups">
+              <PropertyRef Name="instructor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Student__group_n__403A8C7D">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="group_number" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="group_number" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Timetable__group__45F365D3">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+          <End Role="Timetable" Type="Self.Timetable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="group_number" />
+            </Principal>
+            <Dependent Role="Timetable">
+              <PropertyRef Name="group_number" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Timetable__subje__46E78A0C">
+          <End Role="Subject" Type="Self.Subject" Multiplicity="0..1" />
+          <End Role="Timetable" Type="Self.Timetable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subject">
+              <PropertyRef Name="subject_id" />
+            </Principal>
+            <Dependent Role="Timetable">
+              <PropertyRef Name="subject_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="trizbd_bdEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Event" EntityType="Self.Event" />
+          <EntitySet Name="Groups" EntityType="Self.Groups" />
+          <EntitySet Name="Instructor" EntityType="Self.Instructor" />
+          <EntitySet Name="Student" EntityType="Self.Student" />
+          <EntitySet Name="Subject" EntityType="Self.Subject" />
+          <EntitySet Name="Timetable" EntityType="Self.Timetable" />
+          <AssociationSet Name="FK__Groups__instruct__3D5E1FD2" Association="Self.FK__Groups__instruct__3D5E1FD2">
+            <End Role="Instructor" EntitySet="Instructor" />
+            <End Role="Groups" EntitySet="Groups" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Student__group_n__403A8C7D" Association="Self.FK__Student__group_n__403A8C7D">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Timetable__group__45F365D3" Association="Self.FK__Timetable__group__45F365D3">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Timetable" EntitySet="Timetable" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Timetable__subje__46E78A0C" Association="Self.FK__Timetable__subje__46E78A0C">
+            <End Role="Subject" EntitySet="Subject" />
+            <End Role="Timetable" EntitySet="Timetable" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище trizbd_bdModelContainer" CdmEntityContainer="trizbd_bdEntities1">
+          <EntitySetMapping Name="Event">
+            <EntityTypeMapping TypeName="trizbd_bdModel.Event">
+              <MappingFragment StoreEntitySet="Event">
+                <ScalarProperty Name="event_id" ColumnName="event_id" />
+                <ScalarProperty Name="event_title" ColumnName="event_title" />
+                <ScalarProperty Name="kind_of_event" ColumnName="kind_of_event" />
+                <ScalarProperty Name="event_date" ColumnName="event_date" />
+                <ScalarProperty Name="event_time" ColumnName="event_time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Groups">
+            <EntityTypeMapping TypeName="trizbd_bdModel.Groups">
+              <MappingFragment StoreEntitySet="Groups">
+                <ScalarProperty Name="group_number" ColumnName="group_number" />
+                <ScalarProperty Name="profession" ColumnName="profession" />
+                <ScalarProperty Name="instructor_id" ColumnName="instructor_id" />
+                <ScalarProperty Name="number_of_people" ColumnName="number_of_people" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Instructor">
+            <EntityTypeMapping TypeName="trizbd_bdModel.Instructor">
+              <MappingFragment StoreEntitySet="Instructor">
+                <ScalarProperty Name="instructor_id" ColumnName="instructor_id" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="first_name" ColumnName="first_name" />
+                <ScalarProperty Name="birth_date" ColumnName="birth_date" />
+                <ScalarProperty Name="telephone_number" ColumnName="telephone_number" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Student">
+            <EntityTypeMapping TypeName="trizbd_bdModel.Student">
+              <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="id_student" ColumnName="id_student" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="first_name" ColumnName="first_name" />
+                <ScalarProperty Name="group_number" ColumnName="group_number" />
+                <ScalarProperty Name="telephone_number" ColumnName="telephone_number" />
+                <ScalarProperty Name="city_of_registration" ColumnName="city_of_registration" />
+                <ScalarProperty Name="birth_date" ColumnName="birth_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subject">
+            <EntityTypeMapping TypeName="trizbd_bdModel.Subject">
+              <MappingFragment StoreEntitySet="Subject">
+                <ScalarProperty Name="subject_id" ColumnName="subject_id" />
+                <ScalarProperty Name="hours_in_week" ColumnName="hours_in_week" />
+                <ScalarProperty Name="group_number" ColumnName="group_number" />
+                <ScalarProperty Name="subject_name" ColumnName="subject_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Timetable">
+            <EntityTypeMapping TypeName="trizbd_bdModel.Timetable">
+              <MappingFragment StoreEntitySet="Timetable">
+                <ScalarProperty Name="class_id" ColumnName="class_id" />
+                <ScalarProperty Name="group_number" ColumnName="group_number" />
+                <ScalarProperty Name="subject_id" ColumnName="subject_id" />
+                <ScalarProperty Name="time_timetable" ColumnName="time_timetable" />
+                <ScalarProperty Name="audience" ColumnName="audience" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
