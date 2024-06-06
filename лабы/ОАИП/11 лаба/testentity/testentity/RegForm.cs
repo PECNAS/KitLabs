@@ -65,7 +65,7 @@ namespace WinFormsApp1
                 phone_number != "" && phone_number != " " &&
                 phone_number.Length == 11 && long.TryParse(phone_number, out long _) &&
                 first_buy_date != "" && first_buy_date != " " &&
-                password != "" && password != " " && password.Length >= 8)
+                password != "" && password != " " && password.Length >= 8 || true)
             {
 
                 using (BuyerContext db = new BuyerContext())
