@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Templates\AuthWidget.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\CarsWidget.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\DetailsWindows\CarDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\DetailsWindows\InstructorDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\DetailsWindows\StudentDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\DetailsWindows\TicketDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\InstructorsWidget.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\MainWidget.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\StudentsWidget.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\TicketsWidget.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\AuthWidget.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\CarsWidget.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\DBLoading.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\DetailsWindows\CarDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\DetailsWindows\InstructorDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\DetailsWindows\StudentDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\DetailsWindows\TicketDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\InstructorsWidget.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\MainWidget.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\StudentsWidget.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\TicketsWidget.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

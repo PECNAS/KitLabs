@@ -1,0 +1,39 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                     Transient Analysis of circuit105                     ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Maximum Run Time           2u
+Output Start Time (tstart) 0
+Maximum Time Step          0
+Number of Points           51
+Temperature                Linear 27
+Retrace Runs               1
+Run Options                Normal
+State Variables            Leave
+Operating Point            On
+Operating Point Only       Off
+Auto Scale Ranges          Off
+Accumulate Plots           Off
+Fixed Time Step            Off
+Periodic Steady State      Off
+Ignore Expression Errors   Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Digital States
+=================================
+Node     State Node     State Node     State Node     State Node     State
+1        1     QM_BAR   1     QM       0     CLK      0     S        0    
+R        0     7        1     8        1     QS_BAR   1     QS       0    
+11       0     INIT     0    
+

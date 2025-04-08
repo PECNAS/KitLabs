@@ -1,0 +1,1619 @@
+**************************************************************************
+*
+* Библиотека русских элементов v1.5
+* Микросхемы серии K155, K555
+*
+* Авторы:
+* Студенты гр.5001:
+*       Виноградова Анастасия
+*       Сидорков Вячеслав (Silver)
+*
+* 17/01/2003г
+*
+* Пожелания и дополнения шлите на silver@smtp.ru
+*
+**************************************************************************
+
+
+
+* ----------------------------------------------------------- K555TV9 ------
+*  
+*  Два JK триггера.
+*  Based on 74LS112A (Dual Negative Edge-Triggered J-K Flip-Flop With Clear And Preset)
+*  Ноги: S-4 R-15 C-1 J-3 K-2 Q-5 Qbar-6
+*
+.SUBCKT K555TV9 4 15 1 3 2 5 6
++     optional:  DPWR=$G_DPWR DGND=$G_DGND
++     params:    MNTYMXDLY=0 IO_LEVEL=0
+
+U1 JKFF(1) DPWR DGND
++     4 15 1
++     3 2
++     5 6
++     DLY_LS112 IO_LS00 MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+.model DLY_LS112 ueff (tppcqlhTY=15ns tppcqlhMX=20ns
++                      tppcqhlTY=15ns tppcqhlMX=20ns
++                      tpclkqlhTY=15ns tpclkqlhMX=20ns
++                      tpclkqhlTY=15ns tpclkqhlMX=20ns
++                      twpclMN=25ns twclkhMN=20ns tsudclkMN=20ns)
+
+.ENDS K555TV9
+
+* ----------------------------------------------------------- K555TR2 ------
+*  
+*  Четыре RS триггера-защелки
+*  Based on 74LS279A (Quad SBAR-RBAR Latches)
+*  Ноги: 1R-1 1S1-2 1S2-3 1Q-4 2R-5 2S-6 2Q-7
+*
+.SUBCKT K555TR2 1 2 3 5 6 4 7
++     optional: DPWR=$G_DPWR DGND=$G_DGND
++     params: MNTYMXDLY=0 IO_LEVEL=0
+
+U1 nand(3) DPWR DGND
++     2 3 1
++     1Q_O
++     D0_GATE IO_LS MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+U2 nanda(2,3) DPWR DGND
++     1 1Q_O 5 2Q_O 6 2R
++     1R 2R 2Q_O
++     D0_GATE IO_LS MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+U3DLY PINDLY(2,0,5) DWPR DGND
++     1Q_O 2Q_O
++     1 2 3 5 6
++     4 7
++     IO_LS MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++  BOOLEAN:
++     1SCH = {CHANGED(2,0) | CHANGED(3,0)}
++     1RCH = {CHANGED(1,0)}
++     2SCH = {CHANGED(6,0)}
++     2RCH = {CHANGED(5,0)}
++
++  PINDLY:
++     4 = {
++       CASE(
++         1RCH & TRN_HL, DELAY(-1,15ns,27ns),
++         1SCH & TRN_HL, DELAY(-1,13ns,21ns),
++         1SCH & TRN_LH, DELAY(-1,12ns,22ns),
++         DELAY(-1,16ns,28ns))}
++
++     7 = {
++       CASE(
++         2RCH & TRN_HL, DELAY(-1,15ns,27ns),
++         2SCH & TRN_HL, DELAY(-1,13ns,21ns),
++         2SCH & TRN_LH, DELAY(-1,12ns,22ns),
++         DELAY(-1,16ns,28ns))}
+
+U4CON CONSTRAINT(5) DPWR DGND
++     1 2 3 5 6
++     IO_LS IO_LEVEL={IO_LEVEL}
++
++  WIDTH:
++     NODE=1
++     MIN_LO=20ns
++
++  WIDTH:
++     NODE=2
++     MIN_LO=20ns
++
++  WIDTH:
++     NODE=3
++     MIN_LO=20ns
++
++  WIDTH:
++     NODE=5
++     MIN_LO=20ns
++
++  WIDTH:
++     NODE=6
++     MIN_LO=20ns
+
+.ENDS K555TR2
+
+
+* ----------------------------------------------------------- K155KP1 ------
+*
+*  Селектор-мультиплексор данных на 16 каналов со стробированием
+*  Based on 74150 (Data Selectors/Multiplexers)
+*  Ноги: 
+*     D1-1  D2-2   D3-3   D4-4   D5-5   D6-6   D7-7   D8-8
+*     D9-16 D10-17 D11-18 D12-19 D13-20 D14-21 D15-22 D16-23
+*     A1-11 A2-13  A3-14  A4-15
+*     S-9   Q-10
+*
+.SUBCKT K155KP1  1 2 3 4 5 6 7 8 16 17 18 19 20 21 22 23 11 13 14 15 9 10
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U1 LOGICEXP (21,1) DPWR DGND
++      1 2 3 4 5 6 7 8 16 17 18 19 20 21 22 23 11 13 14 15 9 Q_O
++      D0_GATE IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      s = {(~9)}
++      a1bar = {(~11)}
++      a2bar = {(~13)}
++      a3bar = {(~14)}
++      a4bar = {(~15)}
++      a0  = {(1 & a1bar & a2bar & a3bar & a4bar & s)}
++      a1  = {(2 & 11 & a2bar & a3bar & a4bar & s)}
++      a2  = {(3 & a1bar & 13 & a3bar & a4bar & s)}
++      a3  = {(4 & 11 & 13 & a3bar & a4bar & s)}
++      a4  = {(5 & a1bar & a2bar & 14 & a4bar & s)}
++      a5  = {(6 & 11 & a2bar & 14 & a4bar & s)}
++      a6  = {(7 & a1bar & 13 & 14 & a4bar & s)}
++      a7  = {(8 & 11 & 13 & 14 & a4bar & s)}
++      a8  = {(16 & a1bar & a2bar & a3bar & 15 & s)}
++      a9  = {(17 & 11 & a2bar & a3bar & 15 & s)}
++      a10 = {(18 & a1bar & 13 & a3bar & 15 & s)}
++      a11 = {(19 & 11 & 13 & a3bar & 15 & s)}
++      a12 = {(20 & a1bar & a2bar & 14 & 15 & s)}
++      a13 = {(21 & 11 & a2bar & 14 & 15 & s)}
++      a14 = {(22 & a1bar & 13 & 14 & 15 & s)}
++      a15 = {(23 & 11 & 13 & 14 & 15 & s)}
++
++      Qa = { (a0 | a1 | a2 | a3 | a4 | a5 | a6 | a7) }
++      Qb = { (a8 | a9 | a10 | a11 | a12 | a13 | a14 | a15) }
++      Q_O  = { ~(Qa | Qb) }
+
+Udly PINDLY (1,0,21) DPWR DGND
++    Q_O
++    1 2 3 4 5 6 7 8 16 17 18 19 20 21 22 23
++    11 13 14 15 9
++    10
++    IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    BOOLEAN:
++       SELECT= { CHANGED(11,0) | CHANGED(13,0) | CHANGED(14,0) | CHANGED(15,0) }
++       STROBE= { CHANGED(9,0) }
++       DATA={ CHANGED(1,0) | CHANGED(2,0) | CHANGED(3,0) | CHANGED(4,0)
++            | CHANGED(5,0) | CHANGED(6,0) | CHANGED(7,0) | CHANGED(8,0)
++            | CHANGED(16,0) | CHANGED(17,0) | CHANGED(18,0) | CHANGED(19,0)
++            | CHANGED(20,0) | CHANGED(21,0) | CHANGED(22,0) | CHANGED(23,0) }
++
++    PINDLY:
++       10 = {
++            CASE(
++                 SELECT & TRN_LH, DELAY(-1,23ns,35ns),
++                 SELECT & TRN_HL, DELAY(-1,22ns,33ns),
++                 STROBE & TRN_LH, DELAY(-1,15.5ns,24ns),
++                 STROBE & TRN_HL, DELAY(-1,21ns,30ns),
++                 DATA & TRN_LH, DELAY(-1,8.5ns,14ns),
++                 DATA & TRN_HL, DELAY(-1,13ns,20ns),
++                 DELAY(-1,24ns,36ns)
++                )
++            }
+
+.ENDS K155KP1
+
+
+* ----------------------------------------------------------- K155IR13 ------
+*
+*  Реверсивный 8-ми разрядный регистр сдвига (универсальный).
+*  Based on 74198 (8-Bit Shift Register)
+*  Ноги: C-11 DR-2 DL-22 S0-1  S1-23 R-13
+*        D0-3 D1-5 D2-7  D3-9  D4-15 D5-17 D6-19 D7-21
+*        Q0-4 Q1-6 Q2-8  Q3-10 Q4-14 Q5-16 Q6-18 Q7-20
+*  S0 и S1 задают режим работы: S0=1 S1=1 -> загрузка значения в регистр
+*                               S0=1 S1=0 -> сдвиг вправо
+*                               S0=0 S1=1 -> сдвиг влево
+*                               S0=0 S1=0 -> хранение
+*
+.SUBCKT K155IR13 11 2 22 1 23 13 3 5 7 9 15 17 19 21 4 6 8 10 14 16 18 20
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U1 LOGICEXP(21,17) DPWR DGND
++      3 5 7 9 15 17 19 21 2 22 1 23 11
++      Q0_O Q1_O Q2_O Q3_O Q4_O Q5_O Q6_O Q7_O
++      j0 j1 j2 j3 j4 j5 j6 j7 k0 k1 k2 k3 k4 k5 k6 k7 clkbar
++      D0_GATE IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      clkbar = { ~( 11 | ( ~1 & ~23) ) }
++      k0 = { ~( (    2 & ~23) | (~( ~23 | ~1 ) &  3) | (~1 & Q1_O) ) }
++      k1 = { ~( ( Q0_O & ~23) | (~( ~23 | ~1 ) &  5) | (~1 & Q2_O) ) }
++      k2 = { ~( ( Q1_O & ~23) | (~( ~23 | ~1 ) &  7) | (~1 & Q3_O) ) }
++      k3 = { ~( ( Q2_O & ~23) | (~( ~23 | ~1 ) &  9) | (~1 & Q4_O) ) }
++      k4 = { ~( ( Q3_O & ~23) | (~( ~23 | ~1 ) & 15) | (~1 & Q5_O) ) }
++      k5 = { ~( ( Q4_O & ~23) | (~( ~23 | ~1 ) & 17) | (~1 & Q6_O) ) }
++      k6 = { ~( ( Q5_O & ~23) | (~( ~23 | ~1 ) & 19) | (~1 & Q7_O) ) }
++      k7 = { ~( ( Q6_O & ~23) | (~( ~23 | ~1 ) & 21) | (~1 &   22) ) }
++      j0 = {(~k0 )}
++      j1 = {(~k1 )}
++      j2 = {(~k2 )}
++      j3 = {(~k3 )}
++      j4 = {(~k4 )}
++      j5 = {(~k5 )}
++      j6 = {(~k6 )}
++      j7 = {(~k7 )}
+
+Uf0  JKff(8)  DPWR DGND
++    $D_HI 13 clkbar
++    j0 j1 j2 j3 j4 j5 j6 j7 k0 k1 k2 k3 k4 k5 k6 k7 
++    Q0_O Q1_O Q2_O Q3_O Q4_O Q5_O Q6_O Q7_O
++    q0bar q1bar q2bar q3bar q4bar q5bar q6bar q7bar
++    D0_EFF IO_STD
+
+Udly PINDLY (8,0,2) DPWR DGND
++    Q0_O Q1_O Q2_O Q3_O Q4_O Q5_O Q6_O Q7_O
++    11 13 
++    4 6 8 10 14 16 18 20
++    IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    BOOLEAN:
++     CLOCK = {CHANGED(11,0)}
++     CLEAR = {CHANGED(13,0)}
++
++    PINDLY:
++       4 6 8 10 14 16 18 20  = {
++            CASE(
++                 CLEAR & TRN_HL, DELAY(-1,23ns,35ns),
++                 CLOCK & TRN_LH, DELAY(-1,20ns,30ns),
++                 CLOCK & TRN_HL, DELAY(-1,17ns,26ns),
++                 DELAY(-1,24ns,36ns)
++                )
++            }
+
+Ucnstr CONSTRAINT(12) DPWR DGND
++      13 11  3 5 7 9 15 17 19 21 1 23
++      IO_STD
++
++      FREQ:
++         NODE = 11
++         MAXFREQ = 25MEG
++      WIDTH:
++         NODE = 11
++         MIN_HI = 20ns
++      WIDTH:
++         NODE = 13
++         MIN_LO = 20ns
++      SETUP_HOLD:
++        CLOCK LH = 11
++        DATA(8) = 3 5 7 9 15 17 19 21
++        SETUPTIME = 20ns
++      SETUP_HOLD:
++        CLOCK LH = 11
++        DATA(2) = 1 23
++        SETUPTIME = 30ns
+
+.ENDS K155IR13
+
+
+* ----------------------------------------------------------- K555IE10 ------
+*
+*  Двоичный 4-х разрядный счетчик.
+*  Based on 74LS161A (Synchronous 4-Bit Binary Counter w/ Async Clear)
+*  Ноги: 
+*
+*  V1 - разреш. счета    (ENP)
+* -V2 - разреш. записи   (-LOAD)
+*  P1 - разреш. переноса (ENT) - для каскадирования (вых. P2 на вх. P1)
+*  P2 - выход переноса   (RCO)
+*
+*  Режим счета: V1=1  -V2=1  P1=1
+*
+*        Shape:  D1 D2 D3 D4 R      C   V1  P1  P2  V2      Q1 Q2 Q3 Q4
+*        MC5:    A  B  C  D  CLRBAR CLK ENP ENT RCO LOADBAR QA QB QC QD
+.SUBCKT K555IE10 3  4  5  6  1      2   7   10  15  9       14 13 12 11
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U1 LOGICEXP (13, 10) DPWR DGND
++        3 4 5 6 2 7 10 9 Q1_O Q2_O Q3_O Q4_O 1
++        P2_O ja jb jc jd ka kb kc kd clkbar
++        D0_GATE IO_LS IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      clkbar = { (~2) }
++      pnt = { ( 7 & 10) }
++      load = { (~9) }
++      P2_O = { ( 10 & Q1_O & Q2_O & Q3_O & Q4_O) }
++      ia2 = { (~(load & 3)) }
++      ia1 = { (~(load & ia2)) }
++      ia3 = { (pnt | load) }
++      ib2 = { (~(load & 4 )) }
++      ib1 = { (~(ib2 & load)) }
++      ib3 = { (load | (Q1_O & pnt)) }
++      ic2 = { (~(load & 5)) }
++      ic1 = { (~(ic2 & load)) }
++      ic3 = { (load | (pnt & Q1_O & Q2_O)) }
++      id2 = { (~(load & 6)) }
++      id1 = { (~(load & id2)) }
++      id3 = { ( load | (pnt & Q1_O & Q2_O & Q3_O)) }
++      ja  = { (ia1 & ia3) }
++      jb  = { (ib1 & ib3) }
++      jc  = { (ic1 & ic3) }
++      jd  = { (id1 & id3) }
++      ka  = { (ia2 & ia3) }
++      kb  = { (ib2 & ib3) }
++      kc  = { (ic2 & ic3) }
++      kd  = { (id2 & id3) }
+
+Uf0  JKff(4)  DPWR DGND
++    $D_HI 1 clkbar
++    ja jb jc jd ka kb kc kd
++    Q1_O Q2_O Q3_O Q4_O qabar qbbar qcbar qdbar
++    D0_EFF IO_LS
+
+Udly PINDLY (5,0,4) DPWR DGND
++    Q1_O Q2_O Q3_O Q4_O P2_O
++    1 2 10 9
++    14 13 12 11 15
++    IO_LS MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    BOOLEAN:
++       CLOCK= { CHANGED(2,0) }
++       CLEAR= { CHANGED(1,0) }
++       ENABLET = { CHANGED(10,0) }
++       LOADRisHIGH = { (9 == '1)}
++       LOADRisLO = { (9 == '0)}
++
++    PINDLY:
++       15 = {
++              CASE(
++                   ENABLET & TRN_HL, DELAY(-1,9ns,14ns),
++                   ENABLET & TRN_LH, DELAY(-1,9ns,14ns),
++                   CLOCK & TRN_LH, DELAY(-1,20ns,35ns),
++                   CLOCK & TRN_HL, DELAY(-1,18ns,35ns),
++                   DELAY(-1,21ns,36ns)
++                   )
++             }
++       14 13 12 11 = {
++                   CASE(
++                       CLEAR & TRN_HL, DELAY(-1,20ns,28ns),
++                       CLOCK & LOADRisHIGH & TRN_LH, DELAY(-1,13ns,24ns),
++                       CLOCK & LOADRisHIGH & TRN_HL, DELAY(-1,18ns,27ns),
++                       CLOCK & LOADRisLO & TRN_LH, DELAY(-1,13ns,24ns),
++                       CLOCK & LOADRisLO & TRN_HL, DELAY(-1,18ns,27ns),
++                       DELAY(-1,21ns,29ns)
++                       )
++                     }
+
+Ucnstr CONSTRAINT(9) DPWR DGND
++      1 9 2 7 10 3 4 5 6
++      IO_LS
++
++      FREQ:
++         NODE = 2
++         MAXFREQ = 25MEG
++      WIDTH:
++         NODE = 2
++         MIN_HI = 25ns
++      WIDTH:
++         NODE = 1
++         MIN_LO = 20n
++      SETUP_HOLD:
++        CLOCK LH = 2
++        DATA(4) = 3 4 5 6
++        SETUPTIME = 20n
++        HOLDTIME = 3n
++        WHEN = { (1 != '0) }
++      SETUP_HOLD:
++        DATA(3) = 9 7 10
++        CLOCK LH = 2
++        SETUPTIME = 20NS
++      SETUP_HOLD:
++        DATA(1) = 1
++        CLOCK LH = 2
++        SETUPTIME = 25NS
+
+.ENDS K555IE10
+
+
+* ----------------------------------------------------------- K555IR8 ------
+*
+*  Восьмиразрядный последовательный сдвигающий регистр с параллельным выходом.
+*  Based on 74LS164 (8-Bit Parallel-Out Serial Shift Registor)
+*  Ноги:  A-1 B-2 R-9 C-8 Q1-3 Q2-4 Q3-5 Q4-6 Q5-10 Q6-11 Q7-12 Q8-13
+*
+*       MC5:    A B CLRBAR CLK QA QB QC QD QE QF QG QH
+*       Shape:  A B R      C   Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8
+.SUBCKT K555IR8 1 2 9      8   3  4  5  6  10 11 12 13
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U1 LOGICEXP (3,3) DPWR DGND
++        8 1 2
++        r0 s0 clkbar
++        D0_GATE IO_LS IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      r0 = { (~(1 & 2)) }
++      s0 = { (~r0) }
++      clkbar = { (~8) }
+
+
+uf0  JKff(8)  DPWR DGND
++    $D_HI 9 clkbar
++    s0 QA_O QB_O QC_O QD_O QE_O QF_O QG_O
++    r0 qabar qbbar qcbar qdbar qebar qfbar qgbar
++    QA_O QB_O QC_O QD_O QE_O QF_O QG_O QH_O
++    qabar qbbar qcbar qdbar qebar qfbar qgbar qhbar
++    D0_EFF IO_LS
+
+Udly PINDLY (8,0,4) DPWR DGND
++    QA_O QB_O QC_O QD_O QE_O QF_O QG_O QH_O
++    9 8 1 2
++    3 4 5 6 10 11 12 13
++    IO_LS MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    BOOLEAN:
++       DATA=  { ( CHANGED(1,0) | CHANGED(2,0) ) }
++       CLOCK= { CHANGED(8,0) }
++       CLEAR= { CHANGED(9,0) }
++
++    PINDLY:
++       3 4 5 6 10 11 12 13  = {
++                   CASE(
++                       CLEAR & TRN_HL, DELAY(-1,24ns,36ns),
++                       CLOCK & TRN_LH, DELAY(-1,17ns,27ns),
++                       CLOCK & TRN_HL, DELAY(-1,21ns,32ns),
++                       DELAY(-1,25ns,37ns)
++                       )
++                     }
+
+Ucnstr CONSTRAINT(4) DPWR DGND
++          9 8  1 2
++          IO_LS
++
++      FREQ:
++         NODE = 8
++         MAXFREQ = 25MEG
++      WIDTH:
++         NODE = 8
++         MIN_HI = 20ns
++      WIDTH:
++         NODE = 9
++         MIN_LO = 20ns
++      SETUP_HOLD:
++        CLOCK LH = 8
++        DATA(2) = 1 2
++        SETUPTIME = 15ns
++        HOLDTIME = 5ns
++        WHEN = { 9 != '0 }
++      SETUP_HOLD:
++        DATA(1) = 9
++        CLOCK LH = 8
++        SETUPTIME = 20ns
+
+.ENDS K555IR8
+
+
+* ----------------------------------------------------------- K555IR9 ------
+*  
+*  Восьмиразрядный последовательный сдвигающий регистр
+*  с параллельным вводом информации.
+*  Based on 74LS165A (Parallel-Load 8-Bit Shift Register)
+*  Ноги: PL-1 DS-15 C-2 Dвв-10 CLK=2 SER-10 Q0-9 -Q0-7
+*             D0-11 D1-12 D2-13 D4-3 D5-4 D6-5 D7-6
+*
+*  DS == CLOCK_INHIBIT    - норма = 0, в 1 ставить для подавления clock
+*  PL == SHift/LoaD
+*  Записывать можно послед. через D->  или паралл. через D0-D7
+*
+*        MC5:   SH/LDBAR CLK_INH CLK SER A  B  C  D  E  F  G  H  QH  QHBAR
+*        Shape: PL       DS      C   D-> D0 D1 D2 D3 D4 D5 D6 D7 Q0 -Q0
+.SUBCKT K555IR9 1        15      2   10  11 12 13 14 3  4  5  6  9   7
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U1 LOGICEXP (11,17) DPWR DGND
++        1 15 2 11 12 13 14 3 4 5 6
++        r0 s0 r1 s1 r2 s2 r3 s3 r4 s4 r5 s5 r6 s6 r7 s7 clock
++        D0_GATE IO_LS IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      clock = { (15 | 2) }
++      shbar/ld = { (~(1)) }
++      s0 = { (~(shbar/ld & 11)) }
++      r0 = { (~(s0 & shbar/ld)) }
++      s1 = { (~(shbar/ld & 12)) }
++      r1 = { (~(s1 & shbar/ld)) }
++      s2 = { (~(shbar/ld & 13)) }
++      r2 = { (~(s2 & shbar/ld)) }
++      s3 = { (~(shbar/ld & 14)) }
++      r3 = { (~(s3 & shbar/ld)) }
++      s4 = { (~(shbar/ld & 3)) }
++      r4 = { (~(s4 & shbar/ld)) }
++      s5 = { (~(shbar/ld & 4)) }
++      r5 = { (~(s5 & shbar/ld)) }
++      s6 = { (~(shbar/ld & 5)) }
++      r6 = { (~(s6 & shbar/ld)) }
++      s7 = { (~(shbar/ld & 6)) }
++      r7 = { (~(s7 & shbar/ld)) }     
+
+uf0  Dff(1)  DPWR DGND
++    s0 r0  clock
++    10  QA qabar 
++    D0_EFF IO_LS
+
+uf1  Dff(1)  DPWR DGND
++    s1 r1 clock
++    QA QB qbbar 
++    D0_EFF IO_LS
+
+uf2  Dff(1)  DPWR DGND
++    s2 r2  clock
++    QB QC qcbar 
++    D0_EFF IO_LS
+
+uf3  Dff(1)  DPWR DGND
++    s3 r3  clock
++    QC QD qdbar 
++    D0_EFF IO_LS
+
+uf4  Dff(1)  DPWR DGND
++    s4 r4  clock
++    QD QE qebar 
++    D0_EFF IO_LS
+
+uf5  Dff(1)  DPWR DGND
++    s5 r5  clock
++    QE QF qfbar 
++    D0_EFF IO_LS
+
+uf6  Dff(1)  DPWR DGND
++    s6 r6  clock
++    QF QG qgbar 
++    D0_EFF IO_LS
+
+uf7  Dff(1)  DPWR DGND
++    s7 r7  clock
++    QG QH_O QHBAR_O 
++    D0_EFF IO_LS
+
+Udly PINDLY (2,0,5) DPWR DGND
++    QH_O QHBAR_O
++    2 1 6 10 15
++    9 7
++    IO_LS MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    BOOLEAN:
++       DATA=  { CHANGED(6,0) }
++       CLKS= { (CHANGED(2,0) | CHANGED(15,0)) }
++       SERIAL= { CHANGED(10,0) }
++       LOAD= { CHANGED(1,0) }
++
++    PINDLY:
++       9  = {
++                   CASE(
++                       LOAD & TRN_LH, DELAY(-1,21ns,35ns),
++                       LOAD & TRN_HL, DELAY(-1,26ns,35ns),
++                       CLKS & TRN_LH, DELAY(-1,14ns,25ns),
++                       CLKS & TRN_HL, DELAY(-1,16ns,25ns),
++                       DATA & TRN_LH, DELAY(-1,13ns,25ns),
++                       DATA & TRN_HL, DELAY(-1,24ns,30ns),
++                       DELAY(-1,27ns,36ns)
++                       )
++                     }
++       7  = {
++                   CASE(
++                       LOAD & TRN_LH, DELAY(-1,21ns,35ns),
++                       LOAD & TRN_HL, DELAY(-1,26ns,35ns),
++                       CLKS & TRN_LH, DELAY(-1,14ns,25ns),
++                       CLKS & TRN_HL, DELAY(-1,16ns,25ns),
++                       DATA & TRN_LH, DELAY(-1,19ns,30ns),
++                       DATA & TRN_HL, DELAY(-1,17ns,25ns),
++                       DELAY(-1,27ns,36ns)
++                       )
++                     }
+
+
+Ucnstr CONSTRAINT(12) DPWR DGND
++          2 1 10 15 11 12 13 14 3 4 5 6
++          IO_LS
++
++      FREQ:
++         NODE = 2
++         MAXFREQ = 25MEG
++      WIDTH:
++         NODE = 2
++         MIN_HI = 15ns
++         MIN_LO =25ns
++      WIDTH:
++         NODE = 1
++         MIN_HI = 25ns
++         MIN_LO = 17ns
++      SETUP_HOLD:
++        CLOCK LH = 2
++        DATA(1) = 15
++        SETUPTIME = 30ns
++      SETUP_HOLD:
++        CLOCK LH = 2
++        DATA(8) = 11 12 13 14 3 4 5 6
++        SETUPTIME = 10ns
++      SETUP_HOLD:
++        CLOCK LH = 2
++        DATA(1) = 10
++        SETUPTIME = 20ns
++      SETUP_HOLD:
++        CLOCK LH = 2
++        DATA(1) = 1
++        SETUPTIME_HI = 45ns
+
+.ENDS K555IR9
+
+
+* ----------------------------------------------------------- K155IP4 ------
+*
+*  Схема быстрого переноса для АЛУ.
+*  Based on 74182 (Look Ahead Carry Generator)
+*  Ноги: Cn-13 CRP0-4 CRP1-2 CRP2-15 CRP3-6 CRG0-3 CRG1-1 CRG2-14 CRG3-5
+*        Cn+x-12 Cn+y-11 Cn+z-9 CRP-7 CRG-10
+*
+*        MC5:    CN P0BAR P1BAR P2BAR P3BAR G0BAR G1BAR G2BAR G3BAR CNX  CNY  CNZ  PBAR GBAR
+*        Shape:  Cn CRP0  CRP1  CRP2  CRP3  CRG0  CRG1  CRG2  CRG3  Cn+x Cn+y Cn+z CRP  CRG
+.SUBCKT K155IP4  13 4     2     15    6     3     1     14    5     12   11   9    7    10
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U1 LOGICEXP (9,5) DPWR DGND
++      13 4 2 15 6 3 1 14 5
++      CNX_O CNY_O CNZ_O PBAR_O GBAR_O
++      D0_GATE IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      PBAR_O = { (4 | 2 | 15 | 6) }
++      g0 = { (3 & 1 & 14 & 5) }
++      g1 = { (2 & 1 & 14 & 5) }
++      g2 = { (15 & 14 & 5) }
++      g3 = { (6 & 5) }
++      GBAR_O = { (g0 | g1 | g2 | g3) }
++      cnz0 = { (3 & 1 & 14 & (~13)) }
++      cnz1 = { (3 & 1 & 14 & 4) }
++      cnz2 = { (1 & 14 & 2) }
++      cnz3 = { (14 & 15) }
++      CNZ_O = { ~(cnz0 | cnz1 | cnz2 | cnz3) }
++      cny0 = { (3 & 1 & (~13)) }
++      cny1 = { (4 & 3 & 1) }
++      cny2 = { (1 & 2) }
++      CNY_O = { ~(cny0 | cny1 | cny2) }
++      cnx0 = { (3 & (~13)) }
++      cnx1 = { (4 & 3) }
++      CNX_O = { ~(cnx0 | cnx1) }
+
+
+Udly PINDLY (5,0,9) DPWR DGND
++    CNX_O CNY_O CNZ_O PBAR_O GBAR_O
++    13 4 2 15 6 3 1 14 5
++    12 11 9 7 10
++    IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++   PINDLY:
++     12 11 9  10 7= {
++            CASE(
++                 TRN_LH, DELAY(-1,11ns,17ns),
++                 TRN_HL, DELAY(-1,15ns,22ns),
++                 DELAY(-1,16ns,23ns)
++                )
++            }
+
+.ENDS K155IP4
+
+
+* ----------------------------------------------------------- K155KP5 ------
+*
+*  Селектор-мультиплексор данных на 8 каналов без стробирования.
+*  Based on 74HC152 (8 Line to 1 Line Data Selectors/Multiplexers)
+*  Ноги: X1-5 X2-4 X3-3 X4-2 X5-1 X6-13 X7-12 X8-11 X9-10 X10-9 X11-8 Q-6
+*
+*         MC5:   D0 D1 D2 D3 D4 D5 D6 D7 A  B   C   W
+*         Shape: X1 X2 X3 X4 X5 X6 X7 X8 X9 X10 X11 Q
+.SUBCKT K155KP5  5  4  3  2  1  13 12 11 10 9   8   6
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U1 LOGICEXP (11,1) DPWR DGND
++        5 4 3 2 1 13 12 11 10 9 8 W_O
++        D0_GATE IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      abar = {(~10)}
++      bbar = {(~9)}
++      cbar = {(~8)}
++      a0 = {(5 & abar & bbar & cbar)}
++      a1 = {(4 & 10 & bbar & cbar)}
++      a2 = {(3 & abar & 9 & cbar)}
++      a3 = {(2 & 10 & 9 & cbar)}
++      a4 = {(1 & abar & bbar & 8)}
++      a5 = {(13 & 10 & bbar & 8)}
++      a6 = {(12 & abar & 9 & 8)}
++      a7 = {(11 & 10 & 9 & 8)}
++
++      W_O = { ~( a0 | a1 | a2 | a3 | a4 | a5 | a6 | a7 ) }
+
+Udly PINDLY (1,0,11) DPWR DGND
++    W_O
++    5 4 3 2 1 13 12 11
++    10 9 8
++    6
++    IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    BOOLEAN:
++       SELECT= { CHANGED(10,0) | CHANGED(9,0) | CHANGED(8,0) }
++       DATA={ CHANGED(5,0) | CHANGED(4,0) | CHANGED(3,0) | CHANGED(2,0) |
++              CHANGED(1,0) | CHANGED(13,0) | CHANGED(12,0) | CHANGED(11,0) }
++
++    PINDLY:
++     6   = {
++            CASE(
++                 SELECT, DELAY(-1,18ns,34ns),
++                 DATA, DELAY(-1,14ns,26ns),
++                 DELAY(-1,19ns,35ns)
++                )
++            }
+
+.ENDS K155KP5
+
+
+* ----------------------------------------------------------- K555AP4 ------
+*
+*  Двухканальный 8-разрядный формирователь с тремя состояниями на выходе.
+*  Based on 74LS241 (Octal Buffers With 3-State Outputs)
+*  Ноги: 
+*          MC5: 1GBAR 1A1 1A2 1A3 1A4 1Y1 1Y2 1Y3 1Y4
+*        Shape: 1E    D0  D1  D2  D3  Y0  Y1  Y2  Y3
+.SUBCKT K555AP4 1     2   4   6   8   18  16  14  12
++     optional:  DPWR=$G_DPWR DGND=$G_DGND
++     params:  MNTYMXDLY=0 IO_LEVEL=0
+
+Uf0 inv DPWR DGND
++     1 GEN
++     D0_GATE IO_LS_ST MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+Uf1 buf3a(4) DPWR DGND
++     2 4 6 8
++     GEN
++     18 16 14 12
++     DLY_MOD IO_LS_ST MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+.model DLY_MOD utgate (TPLHMN=-1 TPLHTY=12ns TPLHMX=18ns
++                      TPHLMN=-1 TPHLTY=12ns TPHLMX=18ns
++                      TPZLMN=-1 TPZLTY=20ns TPZLMX=30ns
++                      TPZHMN=-1 TPZHTY=15ns TPZHMX=23ns
++                      TPLZMN=-1 TPLZTY=10ns TPLZMX=20ns
++                      TPHZMN=-1 TPHZTY=15ns TPHZMX=25ns)
+
+.ENDS K555AP4
+
+
+* ----------------------------------------------------------- K555AP9 ------
+*
+*  TODO: Для K555AP9 нету УГО !
+*
+*  8-разрядный инверсный двунаправленный драйвер с тремя состояниями.
+*  Based on 74LS640 (Octal Bus Transceivers With 3-State Outputs)
+*  Ноги: 
+*
+.SUBCKT K555AP9 GBAR DIR A1 A2 A3 A4 A5 A6 A7 A8 B1 B2 B3 B4 B5 B6 B7 B8
++     optional:  DPWR=$G_DPWR DGND=$G_DGND
++     params:  MNTYMXDLY=0 IO_LEVEL=0
+
+U1LOG LOGICEXP(2,2) DPWR DGND
++     GBAR DIR
++     GAB GBA
++     D0_GATE IO_LS MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++  LOGIC:
++     gen = {~GBAR}
++     GAB = {gen & DIR}
++     GBA = {~(GBAR | DIR)}
+
+U2 inv3a(8) DPWR DGND
++     A1 A2 A3 A4 A5 A6 A7 A8
++     GAB
++     B1 B2 B3 B4 B5 B6 B7 B8
++     DLY_LS640 IO_LS_ST MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+U3 inv3a(8) DPWR DGND
++     B1 B2 B3 B4 B5 B6 B7 B8
++     GBA
++     A1 A2 A3 A4 A5 A6 A7 A8
++     DLY_LS640 IO_LS_ST MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+.model DLY_LS640 utgate (tplhTY=6ns tplhMX=10ns tphlTY=8ns tphlMX=15ns
++                                   tpzhTY=23ns tpzhMX=40ns tpzlTY=31ns tpzlMX=40ns
++                                   tphzTY=15ns tphzMX=25ns tplzTY=15ns tplzMX=25ns)
+
+.ENDS K555AP9
+
+
+
+* ----------------------------------------------------------- K555AP3 ------
+*
+*  Двухканальный 8-разрядный формирователь с тремя состояниями
+*  на выходе и инверсией сигнала.
+*  Based on 74LS240 (Octal Buffers With 3-State Outputs)
+*  Ноги:        E     D0  D1  D2  D3  Z0  Z1  Z2  Z3
+*               1GBAR 1A1 1A2 1A3 1A4 1Y1 1Y2 1Y3 1Y4
+.SUBCKT K555AP3 1     2   4   6   8   18  16  14  12
++     optional:  DPWR=$G_DPWR DGND=$G_DGND
++     params:  MNTYMXDLY=0 IO_LEVEL=0
+
+uf0 inv DPWR DGND
++     1 GEN
++     D0_GATE IO_LS_ST MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+uf1 inv3a(4) DPWR DGND
++     2 4 6 8
++     GEN
++     18 16 14 12
++     DLY_MOD IO_LS_ST MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+.model DLY_MOD utgate (TPLHMN=-1 TPLHTY=9ns   TPLHMX=14ns 
++                      TPHLMN=-1 TPHLTY=12ns  TPHLMX=18ns
++                      TPZLMN=-1 TPZLTY=20ns  TPZLMX=30ns
++                      TPZHMN=-1 TPZHTY=15ns  TPZHMX=23ns
++                      TPLZMN=-1 TPLZTY=10ns  TPLZMX=20ns
++                      TPHZMN=-1 TPHZTY=15ns  TPHZMX=25ns)
+
+.ENDS K555AP3
+
+
+* ----------------------------------------------------------- K555AP10 ------
+*
+*  8-разрядный двунаправленный приёмопередатчик
+*  
+*  Based on 74LS646 (Octal Bus Transceivers And Registers With 3-State Outputs)
+*  Ноги:         E    DIR CBA SBA CAB SAB 
+*                GBAR DIR CBA SBA CAB SAB A1 A2 A3 A4 A5 A6 A7 A8 B1 .. B8
+.SUBCKT K555AP10 21   3   23  22  1   2   4  5  6  7  8  9  10 11
++     20 19 18 17 16 15 12 13
++     optional:  DPWR=$G_DPWR DGND=$G_DGND
++     params:  MNTYMXDLY=0 IO_LEVEL=0
+
+U1 bufa(20) DPWR DGND
++     23 22 1 2 4 5 6 7 8 9 10 11 20 19 18 17 16 15 12 13
++     CBAB SBAB CABB SABB A1B A2B A3B A4B A5B A6B A7B A8B 
++     B1B B2B B3B B4B B5B B6B B7B B8B
++     D0_GATE IO_LS_ST MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+U2 dff(8) DPWR DGND
++     $D_HI $D_HI CBAB
++     20 19 18 17 16 15 12 13
++     QB1 QB2 QB3 QB4 QB5 QB6 QB7 QB8
++     $D_NC $D_NC $D_NC $D_NC $D_NC $D_NC $D_NC $D_NC
++     D0_EFF IO_LS MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+U3 dff(8) DPWR DGND
++     $D_HI $D_HI CABB
++     4 5 6 7 8 9 10 11
++     QA1 QA2 QA3 QA4 QA5 QA6 QA7 QA8
++     $D_NC $D_NC $D_NC $D_NC $D_NC $D_NC $D_NC $D_NC
++     D0_EFF IO_LS MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+U4LOG LOGICEXP(36,18) DPWR DGND
++     21 3 SBAB SABB A1B A2B A3B A4B A5B A6B A7B A8B 
++     B1B B2B B3B B4B B5B B6B B7B B8B
++     QA1 QA2 QA3 QA4 QA5 QA6 QA7 QA8 QB1 QB2 QB3 QB4 QB5 QB6 QB7 QB8
++     ENBA ENAB A1_O A2_O A3_O A4_O A5_O A6_O A7_O A8_O
++     B1_O B2_O B3_O B4_O B5_O B6_O B7_O B8_O
++     D0_GATE IO_LS MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++  LOGIC:
++     oe = {~21}
++     ENAB = {(oe & 3)}
++     ENBA = {~(21 | 3)}
++     sbabar = {~SBAB}
++     sabbar = {~SABB}
++     A1_O = {(SBAB & QB1) | (sbabar & B1B)}
++     A2_O = {(SBAB & QB2) | (sbabar & B2B)}
++     A3_O = {(SBAB & QB3) | (sbabar & B3B)}
++     A4_O = {(SBAB & QB4) | (sbabar & B4B)}
++     A5_O = {(SBAB & QB5) | (sbabar & B5B)}
++     A6_O = {(SBAB & QB6) | (sbabar & B6B)}
++     A7_O = {(SBAB & QB7) | (sbabar & B7B)}
++     A8_O = {(SBAB & QB8) | (sbabar & B8B)}
++     B1_O = {(SABB & QA1) | (sabbar & A1B)}
++     B2_O = {(SABB & QA2) | (sabbar & A2B)}
++     B3_O = {(SABB & QA3) | (sabbar & A3B)}
++     B4_O = {(SABB & QA4) | (sabbar & A4B)}
++     B5_O = {(SABB & QA5) | (sabbar & A5B)}
++     B6_O = {(SABB & QA6) | (sabbar & A6B)}
++     B7_O = {(SABB & QA7) | (sabbar & A7B)}
++     B8_O = {(SABB & QA8) | (sabbar & A8B)}
+
+U5DLY PINDLY(16,2,22) DPWR DGND
++     A1_O A2_O A3_O A4_O A5_O A6_O A7_O A8_O 
++     B1_O B2_O B3_O B4_O B5_O B6_O B7_O B8_O
++     ENBA ENAB
++     21 23 1 22 2 3
++     4 5 6 7 8 9 10 11 20 19 18 17 16 15 12 13
++     4 5 6 7 8 9 10 11 20 19 18 17 16 15 12 13
++     IO_LS MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++  BOOLEAN:
++     ENOE = {CHANGED(21,0)}
++     ENDIR = {CHANGED(3,0)}
++     SELBA = {CHANGED(22,0)}
++     SELAB = {CHANGED(2,0)}
++     CLOCKBA = {CHANGED_LH(23,0)}
++     CLOCKAB = {CHANGED_LH(1,0)}
++
++  TRISTATE:
++     ENABLE HI=ENBA
++     A1 = {
++       CASE(
++         CLOCKBA & 22=='1 & TRN_LH, DELAY(-1,15ns,25ns),
++         CLOCKBA & 22=='1 & TRN_HL, DELAY(-1,23ns,35ns),
++         SELBA & B1!='0 & TRN_LH, DELAY(-1,26ns,40ns),
++         SELBA & B1!='0 & TRN_HL, DELAY(-1,21ns,35ns),
++         SELBA & B1!='1 & TRN_LH, DELAY(-1,33ns,50ns),
++         SELBA & B1!='1 & TRN_HL, DELAY(-1,14ns,25ns),
++         CHANGED(B1,0) & TRN_LH, DELAY(-1,12ns,18ns),
++         CHANGED(B1,0) & TRN_HL, DELAY(-1,13ns,20ns),
++         ENOE & TRN_ZH, DELAY(-1,33ns,55ns),
++         ENOE & TRN_ZL, DELAY(-1,42ns,65ns),
++         ENOE & TRN_HZ, DELAY(-1,23ns,35ns),
++         ENOE & TRN_LZ, DELAY(-1,22ns,35ns),
++         ENDIR & TRN_ZH, DELAY(-1,28ns,45ns),
++         ENDIR & TRN_ZL, DELAY(-1,39ns,60ns),
++         ENDIR & TRN_HZ, DELAY(-1,20ns,30ns),
++         ENDIR & TRN_LZ, DELAY(-1,19ns,30ns),
++         DELAY(-1,43ns,66ns))}
++
++     A2 = {
++       CASE(
++         CLOCKBA & 22=='1 & TRN_LH, DELAY(-1,15ns,25ns),
++         CLOCKBA & 22=='1 & TRN_HL, DELAY(-1,23ns,35ns),
++         SELBA & B2!='0 & TRN_LH, DELAY(-1,26ns,40ns),
++         SELBA & B2!='0 & TRN_HL, DELAY(-1,21ns,35ns),
++         SELBA & B2!='1 & TRN_LH, DELAY(-1,33ns,50ns),
++         SELBA & B2!='1 & TRN_HL, DELAY(-1,14ns,25ns),
++         CHANGED(B2,0) & TRN_LH, DELAY(-1,12ns,18ns),
++         CHANGED(B2,0) & TRN_HL, DELAY(-1,13ns,20ns),
++         ENOE & TRN_ZH, DELAY(-1,33ns,55ns),
++         ENOE & TRN_ZL, DELAY(-1,42ns,65ns),
++         ENOE & TRN_HZ, DELAY(-1,23ns,35ns),
++         ENOE & TRN_LZ, DELAY(-1,22ns,35ns),
++         ENDIR & TRN_ZH, DELAY(-1,28ns,45ns),
++         ENDIR & TRN_ZL, DELAY(-1,39ns,60ns),
++         ENDIR & TRN_HZ, DELAY(-1,20ns,30ns),
++         ENDIR & TRN_LZ, DELAY(-1,19ns,30ns),
++         DELAY(-1,43ns,66ns))}
++
++     A3 = {
++       CASE(
++         CLOCKBA & 22=='1 & TRN_LH, DELAY(-1,15ns,25ns),
++         CLOCKBA & 22=='1 & TRN_HL, DELAY(-1,23ns,35ns),
++         SELBA & B3!='0 & TRN_LH, DELAY(-1,26ns,40ns),
++         SELBA & B3!='0 & TRN_HL, DELAY(-1,21ns,35ns),
++         SELBA & B3!='1 & TRN_LH, DELAY(-1,33ns,50ns),
++         SELBA & B3!='1 & TRN_HL, DELAY(-1,14ns,25ns),
++         CHANGED(B3,0) & TRN_LH, DELAY(-1,12ns,18ns),
++         CHANGED(B3,0) & TRN_HL, DELAY(-1,13ns,20ns),
++         ENOE & TRN_ZH, DELAY(-1,33ns,55ns),
++         ENOE & TRN_ZL, DELAY(-1,42ns,65ns),
++         ENOE & TRN_HZ, DELAY(-1,23ns,35ns),
++         ENOE & TRN_LZ, DELAY(-1,22ns,35ns),
++         ENDIR & TRN_ZH, DELAY(-1,28ns,45ns),
++         ENDIR & TRN_ZL, DELAY(-1,39ns,60ns),
++         ENDIR & TRN_HZ, DELAY(-1,20ns,30ns),
++         ENDIR & TRN_LZ, DELAY(-1,19ns,30ns),
++         DELAY(-1,43ns,66ns))}
++
++
++     A4 = {
++       CASE(
++         CLOCKBA & 22=='1 & TRN_LH, DELAY(-1,15ns,25ns),
++         CLOCKBA & 22=='1 & TRN_HL, DELAY(-1,23ns,35ns),
++         SELBA & B4!='0 & TRN_LH, DELAY(-1,26ns,40ns),
++         SELBA & B4!='0 & TRN_HL, DELAY(-1,21ns,35ns),
++         SELBA & B4!='1 & TRN_LH, DELAY(-1,33ns,50ns),
++         SELBA & B4!='1 & TRN_HL, DELAY(-1,14ns,25ns),
++         CHANGED(B4,0) & TRN_LH, DELAY(-1,12ns,18ns),
++         CHANGED(B4,0) & TRN_HL, DELAY(-1,13ns,20ns),
++         ENOE & TRN_ZH, DELAY(-1,33ns,55ns),
++         ENOE & TRN_ZL, DELAY(-1,42ns,65ns),
++         ENOE & TRN_HZ, DELAY(-1,23ns,35ns),
++         ENOE & TRN_LZ, DELAY(-1,22ns,35ns),
++         ENDIR & TRN_ZH, DELAY(-1,28ns,45ns),
++         ENDIR & TRN_ZL, DELAY(-1,39ns,60ns),
++         ENDIR & TRN_HZ, DELAY(-1,20ns,30ns),
++         ENDIR & TRN_LZ, DELAY(-1,19ns,30ns),
++         DELAY(-1,43ns,66ns))}
++
++
++     A5 = {
++       CASE(
++         CLOCKBA & 22=='1 & TRN_LH, DELAY(-1,15ns,25ns),
++         CLOCKBA & 22=='1 & TRN_HL, DELAY(-1,23ns,35ns),
++         SELBA & B5!='0 & TRN_LH, DELAY(-1,26ns,40ns),
++         SELBA & B5!='0 & TRN_HL, DELAY(-1,21ns,35ns),
++         SELBA & B5!='1 & TRN_LH, DELAY(-1,33ns,50ns),
++         SELBA & B5!='1 & TRN_HL, DELAY(-1,14ns,25ns),
++         CHANGED(B5,0) & TRN_LH, DELAY(-1,12ns,18ns),
++         CHANGED(B5,0) & TRN_HL, DELAY(-1,13ns,20ns),
++         ENOE & TRN_ZH, DELAY(-1,33ns,55ns),
++         ENOE & TRN_ZL, DELAY(-1,42ns,65ns),
++         ENOE & TRN_HZ, DELAY(-1,23ns,35ns),
++         ENOE & TRN_LZ, DELAY(-1,22ns,35ns),
++         ENDIR & TRN_ZH, DELAY(-1,28ns,45ns),
++         ENDIR & TRN_ZL, DELAY(-1,39ns,60ns),
++         ENDIR & TRN_HZ, DELAY(-1,20ns,30ns),
++         ENDIR & TRN_LZ, DELAY(-1,19ns,30ns),
++         DELAY(-1,43ns,66ns))}
++
++
++     A6 = {
++       CASE(
++         CLOCKBA & 22=='1 & TRN_LH, DELAY(-1,15ns,25ns),
++         CLOCKBA & 22=='1 & TRN_HL, DELAY(-1,23ns,35ns),
++         SELBA & B6!='0 & TRN_LH, DELAY(-1,26ns,40ns),
++         SELBA & B6!='0 & TRN_HL, DELAY(-1,21ns,35ns),
++         SELBA & B6!='1 & TRN_LH, DELAY(-1,33ns,50ns),
++         SELBA & B6!='1 & TRN_HL, DELAY(-1,14ns,25ns),
++         CHANGED(B6,0) & TRN_LH, DELAY(-1,12ns,18ns),
++         CHANGED(B6,0) & TRN_HL, DELAY(-1,13ns,20ns),
++         ENOE & TRN_ZH, DELAY(-1,33ns,55ns),
++         ENOE & TRN_ZL, DELAY(-1,42ns,65ns),
++         ENOE & TRN_HZ, DELAY(-1,23ns,35ns),
++         ENOE & TRN_LZ, DELAY(-1,22ns,35ns),
++         ENDIR & TRN_ZH, DELAY(-1,28ns,45ns),
++         ENDIR & TRN_ZL, DELAY(-1,39ns,60ns),
++         ENDIR & TRN_HZ, DELAY(-1,20ns,30ns),
++         ENDIR & TRN_LZ, DELAY(-1,19ns,30ns),
++         DELAY(-1,43ns,66ns))}
++
++
++     A7 = {
++       CASE(
++         CLOCKBA & 22=='1 & TRN_LH, DELAY(-1,15ns,25ns),
++         CLOCKBA & 22=='1 & TRN_HL, DELAY(-1,23ns,35ns),
++         SELBA & B7!='0 & TRN_LH, DELAY(-1,26ns,40ns),
++         SELBA & B7!='0 & TRN_HL, DELAY(-1,21ns,35ns),
++         SELBA & B7!='1 & TRN_LH, DELAY(-1,33ns,50ns),
++         SELBA & B7!='1 & TRN_HL, DELAY(-1,14ns,25ns),
++         CHANGED(B7,0) & TRN_LH, DELAY(-1,12ns,18ns),
++         CHANGED(B7,0) & TRN_HL, DELAY(-1,13ns,20ns),
++         ENOE & TRN_ZH, DELAY(-1,33ns,55ns),
++         ENOE & TRN_ZL, DELAY(-1,42ns,65ns),
++         ENOE & TRN_HZ, DELAY(-1,23ns,35ns),
++         ENOE & TRN_LZ, DELAY(-1,22ns,35ns),
++         ENDIR & TRN_ZH, DELAY(-1,28ns,45ns),
++         ENDIR & TRN_ZL, DELAY(-1,39ns,60ns),
++         ENDIR & TRN_HZ, DELAY(-1,20ns,30ns),
++         ENDIR & TRN_LZ, DELAY(-1,19ns,30ns),
++         DELAY(-1,43ns,66ns))}
++
++
++     A8 = {
++       CASE(
++         CLOCKBA & 22=='1 & TRN_LH, DELAY(-1,15ns,25ns),
++         CLOCKBA & 22=='1 & TRN_HL, DELAY(-1,23ns,35ns),
++         SELBA & B8!='0 & TRN_LH, DELAY(-1,26ns,40ns),
++         SELBA & B8!='0 & TRN_HL, DELAY(-1,21ns,35ns),
++         SELBA & B8!='1 & TRN_LH, DELAY(-1,33ns,50ns),
++         SELBA & B8!='1 & TRN_HL, DELAY(-1,14ns,25ns),
++         CHANGED(B8,0) & TRN_LH, DELAY(-1,12ns,18ns),
++         CHANGED(B8,0) & TRN_HL, DELAY(-1,13ns,20ns),
++         ENOE & TRN_ZH, DELAY(-1,33ns,55ns),
++         ENOE & TRN_ZL, DELAY(-1,42ns,65ns),
++         ENOE & TRN_HZ, DELAY(-1,23ns,35ns),
++         ENOE & TRN_LZ, DELAY(-1,22ns,35ns),
++         ENDIR & TRN_ZH, DELAY(-1,28ns,45ns),
++         ENDIR & TRN_ZL, DELAY(-1,39ns,60ns),
++         ENDIR & TRN_HZ, DELAY(-1,20ns,30ns),
++         ENDIR & TRN_LZ, DELAY(-1,19ns,30ns),
++         DELAY(-1,43ns,66ns))}
++
++
++  TRISTATE:
++     ENABLE HI=ENAB
++     B1 = {
++       CASE(
++         CLOCKAB & 2=='1 & TRN_LH, DELAY(-1,15ns,25ns),
++         CLOCKAB & 2=='1 & TRN_HL, DELAY(-1,23ns,35ns),
++         SELAB & A1!='0 & TRN_LH, DELAY(-1,26ns,40ns),
++         SELAB & A1!='0 & TRN_HL, DELAY(-1,21ns,35ns),
++         SELAB & A1!='1 & TRN_LH, DELAY(-1,33ns,50ns),
++         SELAB & A1!='1 & TRN_HL, DELAY(-1,14ns,25ns),
++         CHANGED(A1,0) & TRN_LH, DELAY(-1,12ns,18ns),
++         CHANGED(A1,0) & TRN_HL, DELAY(-1,13ns,20ns),
++         ENOE & TRN_ZH, DELAY(-1,33ns,55ns),
++         ENOE & TRN_ZL, DELAY(-1,42ns,65ns),
++         ENOE & TRN_HZ, DELAY(-1,23ns,35ns),
++         ENOE & TRN_LZ, DELAY(-1,22ns,35ns),
++         ENDIR & TRN_ZH, DELAY(-1,28ns,45ns),
++         ENDIR & TRN_ZL, DELAY(-1,39ns,60ns),
++         ENDIR & TRN_HZ, DELAY(-1,20ns,30ns),
++         ENDIR & TRN_LZ, DELAY(-1,19ns,30ns),
++         DELAY(-1,43ns,66ns))}
++
++
++     B2 = {
++       CASE(
++         CLOCKAB & 2=='1 & TRN_LH, DELAY(-1,15ns,25ns),
++         CLOCKAB & 2=='1 & TRN_HL, DELAY(-1,23ns,35ns),
++         SELAB & A2!='0 & TRN_LH, DELAY(-1,26ns,40ns),
++         SELAB & A2!='0 & TRN_HL, DELAY(-1,21ns,35ns),
++         SELAB & A2!='1 & TRN_LH, DELAY(-1,33ns,50ns),
++         SELAB & A2!='1 & TRN_HL, DELAY(-1,14ns,25ns),
++         CHANGED(A2,0) & TRN_LH, DELAY(-1,12ns,18ns),
++         CHANGED(A2,0) & TRN_HL, DELAY(-1,13ns,20ns),
++         ENOE & TRN_ZH, DELAY(-1,33ns,55ns),
++         ENOE & TRN_ZL, DELAY(-1,42ns,65ns),
++         ENOE & TRN_HZ, DELAY(-1,23ns,35ns),
++         ENOE & TRN_LZ, DELAY(-1,22ns,35ns),
++         ENDIR & TRN_ZH, DELAY(-1,28ns,45ns),
++         ENDIR & TRN_ZL, DELAY(-1,39ns,60ns),
++         ENDIR & TRN_HZ, DELAY(-1,20ns,30ns),
++         ENDIR & TRN_LZ, DELAY(-1,19ns,30ns),
++         DELAY(-1,43ns,66ns))}
++
++     B3 = {
++       CASE(
++         CLOCKAB & 2=='1 & TRN_LH, DELAY(-1,15ns,25ns),
++         CLOCKAB & 2=='1 & TRN_HL, DELAY(-1,23ns,35ns),
++         SELAB & A3!='0 & TRN_LH, DELAY(-1,26ns,40ns),
++         SELAB & A3!='0 & TRN_HL, DELAY(-1,21ns,35ns),
++         SELAB & A3!='1 & TRN_LH, DELAY(-1,33ns,50ns),
++         SELAB & A3!='1 & TRN_HL, DELAY(-1,14ns,25ns),
++         CHANGED(A3,0) & TRN_LH, DELAY(-1,12ns,18ns),
++         CHANGED(A3,0) & TRN_HL, DELAY(-1,13ns,20ns),
++         ENOE & TRN_ZH, DELAY(-1,33ns,55ns),
++         ENOE & TRN_ZL, DELAY(-1,42ns,65ns),
++         ENOE & TRN_HZ, DELAY(-1,23ns,35ns),
++         ENOE & TRN_LZ, DELAY(-1,22ns,35ns),
++         ENDIR & TRN_ZH, DELAY(-1,28ns,45ns),
++         ENDIR & TRN_ZL, DELAY(-1,39ns,60ns),
++         ENDIR & TRN_HZ, DELAY(-1,20ns,30ns),
++         ENDIR & TRN_LZ, DELAY(-1,19ns,30ns),
++         DELAY(-1,43ns,66ns))}
++
++     B4 = {
++       CASE(
++         CLOCKAB & 2=='1 & TRN_LH, DELAY(-1,15ns,25ns),
++         CLOCKAB & 2=='1 & TRN_HL, DELAY(-1,23ns,35ns),
++         SELAB & A4!='0 & TRN_LH, DELAY(-1,26ns,40ns),
++         SELAB & A4!='0 & TRN_HL, DELAY(-1,21ns,35ns),
++         SELAB & A4!='1 & TRN_LH, DELAY(-1,33ns,50ns),
++         SELAB & A4!='1 & TRN_HL, DELAY(-1,14ns,25ns),
++         CHANGED(A4,0) & TRN_LH, DELAY(-1,12ns,18ns),
++         CHANGED(A4,0) & TRN_HL, DELAY(-1,13ns,20ns),
++         ENOE & TRN_ZH, DELAY(-1,33ns,55ns),
++         ENOE & TRN_ZL, DELAY(-1,42ns,65ns),
++         ENOE & TRN_HZ, DELAY(-1,23ns,35ns),
++         ENOE & TRN_LZ, DELAY(-1,22ns,35ns),
++         ENDIR & TRN_ZH, DELAY(-1,28ns,45ns),
++         ENDIR & TRN_ZL, DELAY(-1,39ns,60ns),
++         ENDIR & TRN_HZ, DELAY(-1,20ns,30ns),
++         ENDIR & TRN_LZ, DELAY(-1,19ns,30ns),
++         DELAY(-1,43ns,66ns))}
++
++     B5 = {
++       CASE(
++         CLOCKAB & 2=='1 & TRN_LH, DELAY(-1,15ns,25ns),
++         CLOCKAB & 2=='1 & TRN_HL, DELAY(-1,23ns,35ns),
++         SELAB & A5!='0 & TRN_LH, DELAY(-1,26ns,40ns),
++         SELAB & A5!='0 & TRN_HL, DELAY(-1,21ns,35ns),
++         SELAB & A5!='1 & TRN_LH, DELAY(-1,33ns,50ns),
++         SELAB & A5!='1 & TRN_HL, DELAY(-1,14ns,25ns),
++         CHANGED(A5,0) & TRN_LH, DELAY(-1,12ns,18ns),
++         CHANGED(A5,0) & TRN_HL, DELAY(-1,13ns,20ns),
++         ENOE & TRN_ZH, DELAY(-1,33ns,55ns),
++         ENOE & TRN_ZL, DELAY(-1,42ns,65ns),
++         ENOE & TRN_HZ, DELAY(-1,23ns,35ns),
++         ENOE & TRN_LZ, DELAY(-1,22ns,35ns),
++         ENDIR & TRN_ZH, DELAY(-1,28ns,45ns),
++         ENDIR & TRN_ZL, DELAY(-1,39ns,60ns),
++         ENDIR & TRN_HZ, DELAY(-1,20ns,30ns),
++         ENDIR & TRN_LZ, DELAY(-1,19ns,30ns),
++         DELAY(-1,43ns,66ns))}
++
++     B6 = {
++       CASE(
++         CLOCKAB & 2=='1 & TRN_LH, DELAY(-1,15ns,25ns),
++         CLOCKAB & 2=='1 & TRN_HL, DELAY(-1,23ns,35ns),
++         SELAB & A6!='0 & TRN_LH, DELAY(-1,26ns,40ns),
++         SELAB & A6!='0 & TRN_HL, DELAY(-1,21ns,35ns),
++         SELAB & A6!='1 & TRN_LH, DELAY(-1,33ns,50ns),
++         SELAB & A6!='1 & TRN_HL, DELAY(-1,14ns,25ns),
++         CHANGED(A6,0) & TRN_LH, DELAY(-1,12ns,18ns),
++         CHANGED(A6,0) & TRN_HL, DELAY(-1,13ns,20ns),
++         ENOE & TRN_ZH, DELAY(-1,33ns,55ns),
++         ENOE & TRN_ZL, DELAY(-1,42ns,65ns),
++         ENOE & TRN_HZ, DELAY(-1,23ns,35ns),
++         ENOE & TRN_LZ, DELAY(-1,22ns,35ns),
++         ENDIR & TRN_ZH, DELAY(-1,28ns,45ns),
++         ENDIR & TRN_ZL, DELAY(-1,39ns,60ns),
++         ENDIR & TRN_HZ, DELAY(-1,20ns,30ns),
++         ENDIR & TRN_LZ, DELAY(-1,19ns,30ns),
++         DELAY(-1,43ns,66ns))}
++
++     B7 = {
++       CASE(
++         CLOCKAB & 2=='1 & TRN_LH, DELAY(-1,15ns,25ns),
++         CLOCKAB & 2=='1 & TRN_HL, DELAY(-1,23ns,35ns),
++         SELAB & A7!='0 & TRN_LH, DELAY(-1,26ns,40ns),
++         SELAB & A7!='0 & TRN_HL, DELAY(-1,21ns,35ns),
++         SELAB & A7!='1 & TRN_LH, DELAY(-1,33ns,50ns),
++         SELAB & A7!='1 & TRN_HL, DELAY(-1,14ns,25ns),
++         CHANGED(A7,0) & TRN_LH, DELAY(-1,12ns,18ns),
++         CHANGED(A7,0) & TRN_HL, DELAY(-1,13ns,20ns),
++         ENOE & TRN_ZH, DELAY(-1,33ns,55ns),
++         ENOE & TRN_ZL, DELAY(-1,42ns,65ns),
++         ENOE & TRN_HZ, DELAY(-1,23ns,35ns),
++         ENOE & TRN_LZ, DELAY(-1,22ns,35ns),
++         ENDIR & TRN_ZH, DELAY(-1,28ns,45ns),
++         ENDIR & TRN_ZL, DELAY(-1,39ns,60ns),
++         ENDIR & TRN_HZ, DELAY(-1,20ns,30ns),
++         ENDIR & TRN_LZ, DELAY(-1,19ns,30ns),
++         DELAY(-1,43ns,66ns))}
++
++     B8 = {
++       CASE(
++         CLOCKAB & 2=='1 & TRN_LH, DELAY(-1,15ns,25ns),
++         CLOCKAB & 2=='1 & TRN_HL, DELAY(-1,23ns,35ns),
++         SELAB & A8!='0 & TRN_LH, DELAY(-1,26ns,40ns),
++         SELAB & A8!='0 & TRN_HL, DELAY(-1,21ns,35ns),
++         SELAB & A8!='1 & TRN_LH, DELAY(-1,33ns,50ns),
++         SELAB & A8!='1 & TRN_HL, DELAY(-1,14ns,25ns),
++         CHANGED(A8,0) & TRN_LH, DELAY(-1,12ns,18ns),
++         CHANGED(A8,0) & TRN_HL, DELAY(-1,13ns,20ns),
++         ENOE & TRN_ZH, DELAY(-1,33ns,55ns),
++         ENOE & TRN_ZL, DELAY(-1,42ns,65ns),
++         ENOE & TRN_HZ, DELAY(-1,23ns,35ns),
++         ENOE & TRN_LZ, DELAY(-1,22ns,35ns),
++         ENDIR & TRN_ZH, DELAY(-1,28ns,45ns),
++         ENDIR & TRN_ZL, DELAY(-1,39ns,60ns),
++         ENDIR & TRN_HZ, DELAY(-1,20ns,30ns),
++         ENDIR & TRN_LZ, DELAY(-1,19ns,30ns),
++         DELAY(-1,43ns,66ns))}
+
+U6CON CONSTRAINT(19) DPWR DGND
++     1 23 4 5 6 7 8 9 10 11 20 19 18 17 16 15 12 13
++     IO_LS IO_LEVEL={IO_LEVEL}
++
++  WIDTH:
++     NODE=1
++     MIN_HI=15ns
++     MIN_LO=30ns
++
++  WIDTH:
++     NODE=23
++     MIN_HI=15ns
++     MIN_LO=30ns
++
++  WIDTH:
++     NODE=A1
++     MIN_HI=30ns
++     MIN_LO=30ns
++     WHEN={3=='1}
++
++  WIDTH:
++     NODE=A2
++     MIN_HI=30ns
++     MIN_LO=30ns
++     WHEN={3=='1}
++
++  WIDTH:
++     NODE=A3
++     MIN_HI=30ns
++     MIN_LO=30ns
++     WHEN={3=='1}
++
++  WIDTH:
++     NODE=A4
++     MIN_HI=30ns
++     MIN_LO=30ns
++     WHEN={3=='1}
++
++  WIDTH:
++     NODE=A5
++     MIN_HI=30ns
++     MIN_LO=30ns
++     WHEN={3=='1}
++
++  WIDTH:
++     NODE=A6
++     MIN_HI=30ns
++     MIN_LO=30ns
++     WHEN={3=='1}
++
++  WIDTH:
++     NODE=A7
++     MIN_HI=30ns
++     MIN_LO=30ns
++     WHEN={3=='1}
++
++  WIDTH:
++     NODE=A8
++     MIN_HI=30ns
++     MIN_LO=30ns
++     WHEN={3=='1}
++
++  WIDTH:
++     NODE=B1
++     MIN_HI=30ns
++     MIN_LO=30ns
++     WHEN={3=='0}
++
++  WIDTH:
++     NODE=B2
++     MIN_HI=30ns
++     MIN_LO=30ns
++     WHEN={3=='0}
++
++  WIDTH:
++     NODE=B3
++     MIN_HI=30ns
++     MIN_LO=30ns
++     WHEN={3=='0}
++
++  WIDTH:
++     NODE=B4
++     MIN_HI=30ns
++     MIN_LO=30ns
++     WHEN={3=='0}
++
++  WIDTH:
++     NODE=B5
++     MIN_HI=30ns
++     MIN_LO=30ns
++     WHEN={3=='0}
++
++  WIDTH:
++     NODE=B6
++     MIN_HI=30ns
++     MIN_LO=30ns
++     WHEN={3=='0}
++
++  WIDTH:
++     NODE=B7
++     MIN_HI=30ns
++     MIN_LO=30ns
++     WHEN={3=='0}
++
++  WIDTH:
++     NODE=B8
++     MIN_HI=30ns
++     MIN_LO=30ns
++     WHEN={33=='0}
++
++  SETUP_HOLD:
++     CLOCK LH=1
++     DATA(8)=4 5 6 7 8 9 10 11
++     SETUPTIME=15ns
++     WHEN={3=='1}
++
++  SETUP_HOLD:
++     CLOCK LH=23
++     DATA(8)=20 19 18 17 16 15 12 13
++     SETUPTIME=15ns
++     WHEN={3=='0}
+
+.ENDS K555AP10
+
+
+* ----------------------------------------------------------- K155IE6 ------
+*
+*  Двоично-десятичный реверсивный счетчик.
+*
+*  Based on 74192 (Synchronous 4-Bit Up/Down BCD Counter with Dual Clock and Clear)
+*  Ноги: Eng: DOWN UP CLR A  B  C  D  COBAR LOADBAR BOBAR QA QB QC QD
+*        Rus: -1   +1 R   D1 D2 D3 D4 >=9   S       <=0   1  2  4  8
+.SUBCKT K155IE6 4    5  14  15 1  10 9  12    11      13    3  2  6  7
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+UK155IE6 LOGICEXP (16,14) DPWR DGND
++      4 5 15 1 10 9 11 14
++      QA_O QB_O QC_O QD_O qabar qbbar qcbar qdbar
++      COBAR_O BOBAR_O ta tb tc td sa sb sc sd ra rb rc rd
++      D0_GATE IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      upbar = {(~5) }
++      load = {(~11)}
++      downbar = {(~4)}
++      clrbar = {(~14)}
++      sa = { ~(15 & load & clrbar) }
++      ra = { ((~(sa & load)) & clrbar) }
++      sb = { ~(1 & load & clrbar) }
++      rb = { ((~(sb & load)) & clrbar) }
++      sc = { ~(10 & load & clrbar) }
++      rc = { ((~(sc & load)) & clrbar) }
++      sd = { ~(9 & load & clrbar) }
++      rd = { ((~(sd & load)) & clrbar) }
++      BOBAR_O = { ~(downbar & qabar & qbbar & qcbar & qdbar) }
++      COBAR_O =  { ~(upbar & QA_O & QD_O) }
++      i1 = { ~(qbbar & qcbar & qdbar) }
++      ta = { (upbar | downbar) }
++      tb = { (downbar & qabar & i1) | (upbar & QA_O & qdbar)}
++      tc = { (i1 & downbar & qabar & qbbar) | (upbar & QA_O & QB_O)}
++      td = { (downbar & qabar & qbbar & qcbar) | (QA_O & QD_O & upbar) | 
++               (QA_O & QB_O & QC_O & upbar) }
+
+uf0 jkFF(1) DPWR DGND
++ sa ra ta $D_HI $D_HI QA_O qabar
++ D0_EFF IO_STD
+
+uf1 jkFF(1) DPWR DGND
++ sb rb tb $D_HI $D_HI QB_O qbbar
++ D0_EFF IO_STD
+
+uf2 jkFF(1) DPWR DGND
++ sc rc tc $D_HI $D_HI QC_O qcbar
++ D0_EFF IO_STD
+
+uf3 jkFF(1) DPWR DGND
++ sd rd td $D_HI $D_HI QD_O qdbar
++ D0_EFF IO_STD
+
+Udly PINDLY (6,0,8) DPWR DGND
++    COBAR_O QA_O QB_O QC_O QD_O BOBAR_O
++    4 5 14 11 15 1 10 9
++    12 3 2 6 7 13
++    IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    BOOLEAN:
++     LOAD_DAT = { CHANGED(11,0) }
++     CLKUP  = { CHANGED(5,0) }
++     CLKDOWN  = { CHANGED(4,0) }
++     CLEAR = { CHANGED(14,0) }
++     DATA = { CHANGED(15,0) | CHANGED(1,0) | CHANGED(10,0) | CHANGED(9,0) }
++
++    PINDLY:
++       12 = {
++            CASE(
++                 CLKUP & TRN_LH, DELAY(-1,17ns,26ns),
++                 CLKUP & TRN_HL, DELAY(-1,16ns,24ns),
++                 DELAY(-1,18ns,27ns)
++                )
++            }
++       3 2 6 7 = {
++            CASE(
++                 CLEAR & TRN_HL, DELAY(-1,22ns,35ns),
++                 LOAD_DAT & TRN_LH, DELAY(-1,27ns,40ns),
++                 LOAD_DAT & TRN_HL, DELAY(-1,29ns,40ns),
++                 (CLKUP | CLKDOWN) & TRN_LH, DELAY(-1,25ns,38ns),
++                 (CLKUP | CLKDOWN) & TRN_HL, DELAY(-1,31ns,47ns),
++                 DELAY(-1,30ns,49ns)
++                )
++            }
++       13 = {
++            CASE(
++                 CLKDOWN & TRN_LH, DELAY(-1,16ns,24ns),
++                 CLKDOWN & TRN_HL, DELAY(-1,16ns,24ns),
++                 DELAY(-1,17ns,25ns)
++                )
++            }
+
+Ucnstr CONSTRAINT(8) DPWR DGND
++          14 5 4 11 15 1 10 9
++          IO_STD
++
++      FREQ:
++         NODE = 5
++         MAXFREQ = 20MEG
++      FREQ:
++         NODE = 4
++         MAXFREQ = 20MEG
++      WIDTH:
++         NODE = 5
++         MIN_HI = 20ns
++         MIN_LO = 20ns
++      WIDTH:
++         NODE = 4
++         MIN_HI = 20ns
++         MIN_LO = 20ns
++      WIDTH:
++         NODE = 14
++         MIN_HI = 20ns
++      WIDTH:
++         NODE = 11
++         MIN_LO = 20ns
++      SETUP_HOLD:
++        CLOCK LH = 11
++        DATA(4) = 15 1 10 9
++        SETUPTIME = 20ns
++        WHEN = { 14 != '1 }
+
+.ENDS K155IE6
+
+
+* ----------------------------------------------------------- K155ID10 ------
+*
+*  Двоично-десятичный дешифратор
+*
+*  Based on SN74145 (BCD-To-Decimal Decoders/Drivers)
+*
+*  Ноги: Eng:    A  B  C  D  O0 O1 O2 O3 O4 O5 O6 O7 O8 O9
+*        Rus:    1  2  4  8  0  1  2  3  4  5  6  7  8  9
+.SUBCKT K155ID10 15 14 13 12 1  2  3  4  5  6  7  9  10 11
++     optional:  DPWR=$G_DPWR DGND=$G_DGND
++     params:  MNTYMXDLY=0 IO_LEVEL=0
+
+U1LOG LOGICEXP(4,10) DPWR DGND
++     15 14 13 12
++     O0_O O1_O O2_O O3_O O4_O O5_O O6_O O7_O O8_O O9_O
++     D0_GATE IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++  LOGIC:
++     abar = {~15}
++     bbar = {~14}
++     cbar = {~13}
++     dbar = {~12}
++     O0_O = {~(abar & bbar & cbar & dbar)}
++     O1_O = {~(15 & bbar & cbar & dbar)}
++     O2_O = {~(abar & 14 & cbar & dbar)}
++     O3_O = {~(15 & 14 & cbar & dbar)}
++     O4_O = {~(abar & bbar & 13 & dbar)}
++     O5_O = {~(15 & bbar & 13 & dbar)}
++     O6_O = {~(abar & 14 & 13 & dbar)}
++     O7_O = {~(15 & 14 & 13 & dbar)}
++     O8_O = {~(abar & bbar & cbar & 12)}
++     O9_O = {~(15 & bbar & cbar & 12)}
+
+U2DLY PINDLY(10,0,0) DPWR DGND
++     O0_O O1_O O2_O O3_O O4_O O5_O O6_O O7_O O8_O O9_O
++     1 2 3 4 5 6 7 9 10 11
++     IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++  PINDLY:
++     1 2 3 4 5 6 7 9 10 11 = {
++        CASE(
++          DELAY(-1,-1,50ns))}
+
+.ENDS K155ID10
+
+
+* ----------------------------------------------------------- K555IM5 ------
+*
+*  Два одноразрядных сумматора
+*
+*  Dual Carry-Save Full Adder
+*
+*  Ноги: Eng:    1A 1B 1CN 1SUM 1CN1 2A 2B 2CN 2SUM 2CN1
+*        Rus:     1  3   4    6    5 13 12  11    8   10
+
+.SUBCKT K555IM5   1 3 4 6 5 13 12 11 8 10
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+UK555IM5 LOGICEXP (6,4) DPWR DGND
++      1 3 4 13 12 11
++      1SUM_O 1CN1_O 2SUM_O 2CN1_O
++      D0_GATE IO_LS MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      c1a = {(~4 & ~3)}
++      c2a = {(~3 & ~1)}
++      c3a = {(~4 & ~1)}
++      1CN1_O = { ~(c1a | c2a | c3a) }
++      s1a = {(4 & ~3 & 1)}
++      s2a = {(~4 & 3 & 1)}
++      s3a = {(~4 & ~3 & ~1)}
++      s4a = {(4 & 3 & ~1)}
++      1SUM_O = { ~(s1a | s2a | s3a | s4a) }
++      c1b = {(~11 & ~12)}
++      c2b = {(~12 & ~13)}
++      c3b = {(~11 & ~13)}
++      2CN1_O = { ~(c1b | c2b | c3b) }
++      s1b = {(11 & ~12 & 13)}
++      s2b = {(~11 & 12 & 13)}
++      s3b = {(~11 & ~12 & ~13)}
++      s4b = {(11 & 12 & ~13)}
++      2SUM_O = { ~(s1b | s2b | s3b | s4b) }
+
+Udly PINDLY (4,0,6) DPWR DGND
++      1SUM_O 1CN1_O 2SUM_O 2CN1_O
++      1 3 4 13 12 11
++      6 5 8 10
++      IO_LS MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++   PINDLY:
++     6 5 8 10  = {
++            CASE(
++                 TRN_LH, DELAY(-1,9ns,15ns),
++                 TRN_HL, DELAY(-1,20ns,33ns),
++                 DELAY(-1,21ns,34ns)
++                )
++            }
+
+.ENDS K555IM5

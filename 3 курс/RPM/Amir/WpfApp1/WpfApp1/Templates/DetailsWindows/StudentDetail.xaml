@@ -1,0 +1,86 @@
+﻿<Window x:Class="WpfApp1.Templates.DetailsWindows.StudentDetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Templates.DetailsWindows"
+        mc:Ignorable="d"
+        Title="StudentDetail" Height="450" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height=".2*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="Добавление"
+                   Name="TitleTB"
+                   HorizontalAlignment="Center"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   Margin="0, 30, 0, 0"/>
+        <StackPanel Grid.Row="1">
+            <WrapPanel>
+                <Label Content="ФИО:"/>
+                <TextBox Name="NameTB"
+                         Width="220"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Email:"/>
+                <TextBox Name="EmailTB"
+                         Width="220"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Роль:"/>
+                <TextBox Name="RoleTB"
+                         Width="220"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Начало обучения:"/>
+                <TextBox Name="EndDateTB"
+                         Width="180"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Конец обучения:"/>
+                <TextBox Name="StartDateTB"
+                         Width="180"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Категория:"/>
+                <ComboBox Name="CategorySelector"
+               SelectedIndex="0">
+                    <ComboBoxItem Content="A"/>
+                    <ComboBoxItem Content="A1"/>
+                    <ComboBoxItem Content="B"/>
+                    <ComboBoxItem Content="B1"/>
+                    <ComboBoxItem Content="C"/>
+                    <ComboBoxItem Content="C1"/>
+                    <ComboBoxItem Content="D"/>
+                    <ComboBoxItem Content="D1"/>
+                    <ComboBoxItem Content="BE"/>
+                    <ComboBoxItem Content="CE"/>
+                    <ComboBoxItem Content="C1E"/>
+                    <ComboBoxItem Content="DE"/>
+                    <ComboBoxItem Content="D1E"/>
+                </ComboBox>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Инструктор:"/>
+                <ComboBox Name="InstructorsSelector"
+                          SelectedIndex="0">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <Label Content="{Binding Name}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </WrapPanel>
+        </StackPanel>
+        <WrapPanel HorizontalAlignment="Center"
+                   Grid.Row="2">
+            <Button Content="Сохранить"
+                    Click="Save_Click"/>
+        </WrapPanel>
+    </Grid>
+</Window>

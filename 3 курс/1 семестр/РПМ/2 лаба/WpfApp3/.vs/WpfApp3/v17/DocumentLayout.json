@@ -1,0 +1,56 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u041F\u041C\\2 \u043B\u0430\u0431\u0430\\WpfApp3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B46E8F66-DF6A-4D3A-922D-0A7F02509F1E}|WpfApp3\\WpfApp3.csproj|c:\\users\\busov\\documents\\\u043A\u0438\u0442\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0440\u043F\u043C\\2 \u043B\u0430\u0431\u0430\\wpfapp3\\wpfapp3\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B46E8F66-DF6A-4D3A-922D-0A7F02509F1E}|WpfApp3\\WpfApp3.csproj|solutionrelative:wpfapp3\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B46E8F66-DF6A-4D3A-922D-0A7F02509F1E}|WpfApp3\\WpfApp3.csproj|C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u041F\u041C\\2 \u043B\u0430\u0431\u0430\\WpfApp3\\wpfapp3\\usercontrol1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B46E8F66-DF6A-4D3A-922D-0A7F02509F1E}|WpfApp3\\WpfApp3.csproj|solutionrelative:wpfapp3\\usercontrol1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserControl1.xaml",
+              "DocumentMoniker": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u041F\u041C\\2 \u043B\u0430\u0431\u0430\\WpfApp3\\WpfApp3\\UserControl1.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\UserControl1.xaml",
+              "ToolTip": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u041F\u041C\\2 \u043B\u0430\u0431\u0430\\WpfApp3\\WpfApp3\\UserControl1.xaml",
+              "RelativeToolTip": "WpfApp3\\UserControl1.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-30T07:03:28.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u041F\u041C\\2 \u043B\u0430\u0431\u0430\\WpfApp3\\WpfApp3\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u041F\u041C\\2 \u043B\u0430\u0431\u0430\\WpfApp3\\WpfApp3\\MainWindow.xaml",
+              "RelativeToolTip": "WpfApp3\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-02T07:14:17.295Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

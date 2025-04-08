@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="WpfApp1.Templates.CarsWidget"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1.Templates"
+             mc:Ignorable="d" 
+             Height="450" Width="650">
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="70"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Background" Value="#F0F0F0"/>
+            <Setter Property="Margin" Value="10, 0, 0, 0"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+    </UserControl.Resources>
+    <StackPanel HorizontalAlignment="Stretch"
+                Background="White">
+        <ListBox Height="350" Name="CarsList">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="{Binding Name}"
+                                   FontSize="16"
+                                   FontWeight="Bold"/>
+                        <WrapPanel Margin="10, 0">
+                            <TextBlock Text="Категория: "
+                                       FontSize="16"
+                                       FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Category}"
+                                       FontSize="16"
+                                       FontWeight="Bold"/>
+                        </WrapPanel>
+                        <Image Width="130" Source="{Binding Image}">
+                            <Image.Triggers>
+                                <EventTrigger RoutedEvent="MouseEnter">
+                                    <EventTrigger.Actions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation
+                                                Storyboard.TargetProperty="Width"
+                                                Duration="0:0:0.3"
+                                                To="300"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger.Actions>
+                                </EventTrigger>
+                                <EventTrigger RoutedEvent="MouseLeave">
+                                    <EventTrigger.Actions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation
+                                                Storyboard.TargetProperty="Width"
+                                                Duration="0:0:0.3"
+                                                To="130"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger.Actions>
+                                </EventTrigger>
+                            </Image.Triggers>
+                        </Image>
+                    </WrapPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <WrapPanel HorizontalAlignment="Center">
+            <Button Name="AddBtn"
+                    Content="Добавить"
+                    Click="AddBtn_Click"/>
+            <Button Name="DeleteBtn"
+                    Content="Удалить"
+                    Click="DeleteBtn_Click"/>
+            <Button Name="UpdateBtn"
+                    Content="Изменить"
+                    Click="UpdateBtn_Click"/>
+        </WrapPanel>
+
+    </StackPanel>
+</UserControl>

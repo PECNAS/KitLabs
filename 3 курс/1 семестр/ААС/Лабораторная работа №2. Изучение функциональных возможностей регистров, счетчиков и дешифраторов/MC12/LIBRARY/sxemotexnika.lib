@@ -1,0 +1,1240 @@
+* DIGITAL LIBRARY 7400-
+*
+* ------------------------155LA3----------------------------------- 7400 ------
+*  Quad 2-Input Nand Gates
+*
+*  The TTL Logic Data Book, 1988, TI Pages 2-3 to 2-7
+*  bss    2/2/94
+*
+.SUBCKT 155LA3  1A 1B 1Y
++     optional: DPWR=$G_DPWR DGND=$G_DGND
++     params: MNTYMXDLY=0 IO_LEVEL=0
+
+U1 nand(2) DPWR DGND
++     1A 1B 1Y
++     DLY_00 IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+.model DLY_00 ugate (tplhTY=11ns tplhMX=22ns tphlTY=7ns tphlMX=15ns)
+
+.ENDS  155LA3
+
+*
+*
+* -----------------------155LN1------------------------------------ 7404 ------
+*  Hex Inverters
+*
+*  The TTL Logic Data Book, 1988, TI Pages 2-25 to 2-29
+*  bss    2/3/94
+*
+.SUBCKT 155LN1  1A  1Y
++     optional: DPWR=$G_DPWR DGND=$G_DGND
++     params: MNTYMXDLY=0 IO_LEVEL=0
+
+U1 inv DPWR DGND
++     1A 1Y
++     DLY_04 IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+.model DLY_04 ugate (tplhTY=12ns tplhMX=22ns tphlTY=8ns tphlMX=15ns)
+
+.ENDS  155LN1
+
+
+*
+*
+* ----------------155LA4------------------------------------------- 7410 ------
+*  Triple 3-Input Nand Gates
+*
+*  The TTL Logic Data Book, 1988, TI Pages 2-53 to 2-57
+*  bss    2/4/94
+*
+.SUBCKT 155LA4  1A 1B 1C 1Y
++     optional: DPWR=$G_DPWR DGND=$G_DGND
++     params: MNTYMXDLY=0 IO_LEVEL=0
+
+U1 nand(3) DPWR DGND
++     1A 1B 1C 1Y
++     DLY_10 IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+.model DLY_10 ugate (tplhTY=11ns tplhMX=22ns tphlTY=7ns tphlMX=15ns)
+
+.ENDS  155LA4
+
+*
+*
+* ----------------------------------------------------------- 7451 ------
+*  And-Or-Invert Gates
+*
+*  The F Logic Data Book, 1994, TI Pages 2-49 to 2-51
+*  bss    12/8/95
+*
+.SUBCKT 155LR11 1A 1B 1C 1D 1E 1F 2A 2B 2C 2D 1Y 2Y
++     optional:  DPWR=$G_DPWR DGND=$G_DGND
++     params:  MNTYMXDLY=0 IO_LEVEL=0
+
+U1 aoi(3,2) DPWR DGND
++    1A 1B 1C
++    1D 1E 1F
++    1Y
++    DLY_51 IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+U2 aoi(2,2) DPWR DGND
++    2A 2B
++    2C 2D
++    2Y
++    DLY_51 IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+.model DLY_51 ugate (tplhTY=13ns tplhMX=22ns tphlTY=8ns tphlMX=15ns)
+
+.ENDS 155LR11
+
+*
+*
+* ---------------------155TM2-------------------------------------- 7474 ------
+*  Dual D-Type Positive Edge Triggered Flip-Flops With  Preset And Clear
+*
+*  The TTL Logic Data Book, 1988, TI Pages 2-235 to 2-240
+*  bss    2/23/94
+*
+.SUBCKT 155TM2 1PREBAR 1CLRBAR 1CLK 1D 1Q 1QBAR
++     optional:  DPWR=$G_DPWR DGND=$G_DGND
++     params:  MNTYMXDLY=0 IO_LEVEL=0
+
+U1 DFF(1) DPWR DGND
++     1PREBAR 1CLRBAR 1CLK 1D 1Q 1QBAR
++     DLY_74 IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+.model DLY_74 ueff(tppcqlhMX=25ns tppcqhlMX=40ns twpclMN=30ns
++                 tpclkqlhTY=14ns tpclkqlhMX=25ns tpclkqhlTY=20ns
++                 tpclkqhlMX=40ns twclkhMN=30ns twclklMN=37ns
++                 tsudclkMN=20ns thdclkMN=5ns)
+
+.ENDS 155TM2
+
+*
+*
+* --------------------155TM7--------------------------------------- 7475 ------
+*  4 Bit Bistable Latches
+*
+*  The TTL Logic Data Book, 1988, TI Pages 2-241 to 2-245
+*  bss    2/24/94
+*
+.SUBCKT 155TM7 C 1D 2D 1Q 1QBAR 2Q 2QBAR
++     optional:  DPWR=$G_DPWR DGND=$G_DGND
++     params:  MNTYMXDLY=0 IO_LEVEL=0
+
+U1 DLTCH(2) DPWR DGND
++     $D_HI $D_HI C 1D 2D 1Q_O 2Q_O 1QBAR_O 2QBAR_O
++     DLY_75 IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+U2DLY PINDLY(4,0,3) DPWR DGND
++     1Q_O 1QBAR_O 2Q_O 2QBAR_O
++     C 1D 2D
++     1Q 1QBAR 2Q 2QBAR
++     IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++  BOOLEAN:
++     DATA={CHANGED(1D,0) | CHANGED(2D,0)}
++     CLK = {CHANGED_LH(C,0)}
++
++  PINDLY:
++     1Q 2Q = {
++        CASE(
++           DATA & TRN_LH, DELAY(-1,16ns,30ns),
++           DATA & TRN_HL, DELAY(-1,14ns,25ns),
++           CLK & TRN_LH, DELAY(-1,16ns,30ns),
++           CLK & TRN_HL, DELAY(-1,7ns,15ns),
++           DELAY(-1,17ns,31ns))}
++
++     1QBAR 2QBAR = {
++        CASE(
++           DATA & TRN_LH, DELAY(-1,24ns,40ns),
++           DATA & TRN_HL, DELAY(-1,7ns,15ns),
++           CLK & TRN_LH, DELAY(-1,16ns,30ns),
++           CLK & TRN_HL, DELAY(-1,7ns,15ns),
++           DELAY(-1,25ns,41ns))}
+
+.model DLY_75 ugff (twghMN=20ns tsudgMN=20ns thdgMN=5ns)
+
+.ENDS 155TM7
+
+
+*
+*
+* ---------------------155IR9-------------------------------------- 74165 ------
+*  Parallel-Load 8-Bit Shift Register
+*
+*  The TTL Logic Data Book, 1988, TI Pages 2-521 to 2-528
+*  jds    4/14/94
+*
+.SUBCKT 155IR9 SH/LDBAR CLK_INH CLK SER A B C D E F G H QH QHBAR
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U74165 LOGICEXP (11,17) DPWR DGND
++        SH/LDBAR CLK_INH CLK A B C D E F G H
++        r0 s0 r1 s1 r2 s2 r3 s3 r4 s4 r5 s5 r6 s6 r7 s7 clock
++        D0_GATE IO_STD IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      clock = { (CLK_INH | CLK) }
++      shbar/ld = { (~(SH/LDBAR)) }
++      s0 = { (~(shbar/ld & A)) }
++      r0 = { (~(s0 & shbar/ld)) }
++      s1 = { (~(shbar/ld & B)) }
++      r1 = { (~(s1 & shbar/ld)) }
++      s2 = { (~(shbar/ld & C)) }
++      r2 = { (~(s2 & shbar/ld)) }
++      s3 = { (~(shbar/ld & D)) }
++      r3 = { (~(s3 & shbar/ld)) }
++      s4 = { (~(shbar/ld & E)) }
++      r4 = { (~(s4 & shbar/ld)) }
++      s5 = { (~(shbar/ld & F)) }
++      r5 = { (~(s5 & shbar/ld)) }
++      s6 = { (~(shbar/ld & G)) }
++      r6 = { (~(s6 & shbar/ld)) }
++      s7 = { (~(shbar/ld & H)) }
++      r7 = { (~(s7 & shbar/ld)) }     
+
+uf0  Dff(1)  DPWR DGND
++    s0 r0  clock
++    SER  QA qabar 
++    D0_EFF IO_STD
+
+uf1  Dff(1)  DPWR DGND
++    s1 r1 clock
++    QA QB qbbar 
++    D0_EFF IO_STD
+
+uf2  Dff(1)  DPWR DGND
++    s2 r2  clock
++    QB QC qcbar 
++    D0_EFF IO_STD
+
+uf3  Dff(1)  DPWR DGND
++    s3 r3  clock
++    QC QD qdbar 
++    D0_EFF IO_STD
+
+uf4  Dff(1)  DPWR DGND
++    s4 r4  clock
++    QD QE qebar 
++    D0_EFF IO_STD
+
+uf5  Dff(1)  DPWR DGND
++    s5 r5  clock
++    QE QF qfbar 
++    D0_EFF IO_STD
+
+uf6  Dff(1)  DPWR DGND
++    s6 r6  clock
++    QF QG qgbar 
++    D0_EFF IO_STD
+
+uf7  Dff(1)  DPWR DGND
++    s7 r7  clock
++    QG QH_O QHBAR_O 
++    D0_EFF IO_STD
+
+Udly PINDLY (2,0,5) DPWR DGND
++    QH_O QHBAR_O
++    CLK SH/LDBAR H SER CLK_INH
++    QH QHBAR
++    IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    BOOLEAN:
++       DATA=  { CHANGED(H,0) }
++       CLKS= { (CHANGED(CLK,0) | CHANGED(CLK_INH,0)) }
++       SERIAL= { CHANGED(SER,0) }
++       LOAD= { CHANGED(SH/LDBAR,0) }
++
++    PINDLY:
++       QH  = {
++                   CASE(
++                       LOAD & TRN_LH, DELAY(-1,21ns,31ns),
++                       LOAD & TRN_HL, DELAY(-1,27ns,40ns),
++                       CLKS & TRN_LH, DELAY(-1,16ns,24ns),
++                       CLKS & TRN_HL, DELAY(-1,21ns,31ns),
++                       DATA & TRN_LH, DELAY(-1,11ns,17ns),
++                       DATA & TRN_HL, DELAY(-1,24ns,36ns),
++                       DELAY(-1,28ns,41ns)
++                       )
++                     }
++       QHBAR  = {
++                   CASE(
++                       LOAD & TRN_LH, DELAY(-1,21ns,31ns),
++                       LOAD & TRN_HL, DELAY(-1,27ns,40ns),
++                       CLKS & TRN_LH, DELAY(-1,16ns,24ns),
++                       CLKS & TRN_HL, DELAY(-1,21ns,31ns),
++                       DATA & TRN_LH, DELAY(-1,18ns,27ns),
++                       DATA & TRN_HL, DELAY(-1,18ns,27ns),
++                       DELAY(-1,28ns,41ns)
++                       )
++                     }
+
+
+Ucnstr CONSTRAINT(12) DPWR DGND
++          CLK SH/LDBAR SER CLK_INH A B C D E F G H
++          IO_STD
++
++      FREQ:
++         NODE = CLK
++         MAXFREQ = 20MEG
++      WIDTH:
++         NODE = CLK
++         MIN_HI = 25ns
++      WIDTH:
++         NODE = SH/LDBAR
++         MIN_LO = 15ns
++      SETUP_HOLD:
++        CLOCK LH = CLK
++        DATA(1) = CLK_INH
++        SETUPTIME = 30ns
++      SETUP_HOLD:
++        CLOCK LH = CLK
++        DATA(8) = A B C D E F G H
++        SETUPTIME = 10ns
++      SETUP_HOLD:
++        CLOCK LH = CLK
++        DATA(1) = SER
++        SETUPTIME = 20ns
++      SETUP_HOLD:
++        CLOCK LH = CLK
++        DATA(1) = SH/LDBAR
++        SETUPTIME_HI = 45ns
+
+.ENDS 155IR9
+
+*
+*
+* ---------------155IR8-------------------------------------------- 74164 ------
+*  8-Bit Parallel-Out Serial Shift Register
+*
+*  The TTL Logic Data Book, 1988, TI Pages 2-515 to 2-520
+*  jds    3/28/94
+*
+.SUBCKT 155IR8 A B CLRBAR CLK QA QB QC QD QE QF QG QH
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U74164 LOGICEXP (3,3) DPWR DGND
++        CLK A B
++        r0 s0 clkbar
++        D0_GATE IO_STD IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      r0 = { (~(A & B)) }
++      s0 = { (~r0) }
++      clkbar = { (~CLK) }
+
+
+uf0  JKff(8)  DPWR DGND
++    $D_HI CLRBAR clkbar
++    s0 QA_O QB_O QC_O QD_O QE_O QF_O QG_O
++    r0 qabar qbbar qcbar qdbar qebar qfbar qgbar
++    QA_O QB_O QC_O QD_O QE_O QF_O QG_O QH_O
++    qabar qbbar qcbar qdbar qebar qfbar qgbar qhbar
++    D0_EFF IO_STD
+
+Udly PINDLY (8,0,4) DPWR DGND
++    QA_O QB_O QC_O QD_O QE_O QF_O QG_O QH_O
++    CLRBAR CLK A B
++    QA QB QC QD QE QF QG QH
++    IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    BOOLEAN:
++       DATA=  { ( CHANGED(A,0) | CHANGED(B,0) ) }
++       CLOCK= { CHANGED(CLK,0) }
++       CLEAR= { CHANGED(CLRBAR,0) }
++
++    PINDLY:
++       QA QB QC QD QE QF QG QH  = {
++                   CASE(
++                       CLEAR & TRN_HL, DELAY(-1,24ns,36ns),
++                       CLOCK & TRN_LH, DELAY(8ns,17ns,27ns),
++                       CLOCK & TRN_HL, DELAY(10ns,21ns,32ns),
++                       DELAY(-1,25ns,37ns)
++                       )
++                     }
+
+Ucnstr CONSTRAINT(4) DPWR DGND
++          CLRBAR CLK  A B
++          IO_STD
++
++      FREQ:
++         NODE = CLK
++         MAXFREQ = 25MEG
++      WIDTH:
++         NODE = CLK
++         MIN_HI = 20ns
++      WIDTH:
++         NODE = CLRBAR
++         MIN_LO = 20ns
++      SETUP_HOLD:
++        CLOCK LH = CLK
++        DATA(2) = A B
++        SETUPTIME = 15ns
++        HOLDTIME = 5ns
++        WHEN = { CLRBAR != '0 }
++      SETUP_HOLD:
++        DATA(1) = CLRBAR
++        CLOCK LH = CLK
++        SETUPTIME = 20ns
+
+.ENDS 155IR8
+*
+*
+* ------------------------------155SP1----------------------------- 7485 ------
+*  4-Bit Magnitude Comparators
+*
+*  The TTL Logic Data Book, 1988, TI Pages 2-263 to 2-269
+*  bss    2/25/94
+*
+.SUBCKT 155SP1 A0 A1 A2 A3 ALTBI AEQBI AGTBI B0 B1 B2 B3 ALTBO AEQBO AGTBO
++     optional:  DPWR=$G_DPWR DGND=$G_DGND
++     params:  MNTYMXDLY=0 IO_LEVEL=0
+
+U1LOG LOGICEXP(11,3) DPWR DGND
++     A0 A1 A2 A3 ALTBI AEQBI AGTBI B0 B1 B2 B3
++     ALTBO_O AEQBO_O AGTBO_O
++     D0_GATE IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++  LOGIC:
++     nand3 = {~(A3 & B3)}
++     nand2 = {~(A2 & B2)}
++     nand1 = {~(A1 & B1)}
++     nand0 = {~(A0 & B0)}
++     nor3 = {~((A3 & nand3) | (B3 & nand3))}
++     nor2 = {~((A2 & nand2) | (B2 & nand2))}
++     nor1 = {~((A1 & nand1) | (B1 & nand1))}
++     nor0 = {~((A0 & nand0) | (B0 & nand0))}
++     AGTBO_O = {~((B3 & nand3) | (B2 & nand2 & nor3) | (B1 & nand1 & nor3 & nor2) |
++          (B0 & nand0 & nor3 & nor2 & nor1) | (nor3 & nor2 & nor1 & nor0 & ALTBI) |
++          (nor3 & nor2 & nor1 & nor0 & AEQBI))}
++     AEQBO_O = {nor3 & nor2 & AEQBI & nor1 & nor0}
++     ALTBO_O = {~((A3 & nand3) | (A2 & nand2 & nor3) | (A1 & nand1 & nor3 & nor2) |
++          (A0 & nand0 & nor3 & nor2 & nor1) | (nor3 & nor2 & nor1 & nor0 & AGTBI) |
++          (nor3 & nor2 & nor1 & nor0 & AEQBI))}
+
+U2DLY PINDLY(3,0,11) DPWR DGND
++     ALTBO_O AEQBO_O AGTBO_O
++     A0 A1 A2 A3 ALTBI AEQBI AGTBI B0 B1 B2 B3
++     ALTBO AEQBO AGTBO
++     IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++  BOOLEAN:
++     DATA = {CHANGED(A0,0) | CHANGED(A1,0) | CHANGED(A2,0) | CHANGED(A3,0) |
++                 CHANGED(B0,0) | CHANGED(B1,0) | CHANGED(B2,0) | CHANGED(B3,0)}
++     LTHAN = {CHANGED(ALTBI,0)}
++     GTHAN = {CHANGED(AGTBI,0)}
++     EQUAL = {CHANGED(AEQBI,0)}
++
++  PINDLY:
++     AEQBO = {
++        CASE(
++           DATA & TRN_LH, DELAY(-1,23ns,35ns),
++           DATA & TRN_HL, DELAY(-1,20ns,30ns),
++           EQUAL & TRN_LH, DELAY(-1,13ns,20ns),
++           EQUAL & TRN_HL, DELAY(-1,11ns,17ns),
++           DELAY(-1,24ns,36ns))}
++
++     ALTBO AGTBO = {
++        CASE(
++           DATA & TRN_LH, DELAY(-1,17ns,26ns),
++           DATA & TRN_HL, DELAY(-1,20ns,30ns),
++           (LTHAN | EQUAL | GTHAN) & TRN_LH, DELAY(-1,7ns,11ns),
++           (LTHAN | EQUAL | GTHAN) & TRN_HL, DELAY(-1,11ns,17ns),
++           DELAY(-1,21ns,31ns))}
+
+.ENDS 155SP1
+
+*
+*
+* ----------------------------------155KP2--------------------- 74153 ------
+*  4 Line to 1 Line Multiplexer
+*
+*  The TTL Logic Data Book, 1988, TI Pages 2-465 to 2-470
+*  jds    2/25/94
+*
+.SUBCKT 155KP2  1C0 1C1 1C2 1C3 2C0 2C1 2C2 2C3 A B 1GBAR 2GBAR 1Y 2Y
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U74153 LOGICEXP (12,2) DPWR DGND
++      1C0 1C1 1C2 1C3 2C0 2C1 2C2 2C3 A B 1GBAR 2GBAR 1Y_O 2Y_O
++      D0_GATE IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      1g = {(~1GBAR)}
++      2g = {(~2GBAR)}
++      abar = {(~A)}
++      bbar = {(~B)}
++      a0 = {(1C0 & abar & bbar & 1g)}
++      a1 = {(1C1 & A & bbar & 1g)}
++      a2 = {(1C2 & abar & B & 1g)}
++      a3 = {(1C3 & A & B & 1g)}
++      b0 = {(2C0 & abar & bbar & 2g)}
++      b1 = {(2C1 & A & bbar & 2g)}
++      b2 = {(2C2 & abar & B & 2g)}
++      b3 = {(2C3 & A & B & 2g)}
++
++      1Y_O = { ( a0 | a1 | a2 | a3) }
++      2Y_O = { ( b0 | b1 | b2 | b3) }
+
+Udly PINDLY (2,0,12) DPWR DGND
++    1Y_O 2Y_O
++    1C0 1C1 1C2 1C3 2C0 2C1 2C2 2C3
++    A B 1GBAR 2GBAR
++    1Y 2Y
++    IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    BOOLEAN:
++       SELECT= { CHANGED(A,0) | CHANGED(B,0) }
++       STROBE1= { CHANGED(1GBAR,0) }
++       STROBE2= { CHANGED(2GBAR,0) }
++       DATA1={ CHANGED(1C0,0) | CHANGED(1C1,0) | CHANGED(1C2,0) | CHANGED(1C3,0) }
++       DATA2={ CHANGED(2C0,0) | CHANGED(2C1,0) | CHANGED(2C2,0) | CHANGED(2C3,0) }
++
++    PINDLY:
++       1Y = {
++            CASE(
++                 SELECT & TRN_LH, DELAY(-1,22ns,34ns),
++                 SELECT & TRN_HL, DELAY(-1,22ns,34ns),
++                 STROBE1 & TRN_LH, DELAY(-1,19ns,30ns),
++                 STROBE1 & TRN_HL, DELAY(-1,15ns,23ns),
++                 DATA1 & TRN_LH, DELAY(-1,12ns,18ns),
++                 DATA1 & TRN_HL, DELAY(-1,15ns,23ns),
++                 DELAY(-1,23ns,35ns)
++                )
++            }
++       2Y = {
++            CASE(
++                 SELECT & TRN_LH, DELAY(-1,22ns,34ns),
++                 SELECT & TRN_HL, DELAY(-1,22ns,34ns),
++                 STROBE2 & TRN_LH, DELAY(-1,19ns,30ns),
++                 STROBE2 & TRN_HL, DELAY(-1,15ns,23ns),
++                 DATA2 & TRN_LH, DELAY(-1,12ns,18ns),
++                 DATA2 & TRN_HL, DELAY(-1,15ns,23ns),
++                 DELAY(-1,23ns,35ns)
++                )
++            }
+
+.ENDS 155KP2
+
+*
+*
+* -----------------------------155IP2------------------------- 74180 ------
+*  9-Bit Odd/Even Parity Generators/Checkers
+*
+*  The TTL Logic Data Book, 1988, TI Pages 2-597 to 2-600
+*  jds    5/2/94
+*
+.SUBCKT 155IP2  EVEN ODD A B C D E F G H SUM_EVEN SUM_ODD
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U74180 LOGICEXP (10,2) DPWR DGND
++      EVEN ODD A B C D E F G H
++      SUM_EVEN_O SUM_ODD_O
++      D0_GATE IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      data = { ~(( (~(A ^ B)) ^ (~(C ^ D))) ^ ((~(E ^ F)) ^ (~(G ^ H))))}
++      SUM_EVEN_O = {~((data & ODD) | ((~data) & EVEN))}
++      SUM_ODD_O = {~((data & EVEN) | ((~data) & ODD))}
+
+Udly PINDLY (2,0,10) DPWR DGND
++    SUM_EVEN_O SUM_ODD_O
++    EVEN ODD A B C D E F G H
++    SUM_EVEN SUM_ODD
++    IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++   BOOLEAN:
++     DATA = { CHANGED(A,0) | CHANGED(B,0) | CHANGED(C,0) | CHANGED(D,0) |
++              CHANGED(E,0) | CHANGED(F,0) | CHANGED(G,0) | CHANGED(H,0) }
++     PARITY = { (CHANGED(EVEN,0) | CHANGED(ODD,0)) }
++     EVEN_ZERO = { EVEN == '0 }
++     ODD_ZERO = { ODD == '0 }
++
++   PINDLY:
++     SUM_EVEN  = {
++            CASE(
++                 PARITY & TRN_LH, DELAY(-1,13ns,20ns),
++                 PARITY & TRN_HL, DELAY(-1,7ns,10ns),
++                 DATA & ODD_ZERO & TRN_LH, DELAY(-1,40ns,60ns),
++                 DATA & ODD_ZERO & TRN_HL, DELAY(-1,45ns,68ns),
++                 DATA & EVEN_ZERO & TRN_LH, DELAY(-1,32ns,48ns),
++                 DATA & EVEN_ZERO & TRN_HL, DELAY(-1,25ns,38ns),
++                 DELAY(-1,46ns,69ns)
++                )
++            }
++     SUM_ODD  = {
++            CASE(
++                 PARITY & TRN_LH, DELAY(-1,13ns,20ns),
++                 PARITY & TRN_HL, DELAY(-1,7ns,10ns),
++                 DATA & ODD_ZERO & TRN_LH, DELAY(-1,32ns,48ns),
++                 DATA & ODD_ZERO & TRN_HL, DELAY(-1,25ns,38ns),
++                 DATA & EVEN_ZERO & TRN_LH, DELAY(-1,40ns,60ns),
++                 DATA & EVEN_ZERO & TRN_HL, DELAY(-1,45ns,68ns),
++                 DELAY(-1,46ns,69ns)
++                )
++            }
+
+.ENDS 155IP2
+
+*
+* ----------------------------------------------------------- 74181 ------
+*  Arithmetic Logic Units/Functions Generators
+*
+*  The TTL Logic Data Book, 1985, TI Pages 3-709 to 3-720
+*  jds    5/3/94
+*
+.SUBCKT 74181 A0BAR A1BAR A2BAR A3BAR B0BAR B1BAR B2BAR B3BAR S0 S1 S2 S3
++             CN M F0BAR F1BAR F2BAR F3BAR GBAR CN4 PBAR AEQUALB
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U74181 LOGICEXP (14,8) DPWR DGND
++      A0BAR A1BAR A2BAR A3BAR B0BAR B1BAR B2BAR B3BAR S0 S1 S2 S3
++      CN M F0BAR_O F1BAR_O F2BAR_O F3BAR_O GBAR_O CN4_O PBAR_O AEQUALB_O
++      D0_GATE IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      i1 = { ~((S3 & A3BAR & B3BAR) | (S2 & A3BAR & (~B3BAR))) }
++      i2 = { ~( (S1 & (~B3BAR))  | (S0 & B3BAR) | A3BAR) }
++      i3 = { ~((S3 & A2BAR & B2BAR) | (S2 & A2BAR & (~B2BAR))) }
++      i4 = { ~( (S1 & (~B2BAR))  | (S0 & B2BAR) | A2BAR) }
++      i5 = { ~((S3 & A1BAR & B1BAR) | (S2 & A1BAR & (~B1BAR))) }
++      i6 = { ~( (S1 & (~B1BAR))  | (S0 & B1BAR) | A1BAR) }
++      i7 = { ~((S3 & A0BAR & B0BAR) | (S2 & A0BAR & (~B0BAR))) }
++      i8 = { ~( (S1 & (~B0BAR))  | (S0 & B0BAR) | A0BAR) }
++      GBAR_O = {~(i2 | (i1 & i4) | (i1 & i3 & i6) | (i1 & i3 & i5 & i8))}
++      CN4_O = {~(GBAR_O & (~(i1 & i3 & i5 & i7 & CN)) )}
++      PBAR_O = { ~(i1 & i3 & i5 & i7)}
++      F3BAR_O = { ((i1 ^ i2)^ (~((CN & i7 & i5 & i3 & (~M)) |
++                ( i3 & i5 & i8 & (~M)) |
++                ( i3 & i6 & (~M)) |
++                ( i4 & (~M))))) }
++      F2BAR_O = { ((i3 ^ i4)^(~((CN & i7 & i5 & (~M)) |
++                (i5 & i8 & (~M)) |
++                (i6 & (~M))))) }
++      F1BAR_O = { ((i6 ^ i5) ^ (~((CN & (~M) & i7) |
++                (i7 & (~M)))))}
++      F0BAR_O = { ((i8 ^ i7) ^ (~((~M) & CN))) }
++      AEQUALB_O = { (F3BAR_O & F2BAR_O & F1BAR_O & F0BAR_O) }
+
+Udly PINDLY (8,0,14) DPWR DGND
++    GBAR_O CN4_O PBAR_O F3BAR_O F2BAR_O F1BAR_O F0BAR_O AEQUALB_O
++    A0BAR A1BAR A2BAR A3BAR B0BAR B1BAR B2BAR B3BAR S0 S1 S2 S3 CN M
++    GBAR CN4 PBAR F3BAR F2BAR F1BAR F0BAR AEQUALB
++    IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++ BOOLEAN:
++   DATA = { CHANGED(A0BAR,0) | CHANGED(A1BAR,0) | CHANGED(A2BAR,0) |
++            CHANGED(A3BAR,0) | CHANGED(B0BAR,0) | CHANGED(B1BAR,0) |
++            CHANGED(B2BAR,0) | CHANGED(B3BAR,0) }
++   SUM = {(S1 == '0) & (S2 == '0) & (S0 == '1) & (S3 == '1) & (M == '0)}
++   DIFF = {(S1 == '1) & (S2 == '1) & (S0 == '0) & (S3 == '0) & (M == '0)}
++   MODE_HI = { (M == '1) }
++   CARRY_IN = { CHANGED(CN,0) }
++
++   PINDLY:
++     CN4  = {
++            CASE(
++                 CARRY_IN & TRN_LH, DELAY(-1,12ns,18ns),
++                 CARRY_IN & TRN_HL, DELAY(-1,13ns,19ns),
++                 SUM & DATA & TRN_LH, DELAY(-1,28ns,43ns),
++                 SUM & DATA & TRN_HL, DELAY(-1,27ns,41ns),
++                 DIFF & DATA & TRN_LH, DELAY(-1,35ns,50ns),
++                 DIFF & DATA & TRN_HL, DELAY(-1,33ns,50ns),
++                 DELAY(-1,36ns,51ns)
++                )
++            }
++     GBAR  = {
++            CASE(
++                 SUM & DATA & TRN_LH, DELAY(-1,13ns,19ns),
++                 SUM & DATA & TRN_HL, DELAY(-1,13ns,19ns),
++                 DIFF & DATA & TRN_LH, DELAY(-1,17ns,25ns),
++                 DIFF & DATA & TRN_HL, DELAY(-1,17ns,25ns),
++                 DELAY(-1,18ns,26ns)
++                )
++            }
++     PBAR  = {
++            CASE(
++                 SUM & DATA & TRN_LH, DELAY(-1,13ns,19ns),
++                 SUM & DATA & TRN_HL, DELAY(-1,17ns,25ns),
++                 DIFF & DATA & TRN_LH, DELAY(-1,17ns,25ns),
++                 DIFF & DATA & TRN_HL, DELAY(-1,17ns,25ns),
++                 DELAY(-1,18ns,26ns)
++                )
++            }
++     AEQUALB  = {
++            CASE(
++                 DIFF & DATA & TRN_LH, DELAY(-1,35ns,50ns),
++                 DIFF & DATA & TRN_HL, DELAY(-1,32ns,48ns),
++                 DELAY(-1,36ns,51ns)
++                )
++            }
++     F0BAR F1BAR F2BAR F3BAR = {
++            CASE(
++                 CARRY_IN & TRN_LH, DELAY(-1,13ns,19ns),
++                 CARRY_IN & TRN_HL, DELAY(-1,12ns,18ns),
++                 SUM & DATA & TRN_LH, DELAY(-1,28ns,42ns),
++                 SUM & DATA & TRN_HL, DELAY(-1,21ns,32ns),
++                 DIFF & DATA & TRN_LH, DELAY(-1,32ns,48ns),
++                 DIFF & DATA & TRN_HL, DELAY(-1,23ns,34ns),
++                 MODE_HI & TRN_LH, DELAY(-1,32ns,48ns),
++                 MODE_HI & TRN_HL, DELAY(-1,23ns,34ns),
++                 DELAY(-1,33ns,49ns)
++                )
++            }
+
+.ENDS 74181
+
+*
+*
+* ----------------------------------------------------------- 74182 ------
+*  Look Ahead Carry Generator
+*
+*  The Standard TTL Logic Data Book, 1985, TI Pages 3-721 to 3-726
+*  jds    5/3/94
+*
+.SUBCKT 74182  CN P0BAR P1BAR P2BAR P3BAR G0BAR G1BAR G2BAR G3BAR
++              CNX CNY CNZ PBAR GBAR
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U74182 LOGICEXP (9,5) DPWR DGND
++      CN P0BAR P1BAR P2BAR P3BAR G0BAR G1BAR G2BAR G3BAR
++      CNX_O CNY_O CNZ_O PBAR_O GBAR_O
++      D0_GATE IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      PBAR_O = { (P0BAR | P1BAR | P2BAR | P3BAR) }
++      g0 = { (G0BAR & G1BAR & G2BAR & G3BAR) }
++      g1 = { (P1BAR & G1BAR & G2BAR & G3BAR) }
++      g2 = { (P2BAR & G2BAR & G3BAR) }
++      g3 = { (P3BAR & G3BAR) }
++      GBAR_O = { (g0 | g1 | g2 | g3) }
++      cnz0 = { (G0BAR & G1BAR & G2BAR & (~CN)) }
++      cnz1 = { (G0BAR & G1BAR & G2BAR & P0BAR) }
++      cnz2 = { (G1BAR & G2BAR & P1BAR) }
++      cnz3 = { (G2BAR & P2BAR) }
++      CNZ_O = { ~(cnz0 | cnz1 | cnz2 | cnz3) }
++      cny0 = { (G0BAR & G1BAR & (~CN)) }
++      cny1 = { (P0BAR & G0BAR & G1BAR) }
++      cny2 = { (G1BAR & P1BAR) }
++      CNY_O = { ~(cny0 | cny1 | cny2) }
++      cnx0 = { (G0BAR & (~CN)) }
++      cnx1 = { (P0BAR & G0BAR) }
++      CNX_O = { ~(cnx0 | cnx1) }
+
+
+
+Udly PINDLY (5,0,9) DPWR DGND
++    CNX_O CNY_O CNZ_O PBAR_O GBAR_O
++    CN P0BAR P1BAR P2BAR P3BAR G0BAR G1BAR G2BAR G3BAR
++    CNX CNY CNZ PBAR GBAR
++    IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++   PINDLY:
++     CNX CNY CNZ  GBAR PBAR= {
++            CASE(
++                 TRN_LH, DELAY(-1,11ns,17ns),
++                 TRN_HL, DELAY(-1,15ns,22ns),
++                 DELAY(-1,16ns,23ns)
++                )
++            }
+
+.ENDS 74182
+
+*
+*
+* ----------------------------------------------------------- 155IP3 ------
+*  Arithmetic Logic Units/Functions Generators
+*
+*  The TTL Logic Data Book, 1985, TI Pages 3-709 to 3-720
+*  jds    5/3/94
+*
+.SUBCKT 155IP3 A0BAR A1BAR A2BAR A3BAR B0BAR B1BAR B2BAR B3BAR S0 S1 S2 S3
++             CN M F0BAR F1BAR F2BAR F3BAR GBAR CN4 PBAR AEQUALB
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U74181 LOGICEXP (14,8) DPWR DGND
++      A0BAR A1BAR A2BAR A3BAR B0BAR B1BAR B2BAR B3BAR S0 S1 S2 S3
++      CN M F0BAR_O F1BAR_O F2BAR_O F3BAR_O GBAR_O CN4_O PBAR_O AEQUALB_O
++      D0_GATE IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      i1 = { ~((S3 & A3BAR & B3BAR) | (S2 & A3BAR & (~B3BAR))) }
++      i2 = { ~( (S1 & (~B3BAR))  | (S0 & B3BAR) | A3BAR) }
++      i3 = { ~((S3 & A2BAR & B2BAR) | (S2 & A2BAR & (~B2BAR))) }
++      i4 = { ~( (S1 & (~B2BAR))  | (S0 & B2BAR) | A2BAR) }
++      i5 = { ~((S3 & A1BAR & B1BAR) | (S2 & A1BAR & (~B1BAR))) }
++      i6 = { ~( (S1 & (~B1BAR))  | (S0 & B1BAR) | A1BAR) }
++      i7 = { ~((S3 & A0BAR & B0BAR) | (S2 & A0BAR & (~B0BAR))) }
++      i8 = { ~( (S1 & (~B0BAR))  | (S0 & B0BAR) | A0BAR) }
++      GBAR_O = {~(i2 | (i1 & i4) | (i1 & i3 & i6) | (i1 & i3 & i5 & i8))}
++      CN4_O = {~(GBAR_O & (~(i1 & i3 & i5 & i7 & CN)) )}
++      PBAR_O = { ~(i1 & i3 & i5 & i7)}
++      F3BAR_O = { ((i1 ^ i2)^ (~((CN & i7 & i5 & i3 & (~M)) |
++                ( i3 & i5 & i8 & (~M)) |
++                ( i3 & i6 & (~M)) |
++                ( i4 & (~M))))) }
++      F2BAR_O = { ((i3 ^ i4)^(~((CN & i7 & i5 & (~M)) |
++                (i5 & i8 & (~M)) |
++                (i6 & (~M))))) }
++      F1BAR_O = { ((i6 ^ i5) ^ (~((CN & (~M) & i7) |
++                (i8 & (~M)))))}
++      F0BAR_O = { ((i8 ^ i7) ^ (~((~M) & CN))) }
++      AEQUALB_O = { (F3BAR_O & F2BAR_O & F1BAR_O & F0BAR_O) }
+
+Udly PINDLY (8,0,14) DPWR DGND
++    GBAR_O CN4_O PBAR_O F3BAR_O F2BAR_O F1BAR_O F0BAR_O AEQUALB_O
++    A0BAR A1BAR A2BAR A3BAR B0BAR B1BAR B2BAR B3BAR S0 S1 S2 S3 CN M
++    GBAR CN4 PBAR F3BAR F2BAR F1BAR F0BAR AEQUALB
++    IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++ BOOLEAN:
++   DATA = { CHANGED(A0BAR,0) | CHANGED(A1BAR,0) | CHANGED(A2BAR,0) |
++            CHANGED(A3BAR,0) | CHANGED(B0BAR,0) | CHANGED(B1BAR,0) |
++            CHANGED(B2BAR,0) | CHANGED(B3BAR,0) }
++   SUM = {(S1 == '0) & (S2 == '0) & (S0 == '1) & (S3 == '1) & (M == '0)}
++   DIFF = {(S1 == '1) & (S2 == '1) & (S0 == '0) & (S3 == '0) & (M == '0)}
++   MODE_HI = { (M == '1) }
++   CARRY_IN = { CHANGED(CN,0) }
++
++   PINDLY:
++     CN4  = {
++            CASE(
++                 CARRY_IN & TRN_LH, DELAY(-1,12ns,18ns),
++                 CARRY_IN & TRN_HL, DELAY(-1,13ns,19ns),
++                 SUM & DATA & TRN_LH, DELAY(-1,28ns,43ns),
++                 SUM & DATA & TRN_HL, DELAY(-1,27ns,41ns),
++                 DIFF & DATA & TRN_LH, DELAY(-1,35ns,50ns),
++                 DIFF & DATA & TRN_HL, DELAY(-1,33ns,50ns),
++                 DELAY(-1,36ns,51ns)
++                )
++            }
++     GBAR  = {
++            CASE(
++                 SUM & DATA & TRN_LH, DELAY(-1,13ns,19ns),
++                 SUM & DATA & TRN_HL, DELAY(-1,13ns,19ns),
++                 DIFF & DATA & TRN_LH, DELAY(-1,17ns,25ns),
++                 DIFF & DATA & TRN_HL, DELAY(-1,17ns,25ns),
++                 DELAY(-1,18ns,26ns)
++                )
++            }
++     PBAR  = {
++            CASE(
++                 SUM & DATA & TRN_LH, DELAY(-1,13ns,19ns),
++                 SUM & DATA & TRN_HL, DELAY(-1,17ns,25ns),
++                 DIFF & DATA & TRN_LH, DELAY(-1,17ns,25ns),
++                 DIFF & DATA & TRN_HL, DELAY(-1,17ns,25ns),
++                 DELAY(-1,18ns,26ns)
++                )
++            }
++     AEQUALB  = {
++            CASE(
++                 DIFF & DATA & TRN_LH, DELAY(-1,35ns,50ns),
++                 DIFF & DATA & TRN_HL, DELAY(-1,32ns,48ns),
++                 DELAY(-1,36ns,51ns)
++                )
++            }
++     F0BAR F1BAR F2BAR F3BAR = {
++            CASE(
++                 CARRY_IN & TRN_LH, DELAY(-1,13ns,19ns),
++                 CARRY_IN & TRN_HL, DELAY(-1,12ns,18ns),
++                 SUM & DATA & TRN_LH, DELAY(-1,28ns,42ns),
++                 SUM & DATA & TRN_HL, DELAY(-1,21ns,32ns),
++                 DIFF & DATA & TRN_LH, DELAY(-1,32ns,48ns),
++                 DIFF & DATA & TRN_HL, DELAY(-1,23ns,34ns),
++                 MODE_HI & TRN_LH, DELAY(-1,32ns,48ns),
++                 MODE_HI & TRN_HL, DELAY(-1,23ns,34ns),
++                 DELAY(-1,33ns,49ns)
++                )
++            }
+
+.ENDS 155IP3
+*
+*
+* ----------------------------------------------------------- 155IP4 ------
+*  Look Ahead Carry Generator
+*
+*  The Standard TTL Logic Data Book, 1985, TI Pages 3-721 to 3-726
+*  jds    5/3/94
+*
+.SUBCKT 155IP4  CN P0BAR P1BAR P2BAR P3BAR G0BAR G1BAR G2BAR G3BAR
++              CNX CNY CNZ PBAR GBAR
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U74182 LOGICEXP (9,5) DPWR DGND
++      CN P0BAR P1BAR P2BAR P3BAR G0BAR G1BAR G2BAR G3BAR
++      CNX_O CNY_O CNZ_O PBAR_O GBAR_O
++      D0_GATE IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      PBAR_O = { (P0BAR | P1BAR | P2BAR | P3BAR) }
++      g0 = { (G0BAR & G1BAR & G2BAR & G3BAR) }
++      g1 = { (P1BAR & G1BAR & G2BAR & G3BAR) }
++      g2 = { (P2BAR & G2BAR & G3BAR) }
++      g3 = { (P3BAR & G3BAR) }
++      GBAR_O = { (g0 | g1 | g2 | g3) }
++      cnz0 = { (G0BAR & G1BAR & G2BAR & (~CN)) }
++      cnz1 = { (G0BAR & G1BAR & G2BAR & P0BAR) }
++      cnz2 = { (G1BAR & G2BAR & P1BAR) }
++      cnz3 = { (G2BAR & P2BAR) }
++      CNZ_O = { ~(cnz0 | cnz1 | cnz2 | cnz3) }
++      cny0 = { (G0BAR & G1BAR & (~CN)) }
++      cny1 = { (P0BAR & G0BAR & G1BAR) }
++      cny2 = { (G1BAR & P1BAR) }
++      CNY_O = { ~(cny0 | cny1 | cny2) }
++      cnx0 = { (G0BAR & (~CN)) }
++      cnx1 = { (P0BAR & G0BAR) }
++      CNX_O = { ~(cnx0 | cnx1) }
+
+
+
+Udly PINDLY (5,0,9) DPWR DGND
++    CNX_O CNY_O CNZ_O PBAR_O GBAR_O
++    CN P0BAR P1BAR P2BAR P3BAR G0BAR G1BAR G2BAR G3BAR
++    CNX CNY CNZ PBAR GBAR
++    IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++   PINDLY:
++     CNX CNY CNZ  GBAR PBAR= {
++            CASE(
++                 TRN_LH, DELAY(-1,11ns,17ns),
++                 TRN_HL, DELAY(-1,15ns,22ns),
++                 DELAY(-1,16ns,23ns)
++                )
++            }
+
+.ENDS 155IP4
+
+*
+*-------------ALU 155IP3 other name pin------------
+*
+.SUBCKT 155IP3A A0 A1 A2 A3 B0 B1 B2 B3 S0 S1 S2 S3
++             CN M F0 F1 F2 F3 G CN4 P AEQUALB
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U74181 LOGICEXP (14,8) DPWR DGND
++      A0 A1 A2 A3 B0 B1 B2 B3 S0 S1 S2 S3
++      CN M F0_O F1_O F2_O F3_O G_O CN4_O P_O AEQUALB_O
++      D0_GATE IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      i1 = { ~((S3 & A3 & B3) | (S2 & A3 & (~B3))) }
++      i2 = { ~( (S1 & (~B3))  | (S0 & B3) | A3) }
++      i3 = { ~((S3 & A2 & B2) | (S2 & A2 & (~B2))) }
++      i4 = { ~( (S1 & (~B2))  | (S0 & B2) | A2) }
++      i5 = { ~((S3 & A1 & B1) | (S2 & A1 & (~B1))) }
++      i6 = { ~( (S1 & (~B1))  | (S0 & B1) | A1) }
++      i7 = { ~((S3 & A0 & B0) | (S2 & A0 & (~B0))) }
++      i8 = { ~( (S1 & (~B0))  | (S0 & B0) | A0) }
++      G_O = {~(i2 | (i1 & i4) | (i1 & i3 & i6) | (i1 & i3 & i5 & i8))}
++      CN4_O = {~(G_O & (~(i1 & i3 & i5 & i7 & CN)) )}
++      P_O = { ~(i1 & i3 & i5 & i7)}
++      F3_O = { ((i1 ^ i2)^ (~((CN & i7 & i5 & i3 & (~M)) |
++                ( i3 & i5 & i8 & (~M)) |
++                ( i3 & i6 & (~M)) |
++                ( i4 & (~M))))) }
++      F2_O = { ((i3 ^ i4)^(~((CN & i7 & i5 & (~M)) |
++                (i5 & i8 & (~M)) |
++                (i6 & (~M))))) }
++      F1_O = { ((i6 ^ i5) ^ (~((CN & (~M) & i7) |
++                (i7 & (~M)))))}
++      F0_O = { ((i8 ^ i7) ^ (~((~M) & CN))) }
++      AEQUALB_O = { (F3_O & F2_O & F1_O & F0_O) }
+
+Udly PINDLY (8,0,14) DPWR DGND
++    G_O CN4_O P_O F3_O F2_O F1_O F0_O AEQUALB_O
++    A0 A1 A2 A3 B0 B1 B2 B3 S0 S1 S2 S3 CN M
++    G CN4 P F3 F2 F1 F0 AEQUALB
++    IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++ BOOLEAN:
++   DATA = { CHANGED(A0,0) | CHANGED(A1,0) | CHANGED(A2,0) |
++            CHANGED(A3,0) | CHANGED(B0,0) | CHANGED(B1,0) |
++            CHANGED(B2,0) | CHANGED(B3,0) }
++   SUM = {(S1 == '0) & (S2 == '0) & (S0 == '1) & (S3 == '1) & (M == '0)}
++   DIFF = {(S1 == '1) & (S2 == '1) & (S0 == '0) & (S3 == '0) & (M == '0)}
++   MODE_HI = { (M == '1) }
++   CARRY_IN = { CHANGED(CN,0) }
++
++   PINDLY:
++     CN4  = {
++            CASE(
++                 CARRY_IN & TRN_LH, DELAY(-1,12ns,18ns),
++                 CARRY_IN & TRN_HL, DELAY(-1,13ns,19ns),
++                 SUM & DATA & TRN_LH, DELAY(-1,28ns,43ns),
++                 SUM & DATA & TRN_HL, DELAY(-1,27ns,41ns),
++                 DIFF & DATA & TRN_LH, DELAY(-1,35ns,50ns),
++                 DIFF & DATA & TRN_HL, DELAY(-1,33ns,50ns),
++                 DELAY(-1,36ns,51ns)
++                )
++            }
++     G  = {
++            CASE(
++                 SUM & DATA & TRN_LH, DELAY(-1,13ns,19ns),
++                 SUM & DATA & TRN_HL, DELAY(-1,13ns,19ns),
++                 DIFF & DATA & TRN_LH, DELAY(-1,17ns,25ns),
++                 DIFF & DATA & TRN_HL, DELAY(-1,17ns,25ns),
++                 DELAY(-1,18ns,26ns)
++                )
++            }
++     P  = {
++            CASE(
++                 SUM & DATA & TRN_LH, DELAY(-1,13ns,19ns),
++                 SUM & DATA & TRN_HL, DELAY(-1,17ns,25ns),
++                 DIFF & DATA & TRN_LH, DELAY(-1,17ns,25ns),
++                 DIFF & DATA & TRN_HL, DELAY(-1,17ns,25ns),
++                 DELAY(-1,18ns,26ns)
++                )
++            }
++     AEQUALB  = {
++            CASE(
++                 DIFF & DATA & TRN_LH, DELAY(-1,35ns,50ns),
++                 DIFF & DATA & TRN_HL, DELAY(-1,32ns,48ns),
++                 DELAY(-1,36ns,51ns)
++                )
++            }
++     F0 F1 F2 F3 = {
++            CASE(
++                 CARRY_IN & TRN_LH, DELAY(-1,13ns,19ns),
++                 CARRY_IN & TRN_HL, DELAY(-1,12ns,18ns),
++                 SUM & DATA & TRN_LH, DELAY(-1,28ns,42ns),
++                 SUM & DATA & TRN_HL, DELAY(-1,21ns,32ns),
++                 DIFF & DATA & TRN_LH, DELAY(-1,32ns,48ns),
++                 DIFF & DATA & TRN_HL, DELAY(-1,23ns,34ns),
++                 MODE_HI & TRN_LH, DELAY(-1,32ns,48ns),
++                 MODE_HI & TRN_HL, DELAY(-1,23ns,34ns),
++                 DELAY(-1,33ns,49ns)
++                )
++            }
+
+.ENDS 155IP3A
+
+
+*
+*
+* ----------------------------------------------------------- 155ID3 ------
+*  4-Line to 16-Line Decoders/Demultiplexers
+*
+*  The TTL Logic Data Book, 1988, Texas Instruments
+*  jds    2/25/94     Pages 2-471 to 2-474
+*
+.SUBCKT 155ID3  O0 O1 O2 O3 O4 O5 O6 O7 O8 O9
++              O10 O11 O12 O13 O14 O15
++              G1BAR G2BAR A B C D
++  optional: DPWR=$G_DPWR DGND=$G_DGND
++  params: MNTYMXDLY=0 IO_LEVEL=0
+
+U74154 LOGICEXP (6,16) DPWR DGND
++      G1BAR G2BAR A B C D
++      O_0o O_1o O_2o O_3o O_4o O_5o O_6o O_7o O_8o O_9o
++      O_10o O_11o O_12o O_13o O_14o O_15o
++      D0_GATE IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    LOGIC:
++      abar = { (~A) }
++      bbar = { (~B) }
++      cbar = { (~C) }
++      dbar = { (~D) }
++      g = { (~(G1BAR | G2BAR)) }
++
++      O_0o = {~(abar & bbar & cbar & dbar & g)}
++      O_1o = {~(A & bbar & cbar & dbar & g)}
++      O_2o = {~(abar & B & cbar & dbar & g)}
++      O_3o = {~(A & B & cbar & dbar & g)}
++      O_4o = {~(abar & bbar & C & dbar & g)}
++      O_5o = {~(A & bbar & C & dbar & g)}
++      O_6o = {~(abar & B & C & dbar & g)}
++      O_7o = {~(A & B & C & dbar & g)}
++      O_8o = {~(abar & bbar & cbar & D & g)}
++      O_9o = {~(A & bbar & cbar & D & g)}
++      O_10o = {~(abar & B & cbar & D & g)}
++      O_11o = {~(A & B & cbar & D & g)}
++      O_12o = {~(abar & bbar & C & D & g)}
++      O_13o = {~(A & bbar & C & D & g)}
++      O_14o = {~(abar & B & C & D & g)}
++      O_15o = {~(A & B & C & D & g)}
+
+Udly PINDLY (16,0,6) DPWR DGND
++      O_0o O_1o O_2o O_3o O_4o O_5o O_6o O_7o O_8o O_9o
++      O_10o O_11o O_12o O_13o O_14o O_15o
++      G1BAR G2BAR A B C D
++      O0 O1 O2 O3 O4 O5 O6 O7 O8 O9
++      O10 O11 O12 O13 O14 O15
++      IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++    BOOLEAN:
++       STROBE= { CHANGED(G1BAR,0) | CHANGED(G2BAR,0) }
++       DATA={ CHANGED(A,0) | CHANGED(B,0) | CHANGED(C,0) | CHANGED(D,0) }
++
++    PINDLY:
++      O0 O1 O2 O3 O4 O5 O6 O7 O8 O9
++      O10 O11 O12 O13 O14 O15   = {
++            CASE(
++                 DATA & TRN_LH, DELAY(-1,24ns,36ns),
++                 DATA & TRN_HL, DELAY(-1,22ns,33ns),
++                 STROBE & TRN_LH, DELAY(-1,20ns,30ns),
++                 STROBE & TRN_HL, DELAY(-1,18ns,27ns),
++                 DELAY(-1,25ns,37ns)
++                )
++            }
+
+.ENDS 155ID3
+
+* -----------------------------------------------------------------
+*  And-Or-Invert Gates
+*
+*  The TTL Logic Data Book, 1988, TI Pages 2-193 to 2-198
+*  bss    2/14/94
+*
+.SUBCKT 155LR 1A 1B 1C 2A 2B 2C Y 
++     optional:  DPWR=$G_DPWR DGND=$G_DGND
++     params:  MNTYMXDLY=0 IO_LEVEL=0
+
+U1 aoi(3,2) DPWR DGND
++    1A 1B 1C
++    2A 2B 2C
++    Y
++    DLY_51 IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+.model DLY_51 ugate (tplhTY=13ns tplhMX=22ns tphlTY=8ns tphlMX=15ns)
+
+.ENDS 155LR
+
+.SUBCKT 155IE5 R01 R02 CKA CKB QA QB QC QD
++     optional:  DPWR=$G_DPWR DGND=$G_DGND
++     params:  MNTYMXDLY=0 IO_LEVEL=0
+
+U1 JKFF(1) DPWR DGND
++     $D_HI NAND0 CKA $D_HI $D_HI QA_O $D_NC
++     D0_EFF IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+U2 JKFF(1) DPWR DGND
++     $D_HI NAND0 CKB $D_HI $D_HI QB_O $D_NC
++     D0_EFF IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+U3 JKFF(1) DPWR DGND
++     $D_HI NAND0 QB_O $D_HI $D_HI QC_O $D_NC
++     D0_EFF IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+U4 JKFF(1) DPWR DGND
++     $D_HI NAND0 QC_O $D_HI $D_HI QD_O $D_NC
++     D0_EFF IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+U5 nand(2) DPWR DGND
++     R01 R02 NAND0
++     D0_GATE IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+U6DLY PINDLY(4,0,3) DPWR DGND
++     QA_O QB_O QC_O QD_O
++     CKA CKB NAND0
++     QA QB QC QD
++     IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++  BOOLEAN:
++     CHA = {CHANGED_HL(CKA,0)}
++     CHB = {CHANGED_HL(CKB,0)}
++     SETTO0 = {CHANGED_HL(NAND0,0)}
++
++  PINDLY:
++     QA = {
++       CASE(
++         SETTO0 & TRN_HL, DELAY(-1,26ns,40ns),
++         CHA & TRN_LH, DELAY(-1,10ns,16ns),
++         CHA & TRN_HL, DELAY(-1,12ns,18ns),
++         DELAY(-1,27ns,41ns))}
++
++     QB = {
++       CASE(
++         SETTO0 & TRN_HL, DELAY(-1,26ns,40ns),
++         CHB & TRN_LH, DELAY(-1,10ns,16ns),
++         CHB & TRN_HL, DELAY(-1,14ns,21ns),
++         DELAY(-1,27ns,41ns))}
++
++     QC = {
++       CASE(
++         SETTO0 & TRN_HL, DELAY(-1,26ns,40ns),
++         CHB & TRN_LH, DELAY(-1,21ns,32ns),
++         CHB & TRN_HL, DELAY(-1,23ns,35ns),
++         DELAY(-1,27ns,41ns))}
++
++     QD = {
++       CASE(
++         SETTO0 & TRN_HL, DELAY(-1,26ns,40ns),
++         CHB & TRN_LH, DELAY(-1,34ns,51ns),
++         CHB & TRN_HL, DELAY(-1,34ns,51ns),
++         CHA & TRN_LH, DELAY(-1,46ns,70ns),
++         CHA & TRN_HL, DELAY(-1,46ns,70ns),
++         DELAY(-1,47ns,71ns))}
+
+U7CON CONSTRAINT(5) DPWR DGND
++     R01 R02 CKA CKB NAND0
++     IO_STD IO_LEVEL={IO_LEVEL}
++
++  FREQ:
++     NODE=CKA
++     MAXFREQ=32MEG
++
++  FREQ:
++     NODE=CKB
++     MAXFREQ=16MEG
++
++  WIDTH:
++     NODE=CKA
++     MIN_HI=15ns
++     MIN_LO=15ns
++
++  WIDTH:
++     NODE=CKB
++     MIN_HI=30ns
++     MIN_LO=30ns
++
++  WIDTH:
++     NODE=R01
++     MIN_HI=15ns
++
++  WIDTH:
++     NODE=R02
++     MIN_HI=15ns
++
++  SETUP_HOLD:
++  CLOCK HL = CKA
++  DATA(1) = NAND0
++  SETUPTIME_HI = 25ns
++  MESSAGE = "SETUP ERROR - R01 R02 SETUP < 25ns"
++
++  SETUP_HOLD:
++  CLOCK HL = CKB
++  DATA(1) = NAND0
++  SETUPTIME_HI = 25ns
++  MESSAGE = "SETUP ERROR - R01 R02 SETUP < 25ns"
+
+.ENDS 155IE5
+
+* ----------------------------------------------------------- 777 ------
+*  And-Or-Invert Gates
+*
+*  The TTL Logic Data Book, 1988, TI Pages 2-193 to 2-198
+*  bss    2/14/94
+*
+.SUBCKT 777 1A 1B 1C 2A 2B 2C Y
++     optional:  DPWR=$G_DPWR DGND=$G_DGND
++     params:  MNTYMXDLY=0 IO_LEVEL=0
+
+U1 aoi(2,2) DPWR DGND
++    1A 1B 1C
++    2A 2B 2C
++    Y
++    DLY_51 IO_STD MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+.model DLY_51 ugate (tplhTY=13ns tplhMX=22ns tphlTY=8ns tphlMX=15ns)
+
+.ENDS 777

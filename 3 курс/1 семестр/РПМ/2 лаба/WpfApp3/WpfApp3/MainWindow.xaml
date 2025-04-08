@@ -1,0 +1,87 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1200">
+
+    <Window.Resources>
+        <Style TargetType="local:UserControl1">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="GotFocus" >
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation  Storyboard.TargetProperty="(Canvas.Left)"  Duration="0:0:1" To="300"  />
+                            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Bottom)" To="400" Duration="0:0:1"  />
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Children[0].AngleY" To="0" Duration="0:0:1" />
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Children[1].ScaleX" To="2" Duration="0:0:1" />
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Children[1].ScaleY" To="2" Duration="0:0:1" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="LostFocus" >
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)" Duration="0:0:1" />
+                            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Bottom)"  Duration="0:0:1" />
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Children[0].AngleY"  Duration="0:0:1" />
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Children[1].ScaleX"  Duration="0:0:1" />
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Children[1].ScaleY"  Duration="0:0:1" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Canvas>
+            <local:UserControl1 Canvas.Left="20" Canvas.Bottom="90">
+                <local:UserControl1.RenderTransform>
+                    <TransformGroup>
+                        <SkewTransform  AngleY="15" />
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    </TransformGroup>
+                </local:UserControl1.RenderTransform>
+            </local:UserControl1>
+
+            <local:UserControl1 Canvas.Left="225" Canvas.Bottom="35">
+                <local:UserControl1.RenderTransform>
+                    <TransformGroup>
+                        <SkewTransform AngleY="7" />
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    </TransformGroup>
+                </local:UserControl1.RenderTransform>
+            </local:UserControl1>
+
+            <local:UserControl1 Canvas.Left="430" Canvas.Bottom="0">
+                <local:UserControl1.RenderTransform>
+                    <TransformGroup>
+                        <SkewTransform  AngleY="0" />
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    </TransformGroup>
+                </local:UserControl1.RenderTransform>
+            </local:UserControl1>
+
+            <local:UserControl1 Canvas.Left="635" Canvas.Bottom="5">
+                <local:UserControl1.RenderTransform>
+                    <TransformGroup>
+                        <SkewTransform  AngleY="-7" />
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    </TransformGroup>
+                </local:UserControl1.RenderTransform>
+            </local:UserControl1>
+
+            <local:UserControl1 Canvas.Left="840" Canvas.Bottom="30">
+                <local:UserControl1.RenderTransform>
+                    <TransformGroup>
+                        <SkewTransform  AngleY="-15" />
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    </TransformGroup>
+                </local:UserControl1.RenderTransform>
+            </local:UserControl1>
+        </Canvas>
+    </Grid>
+</Window>

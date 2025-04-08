@@ -1,0 +1,44 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                    Transient Analysis of circuit402h                     ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Maximum Run Time           0.5u
+Output Start Time (tstart) 0
+Maximum Time Step          0
+Number of Points           51
+Temperature                Linear 27
+Retrace Runs               1
+Run Options                Normal
+State Variables            Zero
+Operating Point            On
+Operating Point Only       Off
+Auto Scale Ranges          On
+Accumulate Plots           Off
+Fixed Time Step            Off
+Periodic Steady State      Off
+Ignore Expression Errors   Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Digital States
+=================================
+Node        State Node        State Node        State Node        State
+XI1         0     XI2         1     CLK         0     X1          0    
+5           1     X2          0     7           1     Y1_K-1      1    
+Z_BAR       1     10          1     CLK_Z       1     12          0    
+Z           1     14          1     Y1_BAR      1     CLK_Y1      1    
+17          1     18          0     Y2_K-1      1     20          1    
+Y2_BAR      0     CLK_Y2      1     23          1     24          0    
+$D_HI       1     RGX.1Q_O    0     RGX.2Q_O    0     RGX.1QBAR_O 1    
+RGX.2QBAR_O 1    
+

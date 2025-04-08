@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\add.png" />
+    <None Remove="Resources\delete.png" />
+    <None Remove="Resources\logo.png" />
+    <None Remove="Resources\update.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.104.2" />
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\add.png" />
+    <Resource Include="Resources\delete.png" />
+    <Resource Include="Resources\logo.png" />
+    <Resource Include="Resources\update.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,90 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\RPM\\Borya\\WpfApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DB545581-51A5-481F-B743-A35816B6268D}|WpfApp1\\WpfApp1.csproj|c:\\users\\busov\\documents\\\u043A\u0438\u0442\\3 \u043A\u0443\u0440\u0441\\rpm\\borya\\wpfapp1\\wpfapp1\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{DB545581-51A5-481F-B743-A35816B6268D}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB545581-51A5-481F-B743-A35816B6268D}|WpfApp1\\WpfApp1.csproj|c:\\users\\busov\\documents\\\u043A\u0438\u0442\\3 \u043A\u0443\u0440\u0441\\rpm\\borya\\wpfapp1\\wpfapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DB545581-51A5-481F-B743-A35816B6268D}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB545581-51A5-481F-B743-A35816B6268D}|WpfApp1\\WpfApp1.csproj|c:\\users\\busov\\documents\\\u043A\u0438\u0442\\3 \u043A\u0443\u0440\u0441\\rpm\\borya\\wpfapp1\\wpfapp1\\templates\\dbloading.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DB545581-51A5-481F-B743-A35816B6268D}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\templates\\dbloading.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB545581-51A5-481F-B743-A35816B6268D}|WpfApp1\\WpfApp1.csproj|c:\\users\\busov\\documents\\\u043A\u0438\u0442\\3 \u043A\u0443\u0440\u0441\\rpm\\borya\\wpfapp1\\wpfapp1\\templates\\dbloading.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{DB545581-51A5-481F-B743-A35816B6268D}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\templates\\dbloading.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\RPM\\Borya\\WpfApp1\\WpfApp1\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\RPM\\Borya\\WpfApp1\\WpfApp1\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAJwAAAAAAAAAAAAAAKoAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T09:22:57.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DBLoading.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\RPM\\Borya\\WpfApp1\\WpfApp1\\Templates\\DBLoading.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Templates\\DBLoading.xaml.cs",
+              "ToolTip": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\RPM\\Borya\\WpfApp1\\WpfApp1\\Templates\\DBLoading.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\Templates\\DBLoading.xaml.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAFwAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T09:21:40.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DBLoading.xaml",
+              "DocumentMoniker": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\RPM\\Borya\\WpfApp1\\WpfApp1\\Templates\\DBLoading.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Templates\\DBLoading.xaml",
+              "ToolTip": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\RPM\\Borya\\WpfApp1\\WpfApp1\\Templates\\DBLoading.xaml",
+              "RelativeToolTip": "WpfApp1\\Templates\\DBLoading.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-16T09:21:39.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\RPM\\Borya\\WpfApp1\\WpfApp1\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\RPM\\Borya\\WpfApp1\\WpfApp1\\MainWindow.xaml",
+              "RelativeToolTip": "WpfApp1\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-16T09:21:30.021Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

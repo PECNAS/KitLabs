@@ -1,0 +1,76 @@
+﻿<Window x:Class="WpfApp1.Templates.DetailsWindows.TicketDetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Templates.DetailsWindows"
+        mc:Ignorable="d"
+        Title="TicketDetail" Height="450" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height=".2*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+           Text="Добавление"
+           Name="TitleTB"
+           HorizontalAlignment="Center"
+           FontSize="20"
+           FontWeight="Bold"
+           Margin="0, 30, 0, 0"/>
+        <StackPanel Grid.Row="1">
+            <WrapPanel>
+                <Label Content="Вопрос:"/>
+                <TextBox Name="TicketQuestTB"
+                         Width="220"/>
+            </WrapPanel>
+            
+            <Separator/>
+            
+            <WrapPanel>
+                <Label Content="Ответ 1:"/>
+                <TextBox Name="Answer1TB"
+                         Width="220"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Ответ 2:"/>
+                <TextBox Name="Answer2TB"
+             Width="220"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Ответ 3:"/>
+                <TextBox Name="Answer3TB"
+             Width="220"/>
+            </WrapPanel>
+            
+            <Separator/>
+            
+            <WrapPanel>
+                <Label Content="Правильный ответ:"/>
+                <ComboBox Name="TrueAnswerSelector"
+                  SelectedIndex="0">
+                    <ComboBoxItem Content="{Binding ElementName=Answer1TB, Path=Text}"/>
+                    <ComboBoxItem Content="{Binding ElementName=Answer2TB, Path=Text}"/>
+                    <ComboBoxItem Content="{Binding ElementName=Answer3TB, Path=Text}"/>
+                </ComboBox>
+            </WrapPanel>
+
+            <Separator/>
+
+            <WrapPanel>
+                <Label Content="Изображение:"/>
+                <Image Name="TicketImg"
+               Width="150"/>
+                <Button Content="Выбрать"
+                Click="PickImage"/>
+            </WrapPanel>
+        </StackPanel>
+        <WrapPanel HorizontalAlignment="Center"
+           Grid.Row="2">
+            <Button Content="Сохранить"
+            Click="Save_Click"/>
+        </WrapPanel>
+    </Grid>
+</Window>

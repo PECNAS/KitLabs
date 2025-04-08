@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u041F\u0418\u0422\u041F\u041C\\\u0417\u0430\u0447\u0435\u0442\\ConsoleApp2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{81E95C28-5162-41BC-8DAF-A94EEA3E5633}|ConsoleApp2\\ConsoleApp2.csproj|c:\\users\\busov\\documents\\\u043A\u0438\u0442\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043F\u0438\u0442\u043F\u043C\\\u0437\u0430\u0447\u0435\u0442\\consoleapp2\\consoleapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81E95C28-5162-41BC-8DAF-A94EEA3E5633}|ConsoleApp2\\ConsoleApp2.csproj|solutionrelative:consoleapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{360A2B8E-FE58-417E-846B-BD39767C1437}|TestProject1\\TestProject1.csproj|c:\\users\\busov\\documents\\\u043A\u0438\u0442\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043F\u0438\u0442\u043F\u043C\\\u0437\u0430\u0447\u0435\u0442\\consoleapp2\\testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{360A2B8E-FE58-417E-846B-BD39767C1437}|TestProject1\\TestProject1.csproj|solutionrelative:testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81E95C28-5162-41BC-8DAF-A94EEA3E5633}|ConsoleApp2\\ConsoleApp2.csproj|c:\\users\\busov\\documents\\\u043A\u0438\u0442\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043F\u0438\u0442\u043F\u043C\\\u0437\u0430\u0447\u0435\u0442\\consoleapp2\\consoleapp2\\coursescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81E95C28-5162-41BC-8DAF-A94EEA3E5633}|ConsoleApp2\\ConsoleApp2.csproj|solutionrelative:consoleapp2\\coursescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u041F\u0418\u0422\u041F\u041C\\\u0417\u0430\u0447\u0435\u0442\\ConsoleApp2\\TestProject1\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject1\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u041F\u0418\u0422\u041F\u041C\\\u0417\u0430\u0447\u0435\u0442\\ConsoleApp2\\TestProject1\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject1\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T06:22:34.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CoursesContext.cs",
+              "DocumentMoniker": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u041F\u0418\u0422\u041F\u041C\\\u0417\u0430\u0447\u0435\u0442\\ConsoleApp2\\ConsoleApp2\\CoursesContext.cs",
+              "RelativeDocumentMoniker": "ConsoleApp2\\CoursesContext.cs",
+              "ToolTip": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u041F\u0418\u0422\u041F\u041C\\\u0417\u0430\u0447\u0435\u0442\\ConsoleApp2\\ConsoleApp2\\CoursesContext.cs",
+              "RelativeToolTip": "ConsoleApp2\\CoursesContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T06:12:24.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u041F\u0418\u0422\u041F\u041C\\\u0417\u0430\u0447\u0435\u0442\\ConsoleApp2\\ConsoleApp2\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp2\\Program.cs",
+              "ToolTip": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u041F\u0418\u0422\u041F\u041C\\\u0417\u0430\u0447\u0435\u0442\\ConsoleApp2\\ConsoleApp2\\Program.cs*",
+              "RelativeToolTip": "ConsoleApp2\\Program.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T06:11:11.847Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

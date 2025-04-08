@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\busov\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u041A\u0418\u0422\\2 \u043A\u0443\u0440\u0441\\\u043B\u0430\u0431\u044B\\\u0420\u041F\u041C\\4 \u043B\u0430\u0431\u0430\\MenuApp2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2E0BE709-186B-4D1F-A641-E12A5E914F1C}|MenuApp2\\MenuApp2.csproj|c:\\users\\busov\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u043A\u0438\u0442\\2 \u043A\u0443\u0440\u0441\\\u043B\u0430\u0431\u044B\\\u0440\u043F\u043C\\4 \u043B\u0430\u0431\u0430\\menuapp2\\menuapp2\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2E0BE709-186B-4D1F-A641-E12A5E914F1C}|MenuApp2\\MenuApp2.csproj|solutionrelative:menuapp2\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\busov\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u041A\u0418\u0422\\2 \u043A\u0443\u0440\u0441\\\u043B\u0430\u0431\u044B\\\u0420\u041F\u041C\\4 \u043B\u0430\u0431\u0430\\MenuApp2\\MenuApp2\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MenuApp2\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\busov\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u041A\u0418\u0422\\2 \u043A\u0443\u0440\u0441\\\u043B\u0430\u0431\u044B\\\u0420\u041F\u041C\\4 \u043B\u0430\u0431\u0430\\MenuApp2\\MenuApp2\\MainWindow.xaml",
+              "RelativeToolTip": "MenuApp2\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-01T17:49:03.819Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

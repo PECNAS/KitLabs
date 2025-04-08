@@ -1,0 +1,66 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                     Transient Analysis of circuit301                     ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Maximum Run Time           1u
+Output Start Time (tstart) 0
+Maximum Time Step          0
+Number of Points           51
+Temperature                Linear 27
+Retrace Runs               1
+Run Options                Normal
+State Variables            Zero
+Operating Point            On
+Operating Point Only       Off
+Auto Scale Ranges          On
+Accumulate Plots           Off
+Fixed Time Step            Off
+Periodic Steady State      Off
+Ignore Expression Errors   Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Digital States
+=================================
+Node          State Node          State Node          State
+M             0     C0BAR         1     S3            1    
+S2            0     S1            0     S0            1    
+A0            0     A1            0     A2            0    
+A3            0     B0            1     B1            1    
+B2            1     B3            1     F0            1    
+F1            1     F2            1     F3            1    
+19            1     20            0     21            1    
+C1BAR         1     A4            0     A5            0    
+A6            0     A7            0     B4            1    
+B5            0     B6            0     B7            0    
+F4            1     F5            0     F6            0    
+F7            0     35            0     36            0    
+37            0     C2BAR         1     39            0    
+40            1     F8            1     F9            1    
+F10           1     F11           1     45            1    
+46            0     47            1     C3BAR         1    
+F12           1     F13           1     F14           1    
+F15           1     53            1     54            0    
+55            1     C4BAR         1     DD1.F0BAR_O   1    
+DD1.F1BAR_O   1     DD1.F2BAR_O   1     DD1.F3BAR_O   1    
+DD1.GBAR_O    1     DD1.CN4_O     1     DD1.PBAR_O    0    
+DD1.AEQUALB_O 1     DD2.F0BAR_O   1     DD2.F1BAR_O   0    
+DD2.F2BAR_O   0     DD2.F3BAR_O   0     DD2.GBAR_O    0    
+DD2.CN4_O     1     DD2.PBAR_O    0     DD2.AEQUALB_O 0    
+DD3.F0BAR_O   1     DD3.F1BAR_O   1     DD3.F2BAR_O   1    
+DD3.F3BAR_O   1     DD3.GBAR_O    1     DD3.CN4_O     1    
+DD3.PBAR_O    0     DD3.AEQUALB_O 1     DD4.F0BAR_O   1    
+DD4.F1BAR_O   1     DD4.F2BAR_O   1     DD4.F3BAR_O   1    
+DD4.GBAR_O    1     DD4.CN4_O     1     DD4.PBAR_O    0    
+DD4.AEQUALB_O 1    
+

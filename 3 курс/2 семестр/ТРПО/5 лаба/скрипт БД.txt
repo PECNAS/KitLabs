@@ -1,0 +1,53 @@
+CREATE TABLE Curator(
+CuratorID INT PRIMARY KEY IDENTITY,
+FirstName NVARCHAR(255),
+LastName NVARCHAR(255),
+CellPhone NVARCHAR(12),
+Email NVARCHAR(255));
+
+CREATE TABLE Student(
+StudentId INT PRIMARY KEY IDENTITY,
+FirstName NVARCHAR(255),
+LastName NVARCHAR(255),
+GroupNumber NVARCHAR(4),
+BDate NVARCHAR(20),
+CellPhone NVARCHAR(12),
+CuratorId INT FOREIGN KEY(CuratorId) REFERENCES Curator(CuratorId)
+);
+
+CREATE TABLE HealtCard(
+RecordID INT PRIMARY KEY IDENTITY,
+StudentId INT FOREIGN KEY(StudentId) REFERENCES Student(StudentId),
+Description TEXT,
+DateOfRecord NVARCHAR(20)
+);
+
+CREATE TABLE Parent(
+ParentId INT PRIMARY KEY IDENTITY,
+FirstName NVARCHAR(255),
+LastName NVARCHAR(255),
+CellPhone NVARCHAR(12),
+Email NVARCHAR(255),
+Workplace NVARCHAR(255)
+);
+
+CREATE TABLE Student_Parent_Relationship(
+RelId INT PRIMARY KEY IDENTITY,
+StudentId INT FOREIGN KEY(StudentId) REFERENCES Student(StudentId),
+ParentId INT FOREIGN KEY(ParentId) REFERENCES Parent(ParentId)
+);
+
+CREATE TABLE Teacher(
+TeacherId INT PRIMARY KEY IDENTITY,
+FirstName NVARCHAR(255),
+LastName NVARCHAR(255),
+Subject NVARCHAR(255)
+);
+
+CREATE TABLE SummaryLedger(
+LedgerId INT PRIMARY KEY IDENTITY,
+StudentId INT FOREIGN KEY(StudentId) REFERENCES Student(StudentId),
+TeacherId INT FOREIGN KEY(TeacherId) REFERENCES Teacher(TeacherId),
+Grade NVARCHAR(10),
+Semester INT
+);

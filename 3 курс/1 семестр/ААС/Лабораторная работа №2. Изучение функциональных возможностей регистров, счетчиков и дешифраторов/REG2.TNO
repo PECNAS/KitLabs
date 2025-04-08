@@ -1,0 +1,161 @@
+********************************************************************************
+***                  Micro-Cap 11.0.0.7 Evaluation Version                   ***
+***                                   user                                   ***
+***                                   kai                                    ***
+***                        Transient Analysis of REG2                        ***
+********************************************************************************
+Limits
+======
+Time Range               1u
+Maximum Time Step        0
+Number of Points         51
+Temperature              Linear 27
+Retrace Runs             1
+Run Options              Normal
+State Variables          Leave
+Operating Point          On
+Operating Point Only     Off
+Auto Scale Ranges        Off
+Accumulate Plots         Off
+Fixed Time Step          Off
+Periodic Steady State    Off
+Ignore Expression Errors Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+Model parameters for devices of type Diode
+==========================================
+Instance:       X1.X5$.D1       X1.X5$.D2       X1.X5$.D3       X1.X5$.D4   
+Using model:     D74SCLMP            D74S             D74             D74   
+LEVEL                   1(*)            1(*)            1(*)            1(*)
+AF                 1.000 (*)       1.000 (*)       1.000 (*)       1.000 (*)
+BV                 0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+CJO              200.000f        200.000f          5.000p          5.000p   
+EG               690.000m        690.000m          1.110 (*)       1.110 (*)
+FC               500.000m(*)     500.000m(*)     500.000m(*)     500.000m(*)
+IBV              100.000p(*)     100.000p(*)     100.000p(*)     100.000p(*)
+IBVL               0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+IKF                0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+IS                 1.000p          1.000p         10.000f         10.000f   
+ISR                0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+KF                 0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+M                500.000m        500.000m        500.000m        500.000m   
+N                  1.000 (*)       1.000 (*)       1.000 (*)       1.000 (*)
+NBV                1.000 (*)       1.000 (*)       1.000 (*)       1.000 (*)
+NBVL               1.000 (*)       1.000 (*)       1.000 (*)       1.000 (*)
+NR                 2.000 (*)       2.000 (*)       2.000 (*)       2.000 (*)
+RL                 0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+RS                 0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+T_ABS           UNDEFINED(*)    UNDEFINED(*)    UNDEFINED(*)    UNDEFINED(*)
+T_MEASURED      UNDEFINED(*)    UNDEFINED(*)    UNDEFINED(*)    UNDEFINED(*)
+T_REL_GLOBAL    UNDEFINED(*)    UNDEFINED(*)    UNDEFINED(*)    UNDEFINED(*)
+T_REL_LOCAL     UNDEFINED(*)    UNDEFINED(*)    UNDEFINED(*)    UNDEFINED(*)
+TBV1               0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+TBV2               0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+TIKF               0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+TRS1               0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+TRS2               0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+TT                 0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+VJ               700.000m        700.000m          1.000 (*)       1.000 (*)
+XTI                2.000           2.000           3.000 (*)       3.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+$G_DPWR       5.000   $G_DGND       0.000   X1.X5$.1    497.425m 
+X1.X5$.2    248.712m 
+
+DC Operating Point Digital States
+=================================
+Node     State Node     State Node     State Node     State Node     State
+1        1     GEN      0     3        1     Q0       0     Q1       0    
+Q2       0     Q3       0     $D_HI    1     X1.CLKLR 0     X1.JA    0    
+X1.JB    0     X1.JC    0     X1.JD    0     X1.KA    1     X1.KB    1    
+X1.KC    1     X1.KD    1     X1.QA_O  0     X1.QB_O  0     X1.QC_O  0    
+X1.QD_O  0     X1.$D_NC 1     X1.$D_NC 1     X1.$D_NC 1     X1.$D_NC 1    
+0$ATOD   0              X    
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:          X1.X5$.D1       X1.X5$.D2       X1.X5$.D3       X1.X5$.D4
+Using model:        D74SCLMP            D74S             D74             D74
+
+Capacitance Terms:
+CAP                 200.000f        342.411f          5.769p          5.769p
+
+Current Terms:
+ID                    0.000         225.129u        150.282p        150.282p
+
+Resistance Terms:
+REQ                  25.212G        114.886       172.349MEG      172.349MEG
+
+Voltage Terms:
+VD                    0.000         497.425m        248.712m        248.712m
+
+Power DC Terms:
+PD                    0.000         111.985u         37.345p         37.345p
+PS                    0.000           7.482f         31.552f         31.552f
+
+DC Pin Currents:
+Id                    0.000         225.129u        150.282p        150.282p
+
+Condition:
+State                    OFF             OFF             OFF             OFF
+
+Device Variables:
+area                  1.000           1.000           1.000           1.000 
+ic                    0.000           0.000           0.000           0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:           X1.X5$.R1       X1.X6$.R1       X1.X6$.R2       X1.X6$.R3
+V                      4.503           5.000           0.000           0.000 
+Power DC Terms:
+PD                     1.014m         25.000n          0.000           0.000 
+
+DC Pin Currents:
+Ir                   225.129u          5.000n          0.000           0.000 
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:           X1.X5$.C1
+V                      0.000 
+Power DC Terms:
+PS                     0.000 
+
+DC Pin Currents:
+Ic                     0.000 
+
+Device Variables:
+ic                     0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:          X1.X6$.V1       X1.X6$.V2
+V                     5.000           0.000 
+Power DC Terms:
+PG                    1.126m          0.000 
+
+DC Pin Currents:
+ISource            -225.134u        150.282p
+
+

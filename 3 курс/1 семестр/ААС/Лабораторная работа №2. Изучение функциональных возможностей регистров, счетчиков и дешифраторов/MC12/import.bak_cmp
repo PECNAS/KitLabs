@@ -1,0 +1,858 @@
+[Main]
+FileType=CMP
+Version=10.00
+Program=Micro-Cap
+Count=50
+
+[group]
+Name="Import"
+
+[group]
+Name="3_1_I-NE"
+
+[compdef]
+Name=2И-НЕ
+Definition=NAND
+Shape=Nand2_Euro
+Mask=4101
+Used=2
+Data1=2
+Label Offset=11,21,9,9
+PinCnt=3
+Pin="In0",0,0
+Pin="In1",0,2
+Pin="Out",6,1
+
+[compdef]
+Name=Digital Switch
+Definition=DIGITAL SWITCH
+Shape=SwitchAnim
+Mask=4096
+Label Offset=14,24,22,-5
+PinCnt=1
+Pin="Out",4,1,-15,-4
+
+[compdef]
+Name=LED
+Definition=DIGITAL LED
+Shape=LedAnim
+Mask=4096
+Label Offset=11,-14,11,-13
+PinCnt=1
+Pin="In",0,3,5,0
+
+[group]
+End="3_1_I-NE"
+
+[group]
+Name="3_2_TRIGGER_UST"
+
+[compdef]
+Name=3И-НЕ
+Definition=NAND
+Shape=Nand3_Euro
+Mask=4101
+Data1=3
+Label Offset=10,20,8,9
+PinCnt=4
+Pin="In0",0,0,-18,5
+Pin="In1",0,1,-18,7
+Pin="In2",0,2,-18,8
+Pin="Out",6,1,-9,-1
+
+[group]
+End="3_2_TRIGGER_UST"
+
+[group]
+Name="3_4_SUM"
+
+[compdef]
+Name=НЕ
+Definition=INV
+Shape=Inv_GOST
+Mask=4869
+memo=инвертор
+Label Offset=22,9,18,10
+PinCnt=2
+Pin="In",0,0
+Pin="Out",6,0
+
+[group]
+End="3_4_SUM"
+
+[group]
+Name="circuit212"
+
+[compdef]
+Name=1554AG3
+Definition=Macro
+Shape=155AG3
+Mask=4101
+memo=интегральный формирователь импульсов
+Label Offset=46,57,-67,38
+PinCnt=7
+Pin="ABAR",d,0,0
+Pin="B",d,0,2
+Pin="RBAR",d,0,4
+Pin="RC",a,0,6
+Pin="Q",d,13,0
+Pin="QBAR",d,13,8
+Pin="C",a,0,8
+
+[group]
+End="circuit212"
+
+[group]
+Name="circuit301"
+
+[compdef]
+Name=155IP3
+Definition=Subckt
+Shape=155IP3
+Mask=4101
+memo=арифметико-логическое устройство
+Label Offset=58,182,-208,52
+PinCnt=22
+Pin="A0BAR",d,0,12
+Pin="A1BAR",d,0,14
+Pin="A2BAR",d,0,16
+Pin="A3BAR",d,0,18
+Pin="B0BAR",d,0,20
+Pin="B1BAR",d,0,22
+Pin="B2BAR",d,0,24
+Pin="B3BAR",d,0,26
+Pin="S0",d,0,4
+Pin="S1",d,0,6
+Pin="S2",d,0,8
+Pin="S3",d,0,10
+Pin="CN",d,0,0
+Pin="M",d,0,2
+Pin="F0BAR",d,16,12
+Pin="F1BAR",d,16,14
+Pin="F2BAR",d,16,16
+Pin="F3BAR",d,16,18
+Pin="GBAR",d,16,2
+Pin="PBAR",d,16,4
+Pin="AEQUALB",d,16,26
+Pin="CN4",d,16,0
+
+[compdef]
+Name=Stim4
+Definition=STIM
+Shape=STIM4
+Mask=5120
+Data2=4
+memo=4-Bit Digital Stimulus
+Label Offset=4,25,19,16
+PinCnt=4
+Pin="Out3",9,-1,7,2
+Pin="Out2",9,0,7,4
+Pin="Out1",9,1,7,5
+Pin="Out0",9,2,7,7
+
+[group]
+End="circuit301"
+
+[group]
+Name="circuit304"
+
+[compdef]
+Name=155IR9
+Definition=Subckt
+Shape=155IR9
+Mask=4096
+Label Offset=46,154,-180,38
+PinCnt=14
+Pin="SH/LDBAR",d,0,0
+Pin="SER",d,0,2
+Pin="A",d,0,4
+Pin="B",d,0,6
+Pin="C",d,0,8
+Pin="D",d,0,10
+Pin="E",d,0,12
+Pin="F",d,0,14
+Pin="G",d,0,16
+Pin="H",d,0,18
+Pin="CLK",d,0,20
+Pin="CLK_INH",d,0,22
+Pin="QH",d,13,18
+Pin="QHBAR",d,13,20
+
+[compdef]
+Name=155KP2
+Definition=Subckt
+Shape=155KP2
+Mask=4096
+memo=сдвоенный мультиплексор 4x1
+Label Offset=45,156,-179,37
+PinCnt=14
+Pin="1C0",d,0,2
+Pin="1C1",d,0,4
+Pin="1C2",d,0,6
+Pin="1C3",d,0,8
+Pin="2C0",d,0,14
+Pin="2C1",d,0,16
+Pin="2C2",d,0,18
+Pin="2C3",d,0,20
+Pin="A",d,0,10
+Pin="B",d,0,12
+Pin="1GBAR",d,0,0
+Pin="2GBAR",d,0,22
+Pin="1Y",d,13,6
+Pin="2Y",d,13,18
+
+[compdef]
+Name=155IP2
+Definition=Subckt
+Shape=155IP2
+Mask=4101
+memo=схема контроля четности
+Label Offset=46,117,-143,37
+PinCnt=12
+Pin="EVEN",d,0,16
+Pin="ODD",d,0,18
+Pin="A",d,0,0
+Pin="B",d,0,2
+Pin="C",d,0,4
+Pin="D",d,0,6
+Pin="E",d,0,8
+Pin="F",d,0,10
+Pin="G",d,0,12
+Pin="H",d,0,14
+Pin="SUM_EVEN",d,13,8
+Pin="SUM_ODD",d,13,10
+
+[compdef]
+Name=155TM2
+Definition=Subckt
+Shape=155TM2
+Mask=4096
+memo=D-триггер с динамическим входом управления
+Label Offset=37,57,12,16
+PinCnt=6
+Pin="1CLRBAR",d,0,0
+Pin="1D",d,0,2
+Pin="1CLK",d,0,4
+Pin="1PREBAR",d,0,6
+Pin="1Q",d,11,0
+Pin="1QBAR",d,11,6
+
+[compdef]
+Name=4И-НЕ
+Definition=NAND
+Shape=Nand4_Euro
+Mask=4096
+Data1=4
+Label Offset=11,27,7,8
+PinCnt=5
+Pin="In0",0,0
+Pin="In1",0,1
+Pin="In2",0,2
+Pin="In3",0,3
+Pin="Out",6,1
+
+[compdef]
+Name=4ИЛИ-НЕ
+Definition=NOR
+Shape=Nor4_Euro
+Mask=4096
+Data1=4
+Label Offset=9,27,6,9
+PinCnt=5
+Pin="In0",0,0
+Pin="In1",0,1
+Pin="In2",0,2
+Pin="In3",0,3
+Pin="Out",6,1
+
+[compdef]
+Name=2ИЛИ
+Definition=OR
+Shape=Or2_Gost
+Mask=4096
+Data1=2
+Label Offset=11,19,7,8
+PinCnt=3
+Pin="In0",0,0
+Pin="In1",0,2
+Pin="Out",6,1
+
+[compdef]
+Name=2И
+Definition=AND
+Shape=And2_Euro
+Mask=4096
+Used=2
+Data1=2
+Label Offset=10,20,6,8
+PinCnt=3
+Pin="In0",0,0
+Pin="In1",0,2
+Pin="Out",6,1
+
+[compdef]
+Name=155IE5
+Definition=Subckt
+Shape=155IE5
+Mask=4096
+Label Offset=47,56,12,16
+PinCnt=8
+Pin="CKA",d,0,0
+Pin="CKB",d,0,2
+Pin="R01",d,0,4
+Pin="R02",d,0,6
+Pin="QA",d,13,0
+Pin="QB",d,13,2
+Pin="QC",d,13,4
+Pin="QD",d,13,6
+
+[compdef]
+Name=Stim8
+Definition=STIM
+Shape=STIM8
+Mask=5123
+Data2=8
+memo=8-Bit Digital Stimulus
+Label Offset=2,49,29,19
+PinCnt=8
+Pin="Out7",9,-2,7,4
+Pin="Out6",9,-1,7,5
+Pin="Out5",9,0,7,6
+Pin="Out4",9,1,7,7
+Pin="Out3",9,2,7,8
+Pin="Out2",9,3,7,9
+Pin="Out1",9,4,7,10
+Pin="Out0",9,5,7,11
+
+[compdef]
+Name=Pullup
+Definition=PULLUP
+Shape=Pullup
+Mask=4096
+memo=Digital Pullup Resistor
+Label Offset=7,6,-24,4
+PinCnt=1
+Pin="Digital",0,5,5,0
+
+[compdef]
+Name=2И1
+Definition=AND
+Shape=And2_Euro
+Mask=4096
+Used=2
+Data1=2
+Label Offset=10,20,6,8
+PinCnt=3
+Pin="In0",0,0
+Pin="In1",0,2
+Pin="Out",6,1
+
+[group]
+End="circuit304"
+
+[group]
+Name="circuit303"
+
+[compdef]
+Name=155ID3
+Definition=Subckt
+Shape=155ID3
+Mask=4101
+memo=4x16 дешифратор, 1x16 демультиплексор
+Label Offset=58,218,-240,50
+PinCnt=22
+Pin="A",d,0,14
+Pin="B",d,0,16
+Pin="C",d,0,18
+Pin="D",d,0,20
+Pin="G1BAR",d,0,28
+Pin="G2BAR",d,0,30
+Pin="O0",d,16,0
+Pin="O1",d,16,2
+Pin="O2",d,16,4
+Pin="O3",d,16,6
+Pin="O4",d,16,8
+Pin="O5",d,16,10
+Pin="O6",d,16,12
+Pin="O7",d,16,14
+Pin="O8",d,16,16
+Pin="O9",d,16,18
+Pin="O10",d,16,20
+Pin="O11",d,16,22
+Pin="O12",d,16,24
+Pin="O13",d,16,26
+Pin="O14",d,16,28
+Pin="O15",d,16,30
+
+[compdef]
+Name=LED1
+Definition=DIGITAL LED
+Shape=LedAnim
+Mask=5632
+Label Offset=11,-14,11,-13
+PinCnt=1
+Pin="In",0,3,5,0
+
+[group]
+End="circuit303"
+
+[group]
+Name="circuit302"
+
+[compdef]
+Name=155IP4
+Definition=Subckt
+Shape=155IP4
+Mask=4101
+memo=схема ускорения переносов
+Label Offset=57,102,-126,49
+PinCnt=14
+Pin="CN",d,0,0
+Pin="G0BAR",d,0,2
+Pin="P0BAR",d,0,4
+Pin="G1BAR",d,0,6
+Pin="P1BAR",d,0,8
+Pin="G2BAR",d,0,10
+Pin="P2BAR",d,0,12
+Pin="G3BAR",d,0,14
+Pin="P3BAR",d,0,16
+Pin="GBAR",d,16,0
+Pin="PBAR",d,16,2
+Pin="CNX",d,16,12
+Pin="CNY",d,16,14
+Pin="CNZ",d,16,16
+
+[group]
+End="circuit302"
+
+[group]
+Name="circuit401"
+
+[compdef]
+Name=155LR11
+Definition=Subckt
+Shape=155LR11
+Mask=4096
+memo=логические схемы 3И-2ИЛИ-НЕ и 2И-2ИЛИ-НЕ
+Label Offset=29,99,10,16
+PinCnt=12
+Pin="1A",d,0,0
+Pin="1B",d,0,1
+Pin="1C",d,0,2
+Pin="1D",d,0,3
+Pin="1E",d,0,4
+Pin="1F",d,0,5
+Pin="1Y",d,9,2
+Pin="2A",d,0,7
+Pin="2B",d,0,9
+Pin="2C",d,0,10
+Pin="2D",d,0,12
+Pin="2Y",d,9,9
+
+[compdef]
+Name=155TM7
+Definition=Subckt
+Shape=155TM7
+Mask=4096
+memo=два D-триггера с потенциальным общим входом  синхронизации
+Label Offset=38,57,10,15
+PinCnt=7
+Pin="1D",d,0,0
+Pin="2D",d,0,4
+Pin="C",d,1,8
+Pin="1Q",d,11,0
+Pin="1QBAR",d,11,2
+Pin="2Q",d,11,4
+Pin="2QBAR",d,11,6
+
+[group]
+End="circuit401"
+
+[group]
+Name="circuit401h"
+
+[compdef]
+Name=155LA4
+Definition=Subckt
+Shape=Nand3_Euro
+Mask=4096
+Label Offset=9,21,5,8
+PinCnt=4
+Pin="1A",d,0,0
+Pin="1B",d,0,1
+Pin="1C",d,0,2
+Pin="1Y",d,6,1
+
+[group]
+End="circuit401h"
+
+[group]
+Name="DC"
+
+[compdef]
+Name=K155ID3
+Definition=Subckt
+Shape=ID3 дешифратор
+Mask=16512
+memo=Декодер 4 в 16
+Label Offset=-8,217,-224,-1
+PinCnt=22
+Pin="1",d,7,-2,4,3
+Pin="2",d,7,0,4,3
+Pin="3",d,7,2,4,3
+Pin="4",d,7,4,4,3
+Pin="5",d,7,6,4,3
+Pin="6",d,7,8,4,3
+Pin="7",d,7,10,4,3
+Pin="8",d,7,12,3,3
+Pin="9",d,7,14,3,3
+Pin="10",d,7,16,3,3
+Pin="11",d,7,18,3,3
+Pin="13",d,7,20,3,3
+Pin="14",d,7,22,3,3
+Pin="15",d,7,24,3,3
+Pin="16",d,7,26,3,3
+Pin="17",d,7,28,3,3
+Pin="18",d,-2,26,-14,0
+Pin="19",d,-2,28,-14,1
+Pin="23",d,-2,10,-14,0
+Pin="22",d,-2,12,-14,0
+Pin="21",d,-2,14,-14,0
+Pin="20",d,-2,16,-14,0
+
+[group]
+End="DC"
+
+[group]
+Name="REG"
+
+[compdef]
+Name=K155IR1
+Definition=Subckt
+Shape=IR1 регистр
+Mask=16512
+memo=4-разрядный сдвиговый регистр
+Label Offset=-8,97,-109,7
+PinCnt=12
+Pin="6",d,-2,13,-9,2
+Pin="9",d,-2,11,-9,2
+Pin="8",d,-2,9,-9,2
+Pin="1",d,-2,-1,-9,2
+Pin="2",d,-2,1,-9,3
+Pin="3",d,-2,3,-9,3
+Pin="4",d,-2,5,-9,3
+Pin="5",d,-2,7,-9,3
+Pin="13",d,9,1,1,0
+Pin="12",d,9,4,1,0
+Pin="11",d,9,7,1,0
+Pin="10",d,9,10,1,1
+
+[group]
+End="REG"
+
+[group]
+Name="CT"
+
+[compdef]
+Name=K155IE7
+Definition=Subckt
+Shape=IE7 2counter
+Mask=16512
+memo=4-разрядный реверсивный счетчик двоичный
+Label Offset=1,98,-106,12
+PinCnt=14
+Pin="5",d,-2,-1,1,0
+Pin="4",d,-2,1,1,0
+Pin="11",d,-2,3,-1,-1
+Pin="15",d,-2,5,-1,-1
+Pin="1",d,-2,7,-1,0
+Pin="10",d,-2,9,-1,0
+Pin="9",d,-2,11,0,-1
+Pin="14",d,-2,13,-1,-1
+Pin="3",d,11,1,-8,-1
+Pin="2",d,11,3,-8,1
+Pin="6",d,11,5,-8,1
+Pin="7",d,11,7,-7,0
+Pin="12",d,11,11,-12,-1
+Pin="13",d,11,13,-13,0
+
+[group]
+End="CT"
+
+[group]
+Name="RC_CIRCUIT2_2_1K"
+
+[compdef]
+Name=Capacitor
+Definition=Capacitor
+Shape=Capacitor
+Mask=6145
+Label Offset=19,8,12,12
+PinCnt=2
+Pin="Plus",6,0,-3,-5
+Pin="Minus",0,0,-14,-5
+
+[compdef]
+Name=Resistor
+Definition=Resistor
+Shape=Resistor
+Mask=6657
+Label Offset=18,6,8,11
+PinCnt=2
+Pin="Plus",6,0,-10,-4
+Pin="Minus",0,0,-14,-4
+
+[compdef]
+Name=Ground
+Definition=Ground
+Shape=Ground
+Mask=1793
+Label Offset=0,0,0,0
+PinCnt=1
+Pin="PinA",0,0,-3,-7
+
+[compdef]
+Name=Voltage Source
+Definition=VSpice
+Shape=SPICE_V
+Mask=5376
+memo=Voltage Source
+Label Offset=19,13,15,13
+PinCnt=2
+Pin="Plus",6,0,-5,-6
+Pin="Minus",0,0,-20,-6
+
+[group]
+End="RC_CIRCUIT2_2_1K"
+
+[group]
+Name="circuit103"
+
+[compdef]
+Name=2И-НЕ1
+Definition=NAND
+Shape=Nand2_Euro
+Mask=4101
+Used=2
+Data1=2
+Label Offset=11,21,9,9
+PinCnt=3
+Pin="In0",0,0
+Pin="In1",0,2
+Pin="Out",6,1
+
+[compdef]
+Name=Stim1
+Definition=STIM
+Shape=STIM1
+Mask=5123
+Data2=1
+memo=1-Bit Digital Stimulus
+Label Offset=-10,-6,13,20
+PinCnt=1
+Pin="Out0",9,0,-5,-3
+
+[compdef]
+Name=Digital Switch1
+Definition=DIGITAL SWITCH
+Shape=SwitchAnim
+Mask=4096
+Label Offset=14,24,22,-5
+PinCnt=1
+Pin="Out",4,1,-15,-4
+
+[group]
+End="circuit103"
+
+[group]
+Name="ILZ_circuit3_1"
+
+[compdef]
+Name=Inductor
+Definition=Inductor
+Shape=Inductor
+Mask=7681
+Label Offset=18,3,11,12
+PinCnt=2
+Pin="Plus",6,0,-5,-9
+Pin="Minus",0,0,-3,-9
+
+[compdef]
+Name=Pulse Source
+Definition=Pulse source
+Shape=Pulse_Source
+Mask=4865
+Label Offset=18,13,15,9
+PinCnt=2
+Pin="Plus",6,0,-5,-4
+Pin="Minus",0,0,-19,-4
+
+[group]
+End="ILZ_circuit3_1"
+
+[group]
+Name="circuit402"
+
+[compdef]
+Name=Stim2
+Definition=STIM
+Shape=STIM2
+Mask=5120
+Data2=2
+Label Offset=3,24,19,17
+PinCnt=2
+Pin="Out1",9,-1,-4,-4
+Pin="Out0",9,2,-4,-4
+
+[compdef]
+Name=Fixed Digital
+Definition=DIGITAL STATE
+Shape=Fixed
+Mask=2304
+Label Offset=-14,-7,-6,-27
+PinCnt=1
+Pin="Out",4,0,-8,-3
+
+[group]
+End="circuit402"
+
+[group]
+Name="circuit206"
+
+[compdef]
+Name=Diode
+Definition=Diode
+Shape=Diode
+Mask=5377
+Used=136
+memo=Diode
+Label Offset=17,10,12,12
+PinCnt=2
+Pin="Anode",6,0,-9,-8
+Pin="Cathode",0,0,-20,-8
+
+[group]
+End="circuit206"
+
+[group]
+Name="circuit213"
+
+[compdef]
+Name=Pulldown
+Definition=PULLDN
+Shape=Pulldown
+Mask=4864
+Label Offset=7,6,-25,5
+PinCnt=1
+Pin="Digital",0,5,5,1
+
+[group]
+End="circuit213"
+
+[group]
+Name="1554AG3"
+
+[compdef]
+Name=Inverter
+Definition=INV
+Shape=Inv
+Mask=5123
+Data1=1
+Label Offset=12,-6,11,21
+PinCnt=2
+Pin="In",0,0,-4,-2
+Pin="Out",6,0,-10,-2
+
+[compdef]
+Name=Buffer
+Definition=BUF
+Shape=Buf
+Mask=4096
+Data1=1
+Label Offset=11,-6,11,20
+PinCnt=2
+Pin="In",0,0,-5,-1
+Pin="Out",6,0,-10,-1
+
+[compdef]
+Name=Nand3
+Definition=NAND
+Shape=Nand3
+Mask=4608
+Data1=3
+Label Offset=11,5,7,10
+PinCnt=4
+Pin="In0",0,0,-8,-1
+Pin="In1",0,1,-18,7
+Pin="In2",0,2,-8,16
+Pin="Out",6,1,-9,-1
+
+[compdef]
+Name=Nand2
+Definition=NAND
+Shape=Nand2
+Mask=5635
+Data1=2
+Label Offset=14,4,8,9
+PinCnt=3
+Pin="In0",0,0,-8,-2
+Pin="In1",0,2,-8,-1
+Pin="Out",6,1,-9,-1
+
+[compdef]
+Name=Or2
+Definition=OR
+Shape=Or2
+Mask=5123
+Data1=2
+Label Offset=15,4,7,10
+PinCnt=3
+Pin="In0",0,0,-6,-3
+Pin="In1",0,2,-6,-2
+Pin="Out",6,1,-7,-1
+
+[compdef]
+Name=Nor2
+Definition=NOR
+Shape=Nor2
+Mask=4096
+Data1=2
+Label Offset=16,4,8,10
+PinCnt=3
+Pin="In0",0,0,-9,-1
+Pin="In1",0,2,-9,-1
+Pin="Out",6,1,-7,-3
+
+[compdef]
+Name=S (V-Switch)
+Definition=S
+Shape=Switch
+Mask=4352
+Label Offset=56,9,-27,51
+PinCnt=4
+Pin="Plus Output",6,0,-3,-3
+Pin="Minus Output",6,6,-5,20
+Pin="Plus Control",0,0,-33,-3
+Pin="Minus Control",0,6,-41,20
+
+[group]
+End="1554AG3"
+
+[group]
+Name="circuit501"
+
+[compdef]
+Name=155LN1
+Definition=Subckt
+Shape=Inv_GOST
+Mask=4096
+Label Offset=9,12,13,8
+PinCnt=2
+Pin="1A",d,0,0
+Pin="1Y",d,6,0
+
+[group]
+End="circuit501"
+
+[group]
+End="Import"

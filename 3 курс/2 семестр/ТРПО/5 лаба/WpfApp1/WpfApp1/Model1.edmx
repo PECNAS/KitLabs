@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище CuratorsModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Curator">
+          <Key>
+            <PropertyRef Name="CuratorID" />
+          </Key>
+          <Property Name="CuratorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="255" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CellPhone" Type="nvarchar" MaxLength="12" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HealtCard">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentId" Type="int" />
+          <Property Name="Description" Type="text" />
+          <Property Name="DateOfRecord" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Parent">
+          <Key>
+            <PropertyRef Name="ParentId" />
+          </Key>
+          <Property Name="ParentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="255" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CellPhone" Type="nvarchar" MaxLength="12" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="Workplace" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="255" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="255" />
+          <Property Name="GroupNumber" Type="nvarchar" MaxLength="4" />
+          <Property Name="BDate" Type="nvarchar" MaxLength="20" />
+          <Property Name="CellPhone" Type="nvarchar" MaxLength="12" />
+          <Property Name="CuratorId" Type="int" />
+        </EntityType>
+        <EntityType Name="Student_Parent_Relationship">
+          <Key>
+            <PropertyRef Name="RelId" />
+          </Key>
+          <Property Name="RelId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentId" Type="int" />
+          <Property Name="ParentId" Type="int" />
+        </EntityType>
+        <EntityType Name="SummaryLedger">
+          <Key>
+            <PropertyRef Name="LedgerId" />
+          </Key>
+          <Property Name="LedgerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentId" Type="int" />
+          <Property Name="TeacherId" Type="int" />
+          <Property Name="Grade" Type="nvarchar" MaxLength="10" />
+          <Property Name="Semester" Type="int" />
+        </EntityType>
+        <EntityType Name="Teacher">
+          <Key>
+            <PropertyRef Name="TeacherId" />
+          </Key>
+          <Property Name="TeacherId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="255" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <Association Name="FK__HealtCard__Stude__3C69FB99">
+          <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="HealtCard" Type="Self.HealtCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="StudentId" />
+            </Principal>
+            <Dependent Role="HealtCard">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Student__Curator__398D8EEE">
+          <End Role="Curator" Type="Self.Curator" Multiplicity="0..1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Curator">
+              <PropertyRef Name="CuratorID" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="CuratorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Student_P__Paren__4222D4EF">
+          <End Role="Parent" Type="Self.Parent" Multiplicity="0..1" />
+          <End Role="Student_Parent_Relationship" Type="Self.Student_Parent_Relationship" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parent">
+              <PropertyRef Name="ParentId" />
+            </Principal>
+            <Dependent Role="Student_Parent_Relationship">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Student_P__Stude__412EB0B6">
+          <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="Student_Parent_Relationship" Type="Self.Student_Parent_Relationship" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="StudentId" />
+            </Principal>
+            <Dependent Role="Student_Parent_Relationship">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SummaryLe__Stude__46E78A0C">
+          <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="SummaryLedger" Type="Self.SummaryLedger" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="StudentId" />
+            </Principal>
+            <Dependent Role="SummaryLedger">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SummaryLe__Teach__47DBAE45">
+          <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+          <End Role="SummaryLedger" Type="Self.SummaryLedger" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="TeacherId" />
+            </Principal>
+            <Dependent Role="SummaryLedger">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище CuratorsModelContainer">
+          <EntitySet Name="Curator" EntityType="Self.Curator" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HealtCard" EntityType="Self.HealtCard" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Parent" EntityType="Self.Parent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Student_Parent_Relationship" EntityType="Self.Student_Parent_Relationship" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SummaryLedger" EntityType="Self.SummaryLedger" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__HealtCard__Stude__3C69FB99" Association="Self.FK__HealtCard__Stude__3C69FB99">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="HealtCard" EntitySet="HealtCard" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Student__Curator__398D8EEE" Association="Self.FK__Student__Curator__398D8EEE">
+            <End Role="Curator" EntitySet="Curator" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Student_P__Paren__4222D4EF" Association="Self.FK__Student_P__Paren__4222D4EF">
+            <End Role="Parent" EntitySet="Parent" />
+            <End Role="Student_Parent_Relationship" EntitySet="Student_Parent_Relationship" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Student_P__Stude__412EB0B6" Association="Self.FK__Student_P__Stude__412EB0B6">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="Student_Parent_Relationship" EntitySet="Student_Parent_Relationship" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SummaryLe__Stude__46E78A0C" Association="Self.FK__SummaryLe__Stude__46E78A0C">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="SummaryLedger" EntitySet="SummaryLedger" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SummaryLe__Teach__47DBAE45" Association="Self.FK__SummaryLe__Teach__47DBAE45">
+            <End Role="Teacher" EntitySet="Teacher" />
+            <End Role="SummaryLedger" EntitySet="SummaryLedger" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CuratorsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Curator">
+          <Key>
+            <PropertyRef Name="CuratorID" />
+          </Key>
+          <Property Name="CuratorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CellPhone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Student" Relationship="Self.FK__Student__Curator__398D8EEE" FromRole="Curator" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="HealtCard">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentId" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DateOfRecord" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Student" Relationship="Self.FK__HealtCard__Stude__3C69FB99" FromRole="HealtCard" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Parent">
+          <Key>
+            <PropertyRef Name="ParentId" />
+          </Key>
+          <Property Name="ParentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CellPhone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Workplace" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Student_Parent_Relationship" Relationship="Self.FK__Student_P__Paren__4222D4EF" FromRole="Parent" ToRole="Student_Parent_Relationship" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GroupNumber" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="BDate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CellPhone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CuratorId" Type="Int32" />
+          <NavigationProperty Name="Curator" Relationship="Self.FK__Student__Curator__398D8EEE" FromRole="Student" ToRole="Curator" />
+          <NavigationProperty Name="HealtCard" Relationship="Self.FK__HealtCard__Stude__3C69FB99" FromRole="Student" ToRole="HealtCard" />
+          <NavigationProperty Name="Student_Parent_Relationship" Relationship="Self.FK__Student_P__Stude__412EB0B6" FromRole="Student" ToRole="Student_Parent_Relationship" />
+          <NavigationProperty Name="SummaryLedger" Relationship="Self.FK__SummaryLe__Stude__46E78A0C" FromRole="Student" ToRole="SummaryLedger" />
+        </EntityType>
+        <EntityType Name="Student_Parent_Relationship">
+          <Key>
+            <PropertyRef Name="RelId" />
+          </Key>
+          <Property Name="RelId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentId" Type="Int32" />
+          <Property Name="ParentId" Type="Int32" />
+          <NavigationProperty Name="Parent" Relationship="Self.FK__Student_P__Paren__4222D4EF" FromRole="Student_Parent_Relationship" ToRole="Parent" />
+          <NavigationProperty Name="Student" Relationship="Self.FK__Student_P__Stude__412EB0B6" FromRole="Student_Parent_Relationship" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="SummaryLedger">
+          <Key>
+            <PropertyRef Name="LedgerId" />
+          </Key>
+          <Property Name="LedgerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentId" Type="Int32" />
+          <Property Name="TeacherId" Type="Int32" />
+          <Property Name="Grade" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Semester" Type="Int32" />
+          <NavigationProperty Name="Student" Relationship="Self.FK__SummaryLe__Stude__46E78A0C" FromRole="SummaryLedger" ToRole="Student" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK__SummaryLe__Teach__47DBAE45" FromRole="SummaryLedger" ToRole="Teacher" />
+        </EntityType>
+        <EntityType Name="Teacher">
+          <Key>
+            <PropertyRef Name="TeacherId" />
+          </Key>
+          <Property Name="TeacherId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Subject" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SummaryLedger" Relationship="Self.FK__SummaryLe__Teach__47DBAE45" FromRole="Teacher" ToRole="SummaryLedger" />
+        </EntityType>
+        <Association Name="FK__Student__Curator__398D8EEE">
+          <End Role="Curator" Type="Self.Curator" Multiplicity="0..1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Curator">
+              <PropertyRef Name="CuratorID" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="CuratorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HealtCard__Stude__3C69FB99">
+          <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="HealtCard" Type="Self.HealtCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="StudentId" />
+            </Principal>
+            <Dependent Role="HealtCard">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Student_P__Paren__4222D4EF">
+          <End Role="Parent" Type="Self.Parent" Multiplicity="0..1" />
+          <End Role="Student_Parent_Relationship" Type="Self.Student_Parent_Relationship" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parent">
+              <PropertyRef Name="ParentId" />
+            </Principal>
+            <Dependent Role="Student_Parent_Relationship">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Student_P__Stude__412EB0B6">
+          <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="Student_Parent_Relationship" Type="Self.Student_Parent_Relationship" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="StudentId" />
+            </Principal>
+            <Dependent Role="Student_Parent_Relationship">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SummaryLe__Stude__46E78A0C">
+          <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="SummaryLedger" Type="Self.SummaryLedger" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="StudentId" />
+            </Principal>
+            <Dependent Role="SummaryLedger">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SummaryLe__Teach__47DBAE45">
+          <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+          <End Role="SummaryLedger" Type="Self.SummaryLedger" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="TeacherId" />
+            </Principal>
+            <Dependent Role="SummaryLedger">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CuratorsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Curator" EntityType="Self.Curator" />
+          <EntitySet Name="HealtCard" EntityType="Self.HealtCard" />
+          <EntitySet Name="Parent" EntityType="Self.Parent" />
+          <EntitySet Name="Student" EntityType="Self.Student" />
+          <EntitySet Name="Student_Parent_Relationship" EntityType="Self.Student_Parent_Relationship" />
+          <EntitySet Name="SummaryLedger" EntityType="Self.SummaryLedger" />
+          <EntitySet Name="Teacher" EntityType="Self.Teacher" />
+          <AssociationSet Name="FK__Student__Curator__398D8EEE" Association="Self.FK__Student__Curator__398D8EEE">
+            <End Role="Curator" EntitySet="Curator" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HealtCard__Stude__3C69FB99" Association="Self.FK__HealtCard__Stude__3C69FB99">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="HealtCard" EntitySet="HealtCard" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Student_P__Paren__4222D4EF" Association="Self.FK__Student_P__Paren__4222D4EF">
+            <End Role="Parent" EntitySet="Parent" />
+            <End Role="Student_Parent_Relationship" EntitySet="Student_Parent_Relationship" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Student_P__Stude__412EB0B6" Association="Self.FK__Student_P__Stude__412EB0B6">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="Student_Parent_Relationship" EntitySet="Student_Parent_Relationship" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SummaryLe__Stude__46E78A0C" Association="Self.FK__SummaryLe__Stude__46E78A0C">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="SummaryLedger" EntitySet="SummaryLedger" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SummaryLe__Teach__47DBAE45" Association="Self.FK__SummaryLe__Teach__47DBAE45">
+            <End Role="Teacher" EntitySet="Teacher" />
+            <End Role="SummaryLedger" EntitySet="SummaryLedger" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище CuratorsModelContainer" CdmEntityContainer="CuratorsEntities">
+          <EntitySetMapping Name="Curator">
+            <EntityTypeMapping TypeName="CuratorsModel.Curator">
+              <MappingFragment StoreEntitySet="Curator">
+                <ScalarProperty Name="CuratorID" ColumnName="CuratorID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HealtCard">
+            <EntityTypeMapping TypeName="CuratorsModel.HealtCard">
+              <MappingFragment StoreEntitySet="HealtCard">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DateOfRecord" ColumnName="DateOfRecord" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parent">
+            <EntityTypeMapping TypeName="CuratorsModel.Parent">
+              <MappingFragment StoreEntitySet="Parent">
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Workplace" ColumnName="Workplace" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Student">
+            <EntityTypeMapping TypeName="CuratorsModel.Student">
+              <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="GroupNumber" ColumnName="GroupNumber" />
+                <ScalarProperty Name="BDate" ColumnName="BDate" />
+                <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+                <ScalarProperty Name="CuratorId" ColumnName="CuratorId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Student_Parent_Relationship">
+            <EntityTypeMapping TypeName="CuratorsModel.Student_Parent_Relationship">
+              <MappingFragment StoreEntitySet="Student_Parent_Relationship">
+                <ScalarProperty Name="RelId" ColumnName="RelId" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SummaryLedger">
+            <EntityTypeMapping TypeName="CuratorsModel.SummaryLedger">
+              <MappingFragment StoreEntitySet="SummaryLedger">
+                <ScalarProperty Name="LedgerId" ColumnName="LedgerId" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="Semester" ColumnName="Semester" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teacher">
+            <EntityTypeMapping TypeName="CuratorsModel.Teacher">
+              <MappingFragment StoreEntitySet="Teacher">
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

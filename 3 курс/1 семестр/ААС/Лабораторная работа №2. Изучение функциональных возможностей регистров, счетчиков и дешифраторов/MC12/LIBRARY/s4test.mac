@@ -1,0 +1,774 @@
+[Main]
+FileType=CIR
+Version=7.00
+Program=Micro-Cap
+Screen=1280,1024
+MCAPVersion=7.1.6.0
+Key ID=0
+NLCnt=10
+TXCnt=0
+
+[shapedef]
+Name=5GEN
+Rectangle=-12,-24,24,56
+Line=24,-16,40,-16
+Line=24,0,40,0
+Line=24,16,40,16
+Line=24,32,40,32
+Line=24,48,40,48
+Text="100ns",-8,-6,21,6 , -10,0,"Arial"
+Text="200ns",-8,10,21,22 , -10,0,"Arial"
+Text="400ns",-8,26,21,38 , -10,0,"Arial"
+Text="800ns",-8,42,21,54 , -10,0,"Arial"
+Text="50ns",-2,-22,21,-10 , -10,0,"Arial"
+Text="Генератор",-9,-31,23,-23 , -6,0,"Arial"
+Line=-12,-24,-12,-28
+Line=-12,-28,-12,-31
+Line=-12,-31,24,-31
+Line=24,-31,24,-23
+
+[shapedef]
+Name=S4x2
+Line=-16,24,72,24
+Line=31,19,23,27
+Text="4",35,9,43,21 , -10,0,"Arial"
+
+[shapedef]
+Name=S4x4
+Line=-24,8,160,8
+Line=64,4,56,12
+Text="4",68,-6,76,6 , -10,0,"Arial"
+
+[shapedef]
+Name=S4x8
+Line=-16,8,350,8
+Line=171,4,163,12
+Text="4",175,-6,183,6 , -10,0,"Arial"
+
+[shapedef]
+Name=S4LD
+Line=8,-16,8,8
+Line=8,-16,-16,-16
+Line=12,-20,4,-12
+Text="4",9,-18,17,-6 , -10,0,"Arial"
+
+[shapedef]
+Name=S4In
+Line=-24,-16,-8,-16
+Line=-8,0,-24,0
+Line=-24,16,-8,16
+Line=-8,32,-24,32
+Line=0,8,16,8
+Line=-8,-16,0,8
+Line=-8,0,0,8
+Line=-8,16,0,8
+Line=-8,32,0,8
+
+[shapedef]
+Name=S4Out
+Line=16,24,0,24
+Line=0,8,16,8
+Line=16,-8,0,-8
+Line=0,-24,16,-24
+Line=-8,0,-24,0
+Line=0,24,-8,0
+Line=0,8,-8,0
+Line=0,-8,-8,0
+Line=0,-24,-8,0
+
+[compdef]
+Name=S4x2
+Definition=Macro
+Shape=S4x2
+Mask=4224
+Label Offset=0,0,0,0
+PinCnt=8
+Pin="a1",d,-2,3,-4,13
+Pin="a2",d,-3,3,-3,0
+Pin="a3",d,-4,3,-4,13
+Pin="a4",d,-5,3,-3,-1
+Pin="b4",d,9,3,-4,-3
+Pin="b3",d,10,3,-5,14
+Pin="b2",d,11,3,-3,-2
+Pin="b1",d,12,3,-4,14
+
+[compdef]
+Name=S4In
+Definition=Macro
+Shape=S4In
+Mask=4224
+Label Offset=0,0,0,0
+PinCnt=8
+Pin="a1",d,-3,-2
+Pin="a2",d,-3,0
+Pin="a3",d,-3,2
+Pin="a4",d,-3,4
+Pin="b4",d,2,1,-4,-1
+Pin="b3",d,3,1,-5,14
+Pin="b2",d,4,1,-4,0
+Pin="b1",d,5,1,-4,14
+
+[compdef]
+Name=S4LD
+Definition=Macro
+Shape=S4LD
+Mask=6048
+Label Offset=-9,-16,-2,-20
+PinCnt=8
+Pin="a1",d,-2,-2,-3,13
+Pin="a2",d,-3,-2,-3,-1
+Pin="a3",d,-4,-2,-4,14
+Pin="a4",d,-5,-2,-5,-1
+Pin="b4",d,1,1,4,8
+Pin="b3",d,1,2,4,7
+Pin="b2",d,1,3,4,6
+Pin="b1",d,1,4,4,5
+
+[compdef]
+Name=S4Out
+Definition=Macro
+Shape=S4Out
+Mask=4224
+Label Offset=0,0,0,0
+PinCnt=8
+Pin="a1",d,-3,0,-4,12
+Pin="a2",d,-4,0,-3,0
+Pin="a3",d,-5,0,-4,12
+Pin="a4",d,-6,0,-3,-1
+Pin="b1",d,2,-3
+Pin="b2",d,2,-1
+Pin="b3",d,2,1
+Pin="b4",d,2,3
+
+[compdef]
+Name=S4x4
+Definition=Macro
+Shape=S4x4
+Mask=4224
+Label Offset=0,0,0,0
+PinCnt=8
+Pin="a1",d,-3,1,-4,12
+Pin="a2",d,-4,1,-3,0
+Pin="a3",d,-5,1,-5,13
+Pin="a4",d,-6,1,-4,0
+Pin="b4",d,20,1,-4,0
+Pin="b3",d,21,1,-4,14
+Pin="b2",d,22,1,-4,0
+Pin="b1",d,23,1,-5,14
+
+[compdef]
+Name=S4x8
+Definition=Macro
+Shape=S4x8
+Mask=4224
+Label Offset=0,0,0,0
+PinCnt=8
+Pin="a1",d,-2,1,-3,12
+Pin="a2",d,-3,1,-4,-1
+Pin="a3",d,-4,1,-4,13
+Pin="a4",d,-5,1,-4,0
+Pin="b4",d,44,1,-3,-1
+Pin="b3",d,45,1,-5,13
+Pin="b2",d,46,1,-4,0
+Pin="b1",d,47,1,-5,13
+
+[compdef]
+Name=SimplyGen
+Definition=Macro
+Shape=5GEN
+Mask=20640
+Label Offset=-9,56,35,-9
+PinCnt=5
+Pin="50",d,5,-2,2,-2
+Pin="100",d,5,0
+Pin="200",d,5,2
+Pin="400",d,5,4
+Pin="800",d,5,6
+
+[Circuit]
+WinBackGround Color=15
+Grid Text Color=Height=-12,FStyle=0,Color=1,Name=Arial
+Object Default=Height=-16,FStyle=0,Color=4,Name=Arial
+Component Color=4
+Attribute Text=Height=-12,FStyle=0,Color=2,Name=Arial
+Wire Color=2
+Select Color=6
+Pin Connection=Height=-10,FStyle=0,Color=9,Name=Arial
+Select Box Color=4
+Node Number=Height=-12,FStyle=0,Color=2,Name=Arial
+Node Voltage Color=0
+Current=Height=-11,FStyle=0,Color=12,Name=Arial
+Power/Condition=Height=-11,FStyle=0,Color=9,Name=Arial
+Digital Path Color=9
+Title Block=Height=-15,FStyle=0,Color=0,Name=Arial
+Digital 0 Color=0
+Digital R Color=11
+Digital F Color=11
+Digital 1 Color=9
+Digital X Color=7
+Digital Z Color=8
+Window Placement=0,1, -1,-1, -7,-26, 46,46,1023,647
+Window Placement in Analysis=0,0, 0,0, 0,0, 0,0,0,0
+Window Placement in Probe=0,1, -1,-1, -4,-23, 508,0,1016,645
+Block Select Color=41
+TitleBlock Field_1=$name
+TitleBlock Field_2=$user $company
+TitleBlock Field_3
+TitleBlock Field_4=$date
+TitleBlock Field_5=Page $page of $maxpage
+TitleBlock One Title=True
+Title_Block_Border=False
+Title_Block=False
+
+[Comp]
+Name=S4x2
+Style=ShowPinText
+Grid=47,35
+
+[Attr]
+ONV=0,0,PART,X1
+Style=8192
+Color=9
+
+[Attr]
+ONV=0,11,FILE,S4x2
+Color=9
+
+[Comp]
+Name=S4x2
+Style=ShowPinText
+Grid=24,26
+
+[Attr]
+ONV=0,0,PART,X2
+Style=8192
+Color=9
+
+[Attr]
+ONV=0,11,FILE,S4x2
+Color=9
+
+[Comp]
+Name=S4x2
+Style=ShowPinText
+Grid=61,35
+
+[Attr]
+ONV=0,0,PART,X3
+Style=8192
+Color=9
+
+[Attr]
+ONV=0,11,FILE,S4x2
+Color=9
+
+[Comp]
+Name=S4In
+Style=ShowPinText
+Grid=17,28
+
+[Attr]
+ONV=1,-3,PART,X4
+Style=8192
+Color=9
+
+[Attr]
+ONV=0,11,FILE,S4In
+Color=9
+
+[Comp]
+Name=S4LD
+Style=ShowPinText
+Grid=41,37
+Rot=7
+
+[Attr]
+ONV=0,0,PART,X5
+Style=8192
+Color=9
+
+[Attr]
+ONV=0,11,FILE,S4LD
+Color=9
+
+[Comp]
+Name=S4LD
+Style=ShowPinText
+Grid=38,31
+
+[Attr]
+ONV=0,0,PART,X6
+Style=8192
+Color=9
+
+[Attr]
+ONV=0,11,FILE,S4LD
+Color=9
+
+[Comp]
+Name=S4Out
+Style=ShowPinText
+Grid=151,38
+
+[Attr]
+ONV=0,0,PART,X7
+Style=8192
+Color=9
+
+[Attr]
+ONV=0,11,FILE,S4Out
+Color=9
+
+[Comp]
+Name=S4x4
+Style=ShowPinText
+Grid=125,37
+
+[Attr]
+ONV=0,0,PART,X8
+Style=8192
+Color=9
+
+[Attr]
+ONV=0,11,FILE,S4x4
+Color=9
+
+[Comp]
+Name=S4x8
+Style=ShowPinText
+Grid=75,37
+
+[Attr]
+ONV=0,0,PART,X9
+Style=8192
+Color=9
+
+[Attr]
+ONV=0,11,FILE,S4x8
+Color=9
+
+[Comp]
+Name=SimplyGen
+Style=ShowPinText
+Grid=9,28
+
+[Attr]
+ONV=-24,-43,PART,X10
+Style=8192
+Color=9
+
+[Attr]
+ONV=0,11,FILE,SimplyGen
+Color=9
+
+[Node Offsets]
+
+[Condition Offsets]
+
+[Schematic]
+Page 0=0
+TabSize 0=320
+Page 1=0
+TabSize 1=320
+Page 2=0
+TabSize 2=320
+Page 3=0
+TabSize 3=320
+Splitter.xs=0
+Splitter.ys=0
+TextQuad=4097
+Scale=1
+PrinterScale=1
+View=272
+
+[Tools]
+Pos=Top
+SELECT=Yes
+COMP=Yes
+TEXT=Yes
+WIRE=Yes
+WIRED=Yes
+GRAPHIC=Yes
+LINE=No
+ELLIPSE=No
+RECT=No
+DIAM=No
+ARC=No
+PIE=No
+FLAG=Yes
+META=No
+INFO=Yes
+HELP=Yes
+DIGTRC=No
+DIGTRC2=No
+DIGALL=No
+GRIDTEXT=Yes
+COMPTEXT=Yes
+NODE=Yes
+NODEV=Yes
+CURRENT=Yes
+POWER=Yes
+CONDITIN=Yes
+PIN=Yes
+CROSS=Yes
+GRID=Yes
+BORDER=Yes
+TITLE=Yes
+RUBBER=Yes
+PROPERTY=Yes
+STEP=Yes
+MIRROR=Yes
+ROTATE=Yes
+FLIPY=Yes
+FILPX=Yes
+FINDCOMP=Yes
+FIND=Yes
+REPEAT=No
+MODEL=Yes
+CIR2CKT=No
+ATTDISP=No
+TOFRONT=Yes
+TOBACK=Yes
+PAGEADD=Yes
+PAGEDEL=Yes
+ZOOMIN=Yes
+ZOOMOUT=Yes
+GOTOFLAG=Yes
+COLOR=Yes
+FONT=Yes
+
+[Page]
+Index=0
+Name=Page 1
+Scale 0=1
+Scale 1=1
+Scale 2=1
+SB 3=101,0
+Scale 3=1
+Grid=14,32
+
+[Text Area]
+Font=Height=-16,FStyle=0,Color=9,Name=Courier New
+Comment Color=8
+Background Color=15
+Len=0
+
+
+[Printer]
+T.AutoTile=No
+T.BlackBorder=No
+A.AutoTile=No
+A.BlackBorder=No
+D.AutoTile=No
+D.BlackBorder=No
+
+[TRANSIENT]
+AutoTitle=Yes
+Grid Weight=1
+Grid Pattern=Dot
+
+[AC]
+AutoTitle=Yes
+Grid Weight=1
+Grid Pattern=Dot
+Smith Chart Impedance=50
+
+[DC]
+AutoTitle=Yes
+Grid Weight=1
+Grid Pattern=Dot
+
+[Analysis]
+Window Placement=0,0, 0,0, 0,0, 0,0,0,0
+Window Placement in Probe=0,1, -1,-1, -4,-23, 0,0,508,645
+Num Out Header Left
+Num Out Header Center=$MC\n$user\n$company\n$Analysis of $name\n
+Num Out Header Right
+Num Out Delimiter=32
+Analysis Text=Height=-16,FStyle=0,Color=4,Name=Arial
+Analysis Grid Color=8
+Analysis Graph Background=7
+Object Default=Height=-16,FStyle=0,Color=4,Name=Arial
+Analysis Window Background=15
+NumOut=Height=-16,FStyle=0,Color=9,Name=Courier New
+ScaleColor=On
+Select Color=9
+Select Box Color=4
+Cursor Select Color Primary=7
+Cursor Select Color Secondary=9
+Tracker Intercept=False
+Tracker Mouse=True
+Tracker Cursor=True
+Tracker Foreground=Height=-15,FStyle=0,Color=0,Name=Arial
+Tracker Background=11
+Baseline color=12
+Data Point Labels Color Fore=Height=-15,FStyle=0,Color=0,Name=Arial
+Data Point Labels Color Back=11
+AnimateWait=0
+AnimateWaitTime=500
+Same Y Scales=Yes
+T.Save_For_Future=No
+A.Save_For_Future=No
+D.Save_For_Future=No
+T.Reduce_Display=1
+T.Reduce_Save=1
+A.Reduce_Display=1
+A.Reduce_Save=1
+D.Reduce_Display=1
+D.Reduce_Save=1
+
+[Tools]
+Pos=Top
+SELECT=Yes
+GRAPHIC=Yes
+LINE=No
+ELLIPSE=No
+RECT=No
+DIAM=No
+ARC=No
+PIE=No
+POLYCLOS=No
+SCALE=Yes
+CURSOR=Yes
+MEASUREH=Yes
+MEASUREV=Yes
+TAG=Yes
+TEXT=Yes
+PROPERTY=Yes
+START=Yes
+STOP=Yes
+PAUSE=Yes
+DATAPTS=Yes
+TOKENS=Yes
+RULER=Yes
+PLUS=Yes
+XAXIS=Yes
+YAXIS=Yes
+MINORLOG=Yes
+BASELINE=Yes
+HORIZCUR=Yes
+GOTOX=Yes
+GOTOY=Yes
+GOTOPERF=Yes
+GOTOBRNC=Yes
+NEXT=Yes
+NEXTIN=Yes
+PEAK=Yes
+VALLEY=Yes
+HIGH=Yes
+LOW=Yes
+INFLECTN=Yes
+GHIGH=Yes
+GLOW=Yes
+BOTTOM=Yes
+TOP=Yes
+AOUTPUT=Yes
+ZOOMIN=Yes
+ZOOMOUT=Yes
+COLOR=Yes
+FONT=Yes
+
+[Monte Carlo Options]
+Analysis=Transient
+Status=Off
+Distribution=Normal
+Number of Runs
+
+[Monte Carlo Options]
+Analysis=AC
+Status=Off
+Distribution=Normal
+Number of Runs
+
+[Monte Carlo Options]
+Analysis=DC
+Status=Off
+Distribution=Normal
+Number of Runs
+
+[Limits]
+Analysis=Transient
+TRange=1u
+TStep=0
+NPts=0
+Temp=27
+OPT=120
+Horizontal Cursor=False
+Temperature Type=Linear
+
+[WaveForm]
+Analysis=Transient
+Options=LINEARX,LINEARY
+AliasID=1
+Plt=1
+XExp=T
+YExp=d(1)
+XRng=Auto
+YRng=Auto
+VFmtX=3
+SFmtX=2
+SFmtY=2
+Line Color=4
+Text Color=4
+
+[WaveForm]
+Analysis=Transient
+Options=LINEARX,LINEARY
+AliasID=2
+Plt=1
+XExp=T
+YExp=d(2)
+XRng=Auto
+YRng=Auto
+VFmtX=3
+SFmtX=2
+SFmtY=2
+Line Color=9
+Text Color=9
+
+[WaveForm]
+Analysis=Transient
+Options=LINEARX,LINEARY
+AliasID=3
+VFmtX=3
+SFmtX=2
+SFmtY=2
+Line Color=2
+Text Color=2
+
+[Limits]
+Analysis=AC
+OPT=64
+Horizontal Cursor=False
+Temperature Type=Linear
+
+[WaveForm]
+Analysis=AC
+Options=LINEARY
+AliasID=1
+Plt=1
+VFmtX=3
+SFmtX=2
+SFmtY=2
+Line Color=4
+Text Color=4
+
+[WaveForm]
+Analysis=AC
+Options=LINEARY
+AliasID=2
+Plt=1
+VFmtX=3
+SFmtX=2
+SFmtY=2
+Line Color=9
+Text Color=9
+
+[WaveForm]
+Analysis=AC
+Options=LINEARY
+AliasID=3
+VFmtX=3
+SFmtX=2
+SFmtY=2
+Line Color=2
+Text Color=2
+
+[Limits]
+Analysis=DC
+OPT=0
+Horizontal Cursor=False
+Temperature Type=Linear
+Sweep1 type=Auto
+Sweep2 type=None
+
+[WaveForm]
+Analysis=DC
+Options=LINEARX,LINEARY
+AliasID=1
+Plt=1
+VFmtX=3
+SFmtX=2
+SFmtY=2
+Line Color=4
+Text Color=4
+
+[WaveForm]
+Analysis=DC
+Options=LINEARX,LINEARY
+AliasID=2
+VFmtX=3
+SFmtX=2
+SFmtY=2
+Line Color=9
+Text Color=9
+
+[WaveForm]
+Analysis=DC
+Options=LINEARX,LINEARY
+AliasID=3
+VFmtX=3
+SFmtX=2
+SFmtY=2
+Line Color=2
+Text Color=2
+
+[Stepping]
+Analysis=Transient
+Index=1
+Method=Log
+Parameter Type=Model
+
+[Stepping]
+Analysis=AC
+Index=1
+Method=Log
+Parameter Type=Model
+
+[Stepping]
+Analysis=DC
+Index=1
+Method=Log
+Parameter Type=Model
+
+[Optimize]
+Format=3
+
+[Optimize]
+Analysis=Transient
+Method=Standard_Powell
+
+[Optimize]
+Analysis=AC
+Method=Standard_Powell
+
+[Optimize]
+Analysis=DC
+Method=Standard_Powell
+
+[Watch]
+Format=3
+
+[Watch]
+Analysis=Transient
+ExprPercentWidth=80
+
+[Watch]
+Analysis=AC
+ExprPercentWidth=80
+
+[Watch]
+Analysis=DC
+ExprPercentWidth=80
+
+[DSP]
+T.Status=Off
+A.Status=Off
+
+[TF]
+Input Source
+Place Text=False
+
+[SENS]
+Multiple=False
+Parameter Type=Component

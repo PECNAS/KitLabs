@@ -1,0 +1,82 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\2 \u043A\u0443\u0440\u0441\\\u043B\u0430\u0431\u044B\\\u041E\u0410\u0418\u041F\\11 \u043B\u0430\u0431\u0430\\testentity\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7164F5-9EDB-49EC-8FBE-453EA87BCC7E}|testentity\\testentity.csproj|c:\\users\\busov\\documents\\\u043A\u0438\u0442\\2 \u043A\u0443\u0440\u0441\\\u043B\u0430\u0431\u044B\\\u043E\u0430\u0438\u043F\\11 \u043B\u0430\u0431\u0430\\testentity\\testentity\\buyercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7164F5-9EDB-49EC-8FBE-453EA87BCC7E}|testentity\\testentity.csproj|solutionrelative:testentity\\buyercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7164F5-9EDB-49EC-8FBE-453EA87BCC7E}|testentity\\testentity.csproj|c:\\users\\busov\\documents\\\u043A\u0438\u0442\\2 \u043A\u0443\u0440\u0441\\\u043B\u0430\u0431\u044B\\\u043E\u0430\u0438\u043F\\11 \u043B\u0430\u0431\u0430\\testentity\\testentity\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{1F7164F5-9EDB-49EC-8FBE-453EA87BCC7E}|testentity\\testentity.csproj|solutionrelative:testentity\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7164F5-9EDB-49EC-8FBE-453EA87BCC7E}|testentity\\testentity.csproj|c:\\users\\busov\\documents\\\u043A\u0438\u0442\\2 \u043A\u0443\u0440\u0441\\\u043B\u0430\u0431\u044B\\\u043E\u0430\u0438\u043F\\11 \u043B\u0430\u0431\u0430\\testentity\\testentity\\regform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7164F5-9EDB-49EC-8FBE-453EA87BCC7E}|testentity\\testentity.csproj|solutionrelative:testentity\\regform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\2 \u043A\u0443\u0440\u0441\\\u043B\u0430\u0431\u044B\\\u041E\u0410\u0418\u041F\\11 \u043B\u0430\u0431\u0430\\testentity\\testentity\\App.config",
+              "RelativeDocumentMoniker": "testentity\\App.config",
+              "ToolTip": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\2 \u043A\u0443\u0440\u0441\\\u043B\u0430\u0431\u044B\\\u041E\u0410\u0418\u041F\\11 \u043B\u0430\u0431\u0430\\testentity\\testentity\\App.config",
+              "RelativeToolTip": "testentity\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-15T12:22:33.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BuyerContext.cs",
+              "DocumentMoniker": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\2 \u043A\u0443\u0440\u0441\\\u043B\u0430\u0431\u044B\\\u041E\u0410\u0418\u041F\\11 \u043B\u0430\u0431\u0430\\testentity\\testentity\\BuyerContext.cs",
+              "RelativeDocumentMoniker": "testentity\\BuyerContext.cs",
+              "ToolTip": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\2 \u043A\u0443\u0440\u0441\\\u043B\u0430\u0431\u044B\\\u041E\u0410\u0418\u041F\\11 \u043B\u0430\u0431\u0430\\testentity\\testentity\\BuyerContext.cs",
+              "RelativeToolTip": "testentity\\BuyerContext.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAEkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T07:26:29.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegForm.cs",
+              "DocumentMoniker": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\2 \u043A\u0443\u0440\u0441\\\u043B\u0430\u0431\u044B\\\u041E\u0410\u0418\u041F\\11 \u043B\u0430\u0431\u0430\\testentity\\testentity\\RegForm.cs",
+              "RelativeDocumentMoniker": "testentity\\RegForm.cs",
+              "ToolTip": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\2 \u043A\u0443\u0440\u0441\\\u043B\u0430\u0431\u044B\\\u041E\u0410\u0418\u041F\\11 \u043B\u0430\u0431\u0430\\testentity\\testentity\\RegForm.cs",
+              "RelativeToolTip": "testentity\\RegForm.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAABEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T06:45:22.913Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

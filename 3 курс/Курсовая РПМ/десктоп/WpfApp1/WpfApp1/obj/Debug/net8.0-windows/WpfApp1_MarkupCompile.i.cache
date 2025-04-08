@@ -1,0 +1,20 @@
+﻿WpfApp1
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\busov\Documents\КИТ\3 курс\Курсовая РПМ\десктоп\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\
+WpfApp1
+none
+false
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+C:\Users\busov\Documents\КИТ\3 курс\Курсовая РПМ\десктоп\WpfApp1\WpfApp1\App.xaml
+11-395596987
+
+21-1895362139
+20914969648
+MainWindow.xaml;Templates\Details\EmployeeDetail.xaml;Templates\Details\ReservesDetail.xaml;Templates\Details\RoomDetail.xaml;Templates\Details\VisitorDetail.xaml;Templates\Widgets\AuthWidget.xaml;Templates\Widgets\DBLoading.xaml;Templates\Widgets\EmployeesWidget.xaml;Templates\Widgets\ReservesWidget.xaml;Templates\Widgets\RoomsWidget.xaml;Templates\Widgets\VisitorsWidget.xaml;
+
+True
+

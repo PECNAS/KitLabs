@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Templates\Details\EmployeeDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\Details\ReservesDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\Details\RoomDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\Details\VisitorDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\Widgets\AuthWidget.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\Widgets\EmployeesWidget.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\Widgets\ReservesWidget.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\Widgets\RoomsWidget.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Templates\Widgets\VisitorsWidget.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\Details\EmployeeDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\Details\ReservesDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\Details\RoomDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\Details\VisitorDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\Widgets\AuthWidget.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\Widgets\DBLoading.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\Widgets\EmployeesWidget.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\Widgets\ReservesWidget.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\Widgets\RoomsWidget.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Templates\Widgets\VisitorsWidget.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

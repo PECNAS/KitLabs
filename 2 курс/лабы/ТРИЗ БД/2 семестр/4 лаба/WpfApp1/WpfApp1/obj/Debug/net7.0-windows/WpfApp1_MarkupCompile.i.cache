@@ -1,0 +1,20 @@
+﻿WpfApp1
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\busov\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\obj\Debug\net7.0-windows\
+WpfApp1
+none
+false
+TRACE;DEBUG;NET;NET7_0;NETCOREAPP
+C:\Users\busov\Documents\КИТ\2 курс\лабы\ТРИЗ БД\2 семестр\4 лаба\WpfApp1\WpfApp1\App.xaml
+10150051183
+
+22454131861
+201-1377187170
+DataWindows\AppDataWindow.xaml;InsertWindows\AppInsertWindow.xaml;InsertWindows\CategoryInsertWindow.xaml;InsertWindows\ClientInsertWindow.xaml;InsertWindows\ExecutorInsertWindow.xaml;InsertWindows\HistoryInsertWindow.xaml;MainWindow.xaml;SendEMailWindow.xaml;Window1.xaml;Window2.xaml;
+
+True
+

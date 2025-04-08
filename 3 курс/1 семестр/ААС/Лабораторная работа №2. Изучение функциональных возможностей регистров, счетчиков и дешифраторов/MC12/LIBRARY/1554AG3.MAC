@@ -1,0 +1,1806 @@
+[Main]
+FileType=CIR
+Version=7.00
+Program=Micro-Cap
+Screen=1024,768
+MCAPVersion=7.2.4.0
+Key ID=Demo
+NLCnt=169
+TXCnt=8
+
+[shapedef]
+Name=Resistor
+PolyOpen=12 
+PolyLine=0,0
+PolyLine=0,0
+PolyLine=12,0
+PolyLine=14,-4
+PolyLine=18,4
+PolyLine=22,-4
+PolyLine=26,4
+PolyLine=30,-4
+PolyLine=34,4
+PolyLine=36,0
+PolyLine=48,0
+PolyLine=48,0
+Current=32,8,16,8
+
+[shapedef]
+Name=Nand2
+Root="Nand.root",0,-4,0
+
+[shapedef]
+Name=Nand3
+Root="Nand.root",0,-4,0
+Line=0,8,8,8
+
+[shapedef]
+Name=Nor2
+Root="Nor.root",0,-18,0
+
+[shapedef]
+Name=Or2
+Root="Or.root",0,-18,0
+
+[shapedef]
+Name=Inv
+Root="Inv.root",0,-16,0
+
+[shapedef]
+Name=Ground
+Line=0,0,12,0
+Line=12,-8,12,8
+Line=18,-4,18,4
+Line=24,0,24,0
+
+[shapedef]
+Name=Inv.root
+Line=8,-16,8,16
+Line=8,-16,40,0
+Line=8,16,40,0
+Line=0,0,8,0
+Ellipse=40,-2,44,2
+Line=44,0,47,0
+Line=46,0,48,0
+
+[shapedef]
+Name=Switch
+Line=0,0,0,0
+Line=0,48,0,48
+Line=48,0,48,16
+Line=48,48,48,24
+Line=48,16,52,20
+Root="Plus.root",6,6,0
+Root="Minus.root",6,40,0
+Ellipse=-2,-2,2,2
+Ellipse=-2,46,2,50
+
+[shapedef]
+Name=Minus.root
+Line=-2,0,2,0
+
+[shapedef]
+Name=Nand.root
+Line=0,0,8,0
+Line=8,20,8,-4
+Line=0,16,8,16
+Line=25,20,8,20
+Line=8,-4,25,-4
+Ellipse=40,6,44,10
+Line=44,8,48,8
+Arc=11,-4,40,20 , 25,24,24,-6
+
+[shapedef]
+Name=Or.root
+Line=42,8,48,8
+Line=0,0,10,0
+Line=0,16,10,16
+Line=24,-4,6,-4
+Line=6,20,24,20
+Arc=5,-4,43,34 , 42,8,24,-4
+Arc=0,-4,12,20 , 6,20,6,-4
+Arc=5,-18,43,20 , 24,20,42,8
+
+[shapedef]
+Name=Plus.root
+Line=-2,0,2,0
+Line=0,-2,0,2
+
+[shapedef]
+Name=Nor.root
+Arc=5,-18,43,20 , 24,20,42,8
+Line=0,0,10,0
+Line=0,16,10,16
+Line=24,-4,6,-4
+Line=6,20,24,20
+Arc=5,-4,43,34 , 42,8,24,-4
+Ellipse=42,6,46,10
+Line=46,8,48,8
+Arc=0,-4,12,20 , 6,20,6,-4
+
+[shapedef]
+Name=Buf.root
+Line=8,-16,8,16
+Line=8,-16,40,0
+Line=8,16,40,0
+Line=0,0,8,0
+Line=40,0,48,0
+
+[shapedef]
+Name=Buf
+Root="Buf.root",0,-16,0
+
+[compdef]
+Name=Inverter
+Definition=INV
+Shape=Inv
+Mask=5123
+Data1=1
+Label Offset=12,-6,11,21
+PinCnt=2
+Pin="In",0,0,-4,-2
+Pin="Out",6,0,-10,-2
+
+[compdef]
+Name=Buffer
+Definition=BUF
+Shape=Buf
+Mask=4096
+Data1=1
+Label Offset=11,-6,11,20
+PinCnt=2
+Pin="In",0,0,-5,-1
+Pin="Out",6,0,-10,-1
+
+[compdef]
+Name=Nand3
+Definition=NAND
+Shape=Nand3
+Mask=4608
+Data1=3
+Label Offset=11,5,7,10
+PinCnt=4
+Pin="In0",0,0,-8,-1
+Pin="In1",0,1,-18,7
+Pin="In2",0,2,-8,16
+Pin="Out",6,1,-9,-1
+
+[compdef]
+Name=Nand2
+Definition=NAND
+Shape=Nand2
+Mask=5635
+Data1=2
+Label Offset=14,4,8,9
+PinCnt=3
+Pin="In0",0,0,-8,-2
+Pin="In1",0,2,-8,-1
+Pin="Out",6,1,-9,-1
+
+[compdef]
+Name=Or2
+Definition=OR
+Shape=Or2
+Mask=5123
+Data1=2
+Label Offset=15,4,7,10
+PinCnt=3
+Pin="In0",0,0,-6,-3
+Pin="In1",0,2,-6,-2
+Pin="Out",6,1,-7,-1
+
+[compdef]
+Name=Nor2
+Definition=NOR
+Shape=Nor2
+Mask=4096
+Data1=2
+Label Offset=16,4,8,10
+PinCnt=3
+Pin="In0",0,0,-9,-1
+Pin="In1",0,2,-9,-1
+Pin="Out",6,1,-7,-3
+
+[compdef]
+Name=Ground
+Definition=Ground
+Shape=Ground
+Mask=1793
+Label Offset=0,0,0,0
+PinCnt=1
+Pin="PinA",0,0,-3,-7
+
+[compdef]
+Name=S (V-Switch)
+Definition=S
+Shape=Switch
+Mask=4352
+Label Offset=56,9,-27,51
+PinCnt=4
+Pin="Plus Output",6,0,-3,-3
+Pin="Minus Output",6,6,-5,20
+Pin="Plus Control",0,0,-33,-3
+Pin="Minus Control",0,6,-41,20
+
+[compdef]
+Name=Resistor
+Definition=Resistor
+Shape=Resistor
+Mask=7169
+Label Offset=18,6,8,11
+PinCnt=2
+Pin="Plus",6,0,-10,-4
+Pin="Minus",0,0,-14,-4
+
+[Circuit]
+WinBackGround Color=15
+Grid Text Color=Height=-12,FStyle=0,Color=1,Name=Arial
+Object Default=Height=-15,FStyle=0,Color=4,Name=Arial
+Component Color=12
+Attribute Text=Height=-12,FStyle=0,Color=2,Name=Arial
+Wire Color=2
+Select Color=9
+Pin Connection=Height=-10,FStyle=0,Color=9,Name=Arial
+Select Box Color=4
+Node Number=Height=-11,FStyle=0,Color=13,Name=Arial
+Node Voltage Color=0
+Current=Height=-11,FStyle=0,Color=12,Name=Arial
+Power/Condition=Height=-11,FStyle=0,Color=9,Name=Arial
+Digital Path Color=9
+Title Block=Height=-15,FStyle=0,Color=0,Name=Arial
+Digital 0 Color=0
+Digital R Color=11
+Digital F Color=11
+Digital 1 Color=9
+Digital X Color=7
+Digital Z Color=8
+Window Placement=2,3, 0,582, -6,-32, 22,29,888,440
+Window Placement in Analysis=2,3, -1,-1, -6,-32, 0,0,1020,606
+Window Placement in Probe=0,0, 0,0, 0,0, 0,0,0,0
+Block Select Color=41
+TitleBlock Field_1=$name
+TitleBlock Field_2=$user $company
+TitleBlock Field_3
+TitleBlock Field_4=$date
+TitleBlock Field_5=Page $page of $maxpage
+TitleBlock One Title=True
+Title_Block_Border=False
+Title_Block=False
+
+[Comp]
+Name=Inverter
+Grid=15,63
+
+[Attr]
+ONV=12,-6,PART,U1
+Style=8192
+
+[Attr]
+ONV=12,9,TIMING MODEL,D0_GATE
+
+[Attr]
+ONV=12,24,I/O MODEL,IO_STD_ST
+
+[Attr]
+ONV=12,39,MNTYMXDLY,0
+
+[Attr]
+ONV=12,54,IO_LEVEL,0
+
+[Attr]
+ONV=12,69,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=12,84,GROUND NODE,$G_DGND
+
+[Comp]
+Name=Buffer
+Grid=15,68
+
+[Attr]
+ONV=11,-6,PART,U2
+Style=8192
+
+[Attr]
+ONV=11,9,TIMING MODEL,D0_GATE
+
+[Attr]
+ONV=11,24,I/O MODEL,IO_STD_ST
+
+[Attr]
+ONV=11,39,MNTYMXDLY,0
+
+[Attr]
+ONV=11,54,IO_LEVEL,0
+
+[Attr]
+ONV=11,69,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=11,84,GROUND NODE,$G_DGND
+
+[Wire]
+Grids=5,63,15,63
+
+[Wire]
+Grids=5,68,15,68
+
+[Comp]
+Name=Nand3
+Grid=33,66
+
+[Attr]
+ONV=11,5,PART,U3
+Style=8192
+
+[Attr]
+ONV=11,20,TIMING MODEL,D0_GATE
+
+[Attr]
+ONV=11,35,I/O MODEL,IO_STD
+
+[Attr]
+ONV=11,50,MNTYMXDLY,0
+
+[Attr]
+ONV=11,65,IO_LEVEL,0
+
+[Attr]
+ONV=11,80,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=11,95,GROUND NODE,$G_DGND
+
+[Wire]
+Grids=21,68,33,68
+
+[Comp]
+Name=Inverter
+Grid=15,5
+
+[Attr]
+ONV=12,-6,PART,U4
+Style=8192
+
+[Attr]
+ONV=12,9,TIMING MODEL,D0_GATE
+
+[Attr]
+ONV=12,24,I/O MODEL,IO_STD
+
+[Attr]
+ONV=12,39,MNTYMXDLY,0
+
+[Attr]
+ONV=12,54,IO_LEVEL,0
+
+[Attr]
+ONV=12,69,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=12,84,GROUND NODE,$G_DGND
+
+[Wire]
+Grids=5,5,15,5
+
+[Comp]
+Name=Inverter
+Grid=25,5
+
+[Attr]
+ONV=12,-6,PART,U5
+Style=8192
+
+[Attr]
+ONV=12,9,TIMING MODEL,DLY_TTL
+
+[Attr]
+ONV=12,24,I/O MODEL,IO_STD
+
+[Attr]
+ONV=12,39,MNTYMXDLY,0
+
+[Attr]
+ONV=12,54,IO_LEVEL,0
+
+[Attr]
+ONV=12,69,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=12,84,GROUND NODE,$G_DGND
+
+[Wire]
+Grids=21,5,23,5
+
+[Wire]
+Grids=21,63,23,63
+
+[Wire]
+Grids=23,63,23,67
+
+[Wire]
+Grids=23,67,33,67
+
+[Wire]
+Grids=31,5,32,5
+
+[Wire]
+Grids=32,5,32,32
+
+[Wire]
+Grids=32,66,33,66
+
+[Comp]
+Name=Nand2
+Grid=66,62
+Rot=2
+
+[Attr]
+ONV=-30,-19,PART,U6
+Style=8192
+
+[Attr]
+ONV=-68,-34,TIMING MODEL,DLY_TTL
+
+[Attr]
+ONV=-57,-49,I/O MODEL,IO_STD
+
+[Attr]
+ONV=-21,-64,MNTYMXDLY,0
+
+[Attr]
+ONV=-21,-79,IO_LEVEL,0
+
+[Attr]
+ONV=-74,-94,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=-73,-109,GROUND NODE,$G_DGND
+
+[Comp]
+Name=Nand3
+Grid=66,56
+Rot=2
+
+[Attr]
+ONV=-27,-20,PART,U7
+Style=8192
+
+[Attr]
+ONV=-65,-35,TIMING MODEL,DLY_TTL
+
+[Attr]
+ONV=-54,-50,I/O MODEL,IO_STD
+
+[Attr]
+ONV=-18,-65,MNTYMXDLY,0
+
+[Attr]
+ONV=-18,-80,IO_LEVEL,0
+
+[Attr]
+ONV=-71,-95,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=-70,-110,GROUND NODE,$G_DGND
+
+[Wire]
+Grids=59,59,59,61
+
+[Wire]
+Grids=59,61,60,61
+
+[Wire]
+Grids=59,55,59,57
+
+[Wire]
+Grids=59,55,60,55
+
+[Wire]
+Grids=66,56,67,56
+
+[Wire]
+Grids=67,56,67,57
+
+[Wire]
+Grids=66,60,67,60
+
+[Wire]
+Grids=67,59,67,60
+
+[Wire]
+Grids=59,57,67,59
+
+[Wire]
+Grids=59,59,67,57
+
+[Wire]
+Grids=67,62,67,67
+
+[Wire]
+Grids=66,62,67,62
+
+[Comp]
+Name=Or2
+Grid=76,56
+Rot=2
+
+[Attr]
+ONV=-31,-19,PART,U8
+Style=8192
+
+[Attr]
+ONV=-69,-34,TIMING MODEL,DLY_TTL
+
+[Attr]
+ONV=-58,-49,I/O MODEL,IO_STD
+
+[Attr]
+ONV=-22,-64,MNTYMXDLY,0
+
+[Attr]
+ONV=-22,-79,IO_LEVEL,0
+
+[Attr]
+ONV=-75,-94,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=-74,-109,GROUND NODE,$G_DGND
+
+[Comp]
+Name=Inverter
+Grid=57,55
+Rot=2
+
+[Attr]
+ONV=-28,-9,PART,U9
+Style=8192
+
+[Attr]
+ONV=-66,-24,TIMING MODEL,DLY_TTL
+
+[Attr]
+ONV=-55,-39,I/O MODEL,IO_STD
+
+[Attr]
+ONV=-19,-54,MNTYMXDLY,0
+
+[Attr]
+ONV=-19,-69,IO_LEVEL,0
+
+[Attr]
+ONV=-72,-84,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=-71,-99,GROUND NODE,$G_DGND
+
+[Comp]
+Name=Nand2
+Grid=50,52
+Rot=4
+
+[Attr]
+ONV=14,-19,PART,U10
+Style=8192
+
+[Attr]
+ONV=14,-34,TIMING MODEL,DLY_TTL
+
+[Attr]
+ONV=14,-49,I/O MODEL,IO_STD_ST
+
+[Attr]
+ONV=14,-64,MNTYMXDLY,0
+
+[Attr]
+ONV=14,-79,IO_LEVEL,0
+
+[Attr]
+ONV=14,-94,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=14,-109,GROUND NODE,$G_DGND
+
+[Wire]
+Grids=50,55,51,55
+
+[Wire]
+Grids=50,52,50,55
+
+[Wire]
+Grids=56,51,57,51
+
+[Wire]
+Grids=76,51,76,54
+
+[Wire]
+Grids=57,55,59,55
+
+[Wire]
+Grids=66,55,70,55
+
+[Comp]
+Name=Nand2
+Grid=40,7
+Rot=4
+
+[Attr]
+ONV=14,-19,PART,U11
+Style=8192
+
+[Attr]
+ONV=14,-34,TIMING MODEL,D0_GATE
+
+[Attr]
+ONV=14,-49,I/O MODEL,IO_STD
+
+[Attr]
+ONV=14,-64,MNTYMXDLY,0
+
+[Attr]
+ONV=14,-79,IO_LEVEL,0
+
+[Attr]
+ONV=14,-94,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=14,-109,GROUND NODE,$G_DGND
+
+[Comp]
+Name=Nand2
+Grid=40,16
+Rot=4
+
+[Attr]
+ONV=14,-19,PART,U12
+Style=8192
+
+[Attr]
+ONV=14,-34,TIMING MODEL,D0_GATE
+
+[Attr]
+ONV=14,-49,I/O MODEL,IO_STD
+
+[Attr]
+ONV=14,-64,MNTYMXDLY,0
+
+[Attr]
+ONV=14,-79,IO_LEVEL,0
+
+[Attr]
+ONV=14,-94,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=14,-109,GROUND NODE,$G_DGND
+
+[Wire]
+Grids=39,7,40,7
+
+[Wire]
+Grids=39,7,39,8
+
+[Wire]
+Grids=39,14,40,14
+
+[Wire]
+Grids=39,13,39,14
+
+[Wire]
+Grids=46,6,47,6
+
+[Wire]
+Grids=47,6,47,8
+
+[Wire]
+Grids=46,15,47,15
+
+[Wire]
+Grids=47,13,47,15
+
+[Wire]
+Grids=32,5,40,5
+
+[Wire]
+Grids=39,13,47,8
+
+[Wire]
+Grids=39,8,47,13
+
+[Comp]
+Name=Nor2
+Grid=59,6
+
+[Attr]
+ONV=16,4,PART,U13
+Style=8192
+
+[Attr]
+ONV=16,19,TIMING MODEL,D0_GATE
+
+[Attr]
+ONV=16,34,I/O MODEL,IO_AC
+
+[Attr]
+ONV=16,49,MNTYMXDLY,0
+
+[Attr]
+ONV=16,64,IO_LEVEL,0
+
+[Attr]
+ONV=16,79,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=16,94,GROUND NODE,$G_DGND
+
+[Comp]
+Name=Inverter
+Grid=50,15
+Rot=4
+
+[Attr]
+ONV=12,-9,PART,U14
+Style=8192
+
+[Attr]
+ONV=12,-24,TIMING MODEL,D0_GATE
+
+[Attr]
+ONV=12,-39,I/O MODEL,IO_STD
+
+[Attr]
+ONV=12,-54,MNTYMXDLY,0
+
+[Attr]
+ONV=12,-69,IO_LEVEL,0
+
+[Attr]
+ONV=12,-84,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=12,-99,GROUND NODE,$G_DGND
+
+[Comp]
+Name=Ground
+Grid=78,22
+Rot=7
+
+[Comp]
+Name=Nor2
+Grid=59,19
+
+[Attr]
+ONV=16,4,PART,U15
+Style=8192
+
+[Attr]
+ONV=16,19,TIMING MODEL,D0_GATE
+
+[Attr]
+ONV=16,34,I/O MODEL,IO_AC
+
+[Attr]
+ONV=16,49,MNTYMXDLY,0
+
+[Attr]
+ONV=16,64,IO_LEVEL,0
+
+[Attr]
+ONV=16,79,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=16,94,GROUND NODE,$G_DGND
+
+[Comp]
+Name=Nand2
+Grid=56,25
+Rot=6
+
+[Attr]
+ONV=-37,4,PART,U16
+Style=8192
+
+[Attr]
+ONV=-68,19,TIMING MODEL,D0_GATE
+
+[Attr]
+ONV=-57,34,I/O MODEL,IO_STD
+
+[Attr]
+ONV=-21,49,MNTYMXDLY,0
+
+[Attr]
+ONV=-21,64,IO_LEVEL,0
+
+[Attr]
+ONV=-74,79,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=-73,94,GROUND NODE,$G_DGND
+
+[Wire]
+Grids=59,21,59,55
+
+[Wire]
+Grids=65,20,69,20
+
+[Wire]
+Grids=57,19,59,19
+
+[Wire]
+Grids=57,19,57,25
+
+[Wire]
+Grids=57,51,76,51
+
+[Wire]
+Grids=56,25,57,25
+
+[Wire]
+Grids=57,25,57,43
+
+[Wire]
+Grids=39,16,40,16
+
+[Wire]
+Grids=39,16,39,26
+
+[Wire]
+Grids=39,26,49,26
+
+[Wire]
+Grids=57,8,57,15
+
+[Wire]
+Grids=57,8,59,8
+
+[Wire]
+Grids=47,6,59,6
+
+[Wire]
+Grids=49,15,50,15
+
+[Wire]
+Grids=49,15,49,26
+
+[Wire]
+Grids=49,26,50,26
+
+[Wire]
+Grids=56,15,57,15
+
+[Wire]
+Grids=73,14,78,14
+
+[Wire]
+Grids=78,14,83,14
+
+[Wire]
+Grids=83,7,83,14
+
+[Wire]
+Grids=83,7,84,7
+
+[Wire]
+Grids=83,20,84,20
+
+[Wire]
+Grids=83,14,83,20
+
+[Comp]
+Name=Inverter
+Grid=103,7
+
+[Attr]
+ONV=12,-6,PART,U19
+Style=8192
+
+[Attr]
+ONV=12,9,TIMING MODEL,D0_GATE
+
+[Attr]
+ONV=12,24,I/O MODEL,IO_STD
+
+[Attr]
+ONV=12,39,MNTYMXDLY,0
+
+[Attr]
+ONV=12,54,IO_LEVEL,0
+
+[Attr]
+ONV=12,69,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=12,84,GROUND NODE,$G_DGND
+
+[Wire]
+Grids=56,27,112,27
+
+[Wire]
+Grids=112,7,112,27
+
+[Wire]
+Grids=109,7,112,7
+
+[Wire]
+Grids=94,20,94,56
+
+[Wire]
+Grids=76,56,94,56
+
+[Comp]
+Name=Nand2
+Grid=84,33
+Rot=4
+
+[Attr]
+ONV=14,-19,PART,U20
+Style=8192
+
+[Attr]
+ONV=14,-34,TIMING MODEL,D0_GATE
+
+[Attr]
+ONV=14,-49,I/O MODEL,IO_STD
+
+[Attr]
+ONV=14,-64,MNTYMXDLY,0
+
+[Attr]
+ONV=14,-79,IO_LEVEL,0
+
+[Attr]
+ONV=14,-94,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=14,-109,GROUND NODE,$G_DGND
+
+[Comp]
+Name=Or2
+Grid=72,34
+Rot=4
+
+[Attr]
+ONV=15,-19,PART,U21
+Style=8192
+
+[Attr]
+ONV=15,-34,TIMING MODEL,DLY_TTL
+
+[Attr]
+ONV=15,-49,I/O MODEL,IO_STD
+
+[Attr]
+ONV=15,-64,MNTYMXDLY,0
+
+[Attr]
+ONV=15,-79,IO_LEVEL,0
+
+[Attr]
+ONV=15,-94,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=15,-109,GROUND NODE,$G_DGND
+
+[Wire]
+Grids=47,15,47,31
+
+[Wire]
+Grids=47,31,84,31
+
+[Wire]
+Grids=78,33,84,33
+
+[Wire]
+Grids=90,32,95,32
+
+[Comp]
+Name=Inverter
+Grid=97,39
+
+[Attr]
+ONV=12,-6,PART,U22
+Style=8192
+
+[Attr]
+ONV=12,9,TIMING MODEL,D0_GATE
+
+[Attr]
+ONV=12,24,I/O MODEL,IO_STD
+
+[Attr]
+ONV=12,39,MNTYMXDLY,0
+
+[Attr]
+ONV=12,54,IO_LEVEL,0
+
+[Attr]
+ONV=12,69,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=12,84,GROUND NODE,$G_DGND
+
+[Wire]
+Grids=95,32,95,39
+
+[Wire]
+Grids=95,39,97,39
+
+[Wire]
+Grids=95,32,104,32
+
+[Wire]
+Grids=103,39,104,39
+
+[Wire]
+Grids=78,2,78,5
+
+[Wire]
+Grids=14,50,19,50
+
+[Comp]
+Name=Nor2
+Grid=55,43
+Rot=2
+
+[Attr]
+ONV=-39,-19,PART,U23
+Style=8192
+
+[Attr]
+ONV=-70,-34,TIMING MODEL,DLY_TTL
+
+[Attr]
+ONV=-59,-49,I/O MODEL,IO_STD
+
+[Attr]
+ONV=-23,-64,MNTYMXDLY,0
+
+[Attr]
+ONV=-23,-79,IO_LEVEL,0
+
+[Attr]
+ONV=-76,-94,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=-75,-109,GROUND NODE,$G_DGND
+
+[Comp]
+Name=Ground
+Grid=37,36
+Rot=6
+
+[Wire]
+Grids=43,42,46,42
+
+[Wire]
+Grids=46,34,46,42
+
+[Wire]
+Grids=43,47,46,47
+
+[Wire]
+Grids=23,5,23,33
+
+[Wire]
+Grids=23,33,55,33
+
+[Wire]
+Grids=23,5,25,5
+
+[Comp]
+Name=Inverter
+Grid=42,67
+
+[Attr]
+ONV=12,-6,PART,U24
+Style=8192
+
+[Attr]
+ONV=12,9,TIMING MODEL,DLY_TTL
+
+[Attr]
+ONV=12,24,I/O MODEL,IO_STD
+
+[Attr]
+ONV=12,39,MNTYMXDLY,0
+
+[Attr]
+ONV=12,54,IO_LEVEL,0
+
+[Attr]
+ONV=12,69,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=12,84,GROUND NODE,$G_DGND
+
+[Wire]
+Grids=48,67,67,67
+
+[Wire]
+Grids=39,67,41,67
+
+[Wire]
+Grids=41,58,43,58
+
+[Wire]
+Grids=41,67,42,67
+
+[Wire]
+Grids=48,35,48,67
+
+[Wire]
+Grids=46,42,49,42
+
+[Wire]
+Grids=46,42,46,47
+
+[Wire]
+Grids=34,50,50,50
+
+[Wire]
+Grids=34,47,37,47
+
+[Wire]
+Grids=34,42,34,47
+
+[Wire]
+Grids=14,2,14,50
+
+[Wire]
+Grids=55,43,57,43
+
+[Wire]
+Grids=57,43,57,51
+
+[Wire]
+Grids=55,33,55,41
+
+[Wire]
+Grids=14,2,78,2
+
+[Wire]
+Grids=32,32,67,32
+
+[Wire]
+Grids=67,32,67,54
+
+[Wire]
+Grids=32,32,32,66
+
+[Wire]
+Grids=66,54,67,54
+
+[Wire]
+Grids=46,34,72,34
+
+[Wire]
+Grids=69,32,72,32
+
+[Wire]
+Grids=69,29,69,32
+
+[Wire]
+Grids=69,29,99,29
+
+[Wire]
+Grids=99,7,99,29
+
+[Wire]
+Grids=90,7,99,7
+
+[Wire]
+Grids=5,50,14,50
+
+[Wire]
+Grids=72,22,78,22
+
+[Wire]
+Grids=99,7,103,7
+
+[Comp]
+Name=Inverter
+Grid=84,7
+
+[Attr]
+ONV=12,-6,PART,U28
+Style=8192
+
+[Attr]
+ONV=12,9,TIMING MODEL,D0_GATE
+
+[Attr]
+ONV=12,24,I/O MODEL,IO_HC_ST
+
+[Attr]
+ONV=12,39,MNTYMXDLY,0
+
+[Attr]
+ONV=12,54,IO_LEVEL,0
+
+[Attr]
+ONV=12,69,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=12,84,GROUND NODE,$G_DGND
+
+[Comp]
+Name=Buffer
+Grid=84,20
+
+[Attr]
+ONV=11,-6,PART,U29
+Style=8192
+
+[Attr]
+ONV=11,9,TIMING MODEL,D0_GATE
+
+[Attr]
+ONV=11,24,I/O MODEL,IO_HC_ST
+
+[Attr]
+ONV=11,39,MNTYMXDLY,0
+
+[Attr]
+ONV=11,54,IO_LEVEL,0
+
+[Attr]
+ONV=11,69,POWER NODE,$G_DPWR
+
+[Attr]
+ONV=11,84,GROUND NODE,$G_DGND
+
+[Wire]
+Grids=90,20,94,20
+
+[Wire]
+Grids=65,7,68,7
+
+[Wire]
+Grids=78,14,78,16
+
+[Wire]
+Grids=34,42,37,42
+
+[Wire]
+Grids=25,50,34,50
+
+[Comp]
+Name=S (V-Switch)
+Grid=72,5
+
+[Attr]
+ONV=56,9,PART,S1
+Style=8192
+
+[Attr]
+ONV=56,24,MODEL,dpmos
+
+[Comp]
+Name=Ground
+Grid=72,11
+Rot=2
+
+[Wire]
+Grids=78,11,78,14
+
+[Comp]
+Name=S (V-Switch)
+Grid=72,16
+
+[Attr]
+ONV=56,9,PART,S2
+Style=8192
+
+[Attr]
+ONV=56,24,MODEL,dnmos
+
+[Wire]
+Grids=78,22,81,22
+
+[Wire]
+Grids=69,16,69,20
+
+[Wire]
+Grids=69,16,72,16
+
+[Wire]
+Grids=68,5,68,7
+
+[Wire]
+Grids=68,5,72,5
+
+[Comp]
+Name=S (V-Switch)
+Grid=19,56
+Rot=3
+
+[Attr]
+ONV=12,-66,PART,S3
+Style=8192
+
+[Attr]
+ONV=-12,-81,MODEL,dpmos
+
+[Wire]
+Grids=19,56,19,58
+
+[Wire]
+Grids=19,58,41,58
+
+[Wire]
+Grids=41,58,41,67
+
+[Comp]
+Name=Ground
+Grid=25,56
+Rot=4
+
+[Comp]
+Name=S (V-Switch)
+Grid=43,36
+Rot=1
+
+[Attr]
+ONV=-27,51,PART,S4
+Style=8192
+
+[Attr]
+ONV=-27,66,MODEL,dpmos
+
+[Wire]
+Grids=43,35,43,36
+
+[Comp]
+Name=S (V-Switch)
+Grid=43,53
+Rot=5
+
+[Attr]
+ONV=-27,-66,PART,S5
+Style=8192
+
+[Attr]
+ONV=-27,-81,MODEL,dnmos
+
+[Wire]
+Grids=34,47,34,50
+
+[Wire]
+Grids=43,35,48,35
+
+[Wire]
+Grids=43,53,43,58
+
+[Comp]
+Name=Ground
+Grid=37,53
+Rot=6
+
+[Comp]
+Name=Ground
+Grid=7,36
+Rot=7
+
+[Comp]
+Name=Resistor
+Grid=7,30
+Rot=1
+
+[Attr]
+ONV=8,11,PART,R1
+Style=8192
+
+[Attr]
+ONV=8,26,VALUE,0
+Style=8192
+
+[Wire]
+Grids=7,29,7,30
+
+[Wire]
+Grids=4,29,5,29
+
+[Wire]
+Grids=5,29,7,29
+
+[Node Offsets]
+
+[Condition Offsets]
+
+[Grid Text]
+Text=ABAR
+Grid=5,63
+
+[Grid Text]
+Text=B
+Grid=5,68
+
+[Grid Text]
+Text=RBAR
+Grid=5,5
+
+[Grid Text]
+Text=RC
+Grid=73,14
+
+[Grid Text]
+Text=QBAR
+Grid=104,32
+
+[Grid Text]
+Text=Q
+Grid=104,39
+
+[Grid Text]
+Text=$G_DPWR
+Grid=5,50
+
+[Grid Text]
+Text=C
+Grid=5,29
+
+[Schematic]
+Page 0=0
+TabSize 0=340
+Page 1=0
+TabSize 1=340
+Page 2=0
+TabSize 2=340
+Page 3=0
+TabSize 3=340
+Splitter.xs=0
+Splitter.ys=0
+TextQuad=4099
+Scale=1
+PrinterScale=1
+View=1328
+
+[Tools]
+Pos=Top
+SELECT=Yes
+COMP=Yes
+TEXT=Yes
+WIRE=Yes
+WIRED=Yes
+GRAPHIC=Yes
+LINE=No
+ELLIPSE=No
+RECT=No
+DIAM=No
+ARC=No
+PIE=No
+FLAG=No
+META=No
+INFO=Yes
+HELP=Yes
+DIGTRC=No
+DIGTRC2=No
+DIGALL=No
+GRIDTEXT=Yes
+COMPTEXT=Yes
+NODE=Yes
+NODEV=Yes
+CURRENT=Yes
+POWER=Yes
+CONDITIN=Yes
+PIN=Yes
+CROSS=No
+GRID=Yes
+BORDER=No
+TITLE=Yes
+RUBBER=Yes
+PROPERTY=Yes
+STEP=Yes
+MIRROR=Yes
+ROTATE=Yes
+FLIPY=Yes
+FILPX=Yes
+FINDCOMP=No
+FIND=Yes
+REPEAT=No
+MODEL=Yes
+CIR2CKT=No
+ATTDISP=No
+TOFRONT=No
+TOBACK=No
+PAGEADD=No
+PAGEDEL=No
+ZOOMIN=Yes
+ZOOMOUT=Yes
+GOTOFLAG=No
+COLOR=Yes
+FONT=Yes
+
+[Page]
+Index=0
+Name=Page 1
+Scale 0=1
+Scale 1=1
+Scale 2=1
+Scale 3=1
+Grid=19,19
+
+[Text Area]
+Font=Height=-15,FStyle=0,Color=4,Name=Courier New
+Comment Color=8
+Background Color=15
+Len=855
+.define ABAR 0ns 0 8us 1 8.01us 0
+
+.define B 0ns 1 2.3us 0 4us 0 4.01us 1 4.1us 0 5.5us 1
+
+.define RBAR 0ns 1 10ns 0 500ns 1
+*** From file C:\Program Files\MC7DEMO\library\SMALL.LBR
+*** N-Channel Generic
+.MODEL $GENERIC_N NMOS (VTO=3 KP=20U L=2U W=350M GAMMA=0 PHI=600M LAMBDA=20M
++ RD=150M RS=300M CBD=400P CGSO=170P CGDO=130P TOX=0 NSUB=0 TPG=1 UO=600 RG=30
++ RDS=320K NLEV=0 GDSNOI=0)
+
+
+*** From file C:\Program Files\MC7DEMO\library\DIGIO.LIB
+.MODEL IO_AC UIO (INLD=4.5PF DRVH=2 DRVL=1 ATOD1="ATOD_AC" DTOA1="DTOA_AC"
++ ATOD2="ATOD_AC_NX" DTOA2="DTOA_AC" ATOD3="ATOD_AC" DTOA3="DTOA_AC"
++ ATOD4="ATOD_AC_NX" DTOA4="DTOA_AC" TSWLH1=2.971NS TSWLH2=2.971NS
++ TSWLH3=2.971NS TSWLH4=2.971NS TSWHL1=769PS TSWHL2=769PS TSWHL3=769PS
++ TSWHL4=769PS)
+
+
+.MODEL DPMOS VSWITCH (ROFF=1G VOFF=1.1)
+.MODEL DNMOS VSWITCH (ROFF=1G VON=3.1 VOFF=3.0)
+
+[Printer]
+T.AutoTile=No
+T.BlackBorder=No
+A.AutoTile=No
+A.BlackBorder=No
+D.AutoTile=No
+D.BlackBorder=No
+
+[TRANSIENT]
+AutoTitle=Yes
+Grid Weight=1
+Grid Pattern=Dot
+Static Grids=False
+
+[AC]
+AutoTitle=Yes
+Grid Weight=1
+Grid Pattern=Dot
+Static Grids=False
+
+[DC]
+AutoTitle=Yes
+Grid Weight=1
+Grid Pattern=Dot
+Static Grids=False
+
+[Analysis]
+Window Placement=2,3, -1,-1, -6,-32, 0,0,1020,606
+Window Placement in Probe=0,0, 0,0, 0,0, 0,0,0,0
+Num Out Header Left
+Num Out Header Center=$MC\n$user\n$company\n$Analysis of $name\n
+Num Out Header Right
+Num Out Delimiter=32
+Analysis Text=Height=-15,FStyle=0,Color=12,Name=Arial
+Analysis Grid Color=8
+Analysis Graph Background=15
+Object Default=Height=-15,FStyle=0,Color=4,Name=Arial
+Analysis Window Background=15
+NumOut=Height=-15,FStyle=0,Color=4,Name=Courier New
+ScaleColor=On
+Select Color=9
+Select Box Color=4
+Cursor Select Color Primary=7
+Cursor Select Color Secondary=9
+Tracker Intercept=False
+Tracker Mouse=True
+Tracker Cursor=True
+Tracker Foreground=Height=-15,FStyle=0,Color=0,Name=Arial
+Tracker Background=11
+Baseline color=12
+Data Point Labels Color Fore=Height=-15,FStyle=0,Color=0,Name=Arial
+Data Point Labels Color Back=11
+AnimateWait=0
+AnimateWaitTime=500
+Same Y Scales=Yes
+ThumbNail=678,29,965,208
+T.Save_For_Future=No
+A.Save_For_Future=No
+D.Save_For_Future=No
+T.Reduce_Display=1
+T.Reduce_Save=1
+A.Reduce_Display=1
+A.Reduce_Save=1
+D.Reduce_Display=1
+D.Reduce_Save=1
+
+[Tools]
+Pos=Top
+SELECT=Yes
+GRAPHIC=No
+LINE=No
+ELLIPSE=No
+RECT=No
+DIAM=No
+ARC=No
+PIE=No
+POLYCLOS=No
+SCALE=Yes
+CURSOR=Yes
+MEASUREH=Yes
+MEASUREV=Yes
+TAG=Yes
+TEXT=Yes
+PROPERTY=Yes
+START=Yes
+STOP=Yes
+PAUSE=No
+DATAPTS=Yes
+TOKENS=Yes
+RULER=No
+PLUS=No
+XAXIS=Yes
+YAXIS=Yes
+MINORLOG=No
+BASELINE=No
+HORIZCUR=No
+GOTOX=Yes
+GOTOY=Yes
+GOTOPERF=Yes
+GOTOBRNC=Yes
+NEXT=Yes
+NEXTIN=Yes
+PEAK=Yes
+VALLEY=Yes
+HIGH=Yes
+LOW=Yes
+INFLECTN=Yes
+GHIGH=Yes
+GLOW=Yes
+BOTTOM=Yes
+TOP=Yes
+AOUTPUT=Yes
+ZOOMIN=No
+ZOOMOUT=No
+COLOR=Yes
+FONT=Yes
+
+[Monte Carlo Options]
+Analysis=Transient
+Status=Off
+Distribution=Normal
+Number of Runs=10
+
+[Monte Carlo Options]
+Analysis=AC
+Status=Off
+Distribution=Normal
+Number of Runs=10
+
+[Monte Carlo Options]
+Analysis=DC
+Status=Off
+Distribution=Normal
+Number of Runs=10
+
+[Limits]
+Analysis=Transient
+TRange=10u
+TStep=0
+NPts=51
+Temp=27
+OPT=32888
+Horizontal Cursor=False
+Temperature Type=Linear
+
+[WaveForm]
+Analysis=Transient
+Options=LINEARX,LINEARY
+AliasID=-1
+VFmtX=3
+VFmtY=3
+SFmtX=3
+SFmtY=3
+Line Color=2
+Text Color=2
+
+[Limits]
+Analysis=AC
+OPT=0
+Horizontal Cursor=False
+Temperature Type=Linear
+
+[WaveForm]
+Analysis=AC
+Options=LINEARY
+AliasID=-1
+Plt=1
+Line Color=12
+Text Color=12
+
+[WaveForm]
+Analysis=AC
+Options=LINEARY
+AliasID=-1
+Plt=2
+Line Color=9
+Text Color=9
+
+[WaveForm]
+Analysis=AC
+Options=LINEARY
+AliasID=-1
+Line Color=2
+Text Color=2
+
+[Limits]
+Analysis=DC
+OPT=0
+Horizontal Cursor=False
+Temperature Type=Linear
+Sweep1 type=Auto
+Sweep2 type=None
+
+[WaveForm]
+Analysis=DC
+Options=LINEARX,LINEARY
+AliasID=-1
+Plt=1
+Line Color=12
+Text Color=12
+
+[WaveForm]
+Analysis=DC
+Options=LINEARX,LINEARY
+AliasID=-1
+Line Color=9
+Text Color=9
+
+[WaveForm]
+Analysis=DC
+Options=LINEARX,LINEARY
+AliasID=-1
+Line Color=2
+Text Color=2
+
+[Optimize]
+Format=3
+
+[Optimize]
+Analysis=Transient
+Method=Standard_Powell
+
+[Optimize]
+Analysis=AC
+Method=Standard_Powell
+
+[Optimize]
+Analysis=DC
+Method=Standard_Powell
+
+[Watch]
+Format=3
+
+[Watch]
+Analysis=Transient
+ExprPercentWidth=80
+
+[Watch]
+Analysis=AC
+ExprPercentWidth=80
+
+[Watch]
+Analysis=DC
+ExprPercentWidth=80
+
+[DSP]
+T.Status=Off
+A.Status=Off
+
+[TF]
+Input Source
+Place Text=False
+
+[SENS]
+Multiple=False
+Parameter Type=Component

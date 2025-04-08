@@ -1,0 +1,36 @@
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2.csproj.AssemblyReference.cache
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\obj\Debug\MainWindow.g.cs
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\obj\Debug\UserControl1.g.cs
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\obj\Debug\App.g.cs
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2_MarkupCompile.cache
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2_MarkupCompile.lref
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\bin\Debug\РПМ_ЛБ_3_2_2.exe.config
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\bin\Debug\РПМ_ЛБ_3_2_2.exe
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\bin\Debug\РПМ_ЛБ_3_2_2.pdb
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\obj\Debug\MainWindow.baml
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\obj\Debug\UserControl1.baml
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2.g.resources
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2.Properties.Resources.resources
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2.csproj.GenerateResource.cache
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2.csproj.CoreCompileInputs.cache
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2.exe
+D:\Users\Huawei\source\repos\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2.pdb
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\bin\Debug\РПМ_ЛБ_3_2_2.exe.config
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\bin\Debug\РПМ_ЛБ_3_2_2.exe
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\bin\Debug\РПМ_ЛБ_3_2_2.pdb
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2.csproj.AssemblyReference.cache
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\obj\Debug\MainWindow.g.cs
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\obj\Debug\UserControl1.g.cs
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\obj\Debug\App.g.cs
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2_MarkupCompile.cache
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2_MarkupCompile.lref
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\obj\Debug\MainWindow.baml
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\obj\Debug\UserControl1.baml
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2.g.resources
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2.Properties.Resources.resources
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2.csproj.GenerateResource.cache
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2.csproj.CoreCompileInputs.cache
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2.exe
+C:\Users\busov\OneDrive\Документы\КИТ\3 курс\1 семестр\РПМ\3 лаба\РПМ_ЛБ_3_2_2\obj\Debug\РПМ_ЛБ_3_2_2.pdb

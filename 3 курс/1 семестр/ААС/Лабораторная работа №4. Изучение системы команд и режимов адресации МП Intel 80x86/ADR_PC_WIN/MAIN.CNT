@@ -1,0 +1,28 @@
+:Base main.hlp
+:Title Адресация МП Intel
+1 Введение
+2 О программе=ID_ABOUT
+1 Адресация в МП Intel
+2 Реальный режим МП Intel=ID_ADR_MAIN
+1 Структура команд МП Intel
+2 Форматы команд МП Intel=ID_CMD_MAIN
+2 Форматы команды MOV
+3 Общие структурные схемы команды MOV=ID_CMD_MOV
+3 Регистр <-> Регистр/Память=ID_ADR_REG-REGMEM
+3 Регистр/Память <- Данные=ID_ADR_REGMEM-DATA
+3 Регистр <- Данные=ID_ADR_REG-DATA
+3 Аккумулятор <-> Память=ID_ADR_AX-MEM
+3 Сегментный регистр <-> Регистр/Память=ID_ADR_SEG-REGMEM
+2 Назначение полей команды MOV
+3 Список всех полей=ID_CMD_POSTBYTE
+3 Префикс=ID_CMD_PREFIX
+3 w - размер операнда=ID_CMD_W
+3 md - режим=ID_CMD_MD
+3 reg - базовый регистр=ID_CMD_REG
+3 r/m - регистр/память=ID_CMD_RM
+3 sr - сегментный регистр=ID_CMD_SR
+3 disp 8/16 - смещение=ID_CMD_DISP
+3 data L/H - данные=ID_CMD_DATA
+2 Приложения
+3 Ассемблер: оператор указания типа(PTR)=ID_CMD_PTR
+3 Примеры команды MOV=ID_CMD_SAMPLE
