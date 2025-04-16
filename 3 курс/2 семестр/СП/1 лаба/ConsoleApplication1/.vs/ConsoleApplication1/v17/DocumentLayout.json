@@ -1,0 +1,100 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u041F\\1 \u043B\u0430\u0431\u0430\\ConsoleApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E4678EB7-9025-4E85-B5DB-4C13BCC516A2}|ConsoleApplication1\\ConsoleApplication1.vcxproj|C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u041F\\1 \u043B\u0430\u0431\u0430\\ConsoleApplication1\\ConsoleApplication1\\Application_2_16.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E4678EB7-9025-4E85-B5DB-4C13BCC516A2}|ConsoleApplication1\\ConsoleApplication1.vcxproj|solutionrelative:ConsoleApplication1\\Application_2_16.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4678EB7-9025-4E85-B5DB-4C13BCC516A2}|ConsoleApplication1\\ConsoleApplication1.vcxproj|C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u041F\\1 \u043B\u0430\u0431\u0430\\ConsoleApplication1\\ConsoleApplication1\\Application_1_1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E4678EB7-9025-4E85-B5DB-4C13BCC516A2}|ConsoleApplication1\\ConsoleApplication1.vcxproj|solutionrelative:ConsoleApplication1\\Application_1_1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4678EB7-9025-4E85-B5DB-4C13BCC516A2}|ConsoleApplication1\\ConsoleApplication1.vcxproj|C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u041F\\1 \u043B\u0430\u0431\u0430\\ConsoleApplication1\\ConsoleApplication1\\Application_2_1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E4678EB7-9025-4E85-B5DB-4C13BCC516A2}|ConsoleApplication1\\ConsoleApplication1.vcxproj|solutionrelative:ConsoleApplication1\\Application_2_1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4678EB7-9025-4E85-B5DB-4C13BCC516A2}|ConsoleApplication1\\ConsoleApplication1.vcxproj|C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u041F\\1 \u043B\u0430\u0431\u0430\\ConsoleApplication1\\ConsoleApplication1\\Application_1_7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E4678EB7-9025-4E85-B5DB-4C13BCC516A2}|ConsoleApplication1\\ConsoleApplication1.vcxproj|solutionrelative:ConsoleApplication1\\Application_1_7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Application_2_16.cpp",
+              "DocumentMoniker": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u041F\\1 \u043B\u0430\u0431\u0430\\ConsoleApplication1\\ConsoleApplication1\\Application_2_16.cpp",
+              "RelativeDocumentMoniker": "ConsoleApplication1\\Application_2_16.cpp",
+              "ToolTip": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u041F\\1 \u043B\u0430\u0431\u0430\\ConsoleApplication1\\ConsoleApplication1\\Application_2_16.cpp",
+              "RelativeToolTip": "ConsoleApplication1\\Application_2_16.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-11T14:28:46.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Application_2_1.cpp",
+              "DocumentMoniker": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u041F\\1 \u043B\u0430\u0431\u0430\\ConsoleApplication1\\ConsoleApplication1\\Application_2_1.cpp",
+              "RelativeDocumentMoniker": "ConsoleApplication1\\Application_2_1.cpp",
+              "ToolTip": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u041F\\1 \u043B\u0430\u0431\u0430\\ConsoleApplication1\\ConsoleApplication1\\Application_2_1.cpp",
+              "RelativeToolTip": "ConsoleApplication1\\Application_2_1.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-11T14:28:45.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Application_1_7.cpp",
+              "DocumentMoniker": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u041F\\1 \u043B\u0430\u0431\u0430\\ConsoleApplication1\\ConsoleApplication1\\Application_1_7.cpp",
+              "RelativeDocumentMoniker": "ConsoleApplication1\\Application_1_7.cpp",
+              "ToolTip": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u041F\\1 \u043B\u0430\u0431\u0430\\ConsoleApplication1\\ConsoleApplication1\\Application_1_7.cpp",
+              "RelativeToolTip": "ConsoleApplication1\\Application_1_7.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-11T14:28:44.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Application_1_1.cpp",
+              "DocumentMoniker": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u041F\\1 \u043B\u0430\u0431\u0430\\ConsoleApplication1\\ConsoleApplication1\\Application_1_1.cpp",
+              "RelativeDocumentMoniker": "ConsoleApplication1\\Application_1_1.cpp",
+              "ToolTip": "C:\\Users\\busov\\Documents\\\u041A\u0418\u0422\\3 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u041F\\1 \u043B\u0430\u0431\u0430\\ConsoleApplication1\\ConsoleApplication1\\Application_1_1.cpp",
+              "RelativeToolTip": "ConsoleApplication1\\Application_1_1.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-11T14:28:22Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

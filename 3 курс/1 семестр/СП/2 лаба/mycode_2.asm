@@ -1,9 +1,8 @@
 .model tiny
 
 .data
-    a db 120
-    b db 20
-    c db 5
+    K dw 10, -10, 20, -20, 30, -30, 40, -40
+    sum dw 0
 .code
 
 N:
@@ -11,25 +10,22 @@ N:
     push ds
     
 ;;;;;;;;;;;;;;;;;;;;;;;;
-    mov al, a
-    mov bl, b
-    mov cl, c
+    mov bx, 0
+    mov cx, 8
     
-    cmp al, bl
-    jle check_c  
-    
-    mov al, bl
-    
-    check_c:
-        cmp al, cl
-        jle ready
+    m:
+        mov ax, K[bx]
+        cmp ax, 0
+        jle m2
+        add sum, ax
         
-        mov al, cl
-    
-    ready:
-        mov c, al
-;;;;;;;;;;;;;;;;;;;;;;;;
+    m2:
+        add bx, 2
+        loop m
 
+;;;;;;;;;;;;;;;;;;;;;;;;
     mov ax, 4c00h
+    int 21h
+end N    mov ax, 4c00h
     int 21h
 end N

@@ -10,7 +10,7 @@ N:
     push ds
 ;;;;;;;;;;;;;;;;;;;;
     mov ah, x
-    mov bh, 01000100b
+    mov bh, 00100010b
     xor ah, bh
     
     mov x, ah
